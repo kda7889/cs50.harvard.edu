@@ -23,6 +23,13 @@
     align-items: center;
 }
 
+
+.bg-light {
+    background-color: rgb(8 118 229) !important;
+}
+
+
+
 /* Стили для кнопок */
 button.btn {
     display: block;
