@@ -1,0 +1,30 @@
+/* CSS файл для сайта */
+/* ru: Это пример файла стилей для нашего сайта */
+/* en: This is a sample stylesheet for our website */
+/* fr: Ceci est un exemple de feuille de style pour notre site */
+/* es: Este es un ejemplo de hoja de estilos para nuestro sitio web */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+h1, h2, h3 {
+    color: #007bff;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+}
+
+button {
+    margin-top: 10px;
+}

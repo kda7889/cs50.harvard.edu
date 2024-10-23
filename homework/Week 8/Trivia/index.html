@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Trivia</title>
+</head>
+<body>
+    <h1>Trivia!</h1>
+
+    <!-- Language Selection -->
+    <label for="languageSelect">Choose Language:</label>
+    <select id="languageSelect" onchange="setLanguage()">
+        <option value="en">English</option>
+        <option value="ru">Русский</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+    </select>
+
+    <!-- Part 1: Multiple Choice -->
+    <h2>Part 1: Multiple Choice</h2>
+    <h3>What is the capital of France?</h3>
+    <button onclick="checkAnswer(this, false)">Berlin</button>
+    <button onclick="checkAnswer(this, false)">Madrid</button>
+    <button onclick="checkAnswer(this, true)">Paris</button>
+    <button onclick="checkAnswer(this, false)">Rome</button>
+    <p id="part1-feedback"></p>
+
+    <!-- Part 2: Free Response -->
+    <h2>Part 2: Free Response</h2>
+    <h3>In which country is the Great Wall located?</h3>
+    <input type="text" id="freeResponse">
+    <button onclick="checkFreeResponse()">Check Answer</button>
+    <p id="part2-feedback"></p>
+
+    <script>
+        let language = 'en';
+
+        function setLanguage() {
+            language = document.getElementById('languageSelect').value;
+        }
+
+        function getFeedbackText(isCorrect) {
+            const feedbackTexts = {
+                en: { correct: 'Correct!', incorrect: 'Incorrect' },
+                ru: { correct: 'Правильно!', incorrect: 'Неверно' },
+                es: { correct: '¡Correcto!', incorrect: 'Incorrecto' },
+                fr: { correct: 'Correct!', incorrect: 'Incorrect' }
+            };
+            return isCorrect ? feedbackTexts[language].correct : feedbackTexts[language].incorrect;
+        }
+
+        // Функция для проверки ответа на вопрос с вариантами ответа
+        function checkAnswer(button, isCorrect) {
+            if (isCorrect) {
+                button.style.backgroundColor = 'green';
+            } else {
+                button.style.backgroundColor = 'red';
+            }
+            document.getElementById('part1-feedback').innerText = getFeedbackText(isCorrect);
+        }
+
+        // Функция для проверки текстового ответа
+        function checkFreeResponse() {
+            const answer = document.getElementById('freeResponse').value.trim().toLowerCase();
+            const feedback = document.getElementById('part2-feedback');
+            const isCorrect = answer === 'china' || answer === 'китай';
+            if (isCorrect) {
+                document.getElementById('freeResponse').style.backgroundColor = 'green';
+            } else {
+                document.getElementById('freeResponse').style.backgroundColor = 'red';
+            }
+            feedback.innerText = getFeedbackText(isCorrect);
+        }
+    </script>
+</body>
+</html>

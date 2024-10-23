@@ -1,0 +1,49 @@
+HTML and CSS Specification (English)
+
+HTML Tags Used:
+1. <nav> - Used to create the navigation bar.
+2. <header> - Used for the top part of the page that introduces the content.
+3. <section> - Used to group different parts of the page.
+4. <footer> - Used at the bottom of the page for footer information.
+5. <form> - Used to collect user input on the contact page.
+6. <input> - Used for text and email fields in the contact form.
+7. <button> - Used for form submission and to trigger JavaScript actions.
+8. <textarea> - Used for multi-line text input in the contact form.
+9. <img> - Used to display images on the website.
+10. <blockquote> - Used to display a quote in a visually distinct way.
+
+CSS Properties Used:
+1. font-family - Set the typeface for text on the website.
+2. background-color - Applied to body and footer for visual styling.
+3. color - Set text color for headers and footers.
+4. margin - Used to create space around elements like buttons.
+5. padding - Used for the footer to create spacing inside the element.
+
+JavaScript and Bootstrap:
+JavaScript was used to add interactivity by providing form validation, displaying alerts, and simulating form submission. Bootstrap was used for styling components like the navigation bar, buttons, and form, to ensure responsiveness and an appealing design.
+
+---------------------------------
+
+Спецификация HTML и CSS (Русский)
+
+Использованные теги HTML:
+1. <nav> - Используется для создания навигационной панели.
+2. <header> - Используется для верхней части страницы, представляющей контент.
+3. <section> - Используется для группировки различных частей страницы.
+4. <footer> - Используется внизу страницы для информации в нижнем колонтитуле.
+5. <form> - Используется для сбора пользовательского ввода на странице контактов.
+6. <input> - Используется для полей ввода текста и электронной почты в форме.
+7. <button> - Используется для отправки формы и запуска JavaScript-действий.
+8. <textarea> - Используется для многострочного ввода текста в форме контактов.
+9. <img> - Используется для отображения изображений на сайте.
+10. <blockquote> - Используется для отображения цитаты в визуально отличающемся виде.
+
+Использованные свойства CSS:
+1. font-family - Задает шрифт текста на сайте.
+2. background-color - Применяется к body и footer для визуального оформления.
+3. color - Устанавливает цвет текста для заголовков и подвала.
+4. margin - Используется для создания пространства вокруг элементов, таких как кнопки.
+5. padding - Используется для создания отступов внутри элементов, таких как footer.
+
+JavaScript и Bootstrap:
+JavaScript использовался для добавления интерактивности, обеспечивая валидацию формы, отображение оповещений и имитацию отправки формы. Bootstrap использовался для стилизации компонентов, таких как навигационная панель, кнопки и форма, для обеспечения адаптивности и привлекательного дизайна.
