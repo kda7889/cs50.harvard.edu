@@ -51,3 +51,147 @@ button {
     justify-content: center;
     align-items: center;
 }
+
+
+/* Общие стили для контейнеров и отступов */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+
+.my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+
+/* Стили для кнопок */
+button.btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #537fbe;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #4c8bf5;
+    transform: scale(1.05);
+}
+
+button.btn:active {
+    transform: scale(0.95);
+}
+
+/* Стили для форм и полей ввода */
+input[type="text"], input[type="password"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus {
+    border-color: #4c8bf5;
+    outline: none;
+}
+
+
+/* Стили для навигационной панели */
+nav.navbar {
+    background-color: #537fbe; /* Используем фирменный цвет для навигации */
+    padding: 1rem;
+}
+
+nav.navbar a.nav-link {
+    color: #ffffff;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+nav.navbar a.nav-link:hover {
+    color: #f5b82e; /* Цвет для выделения при наведении */
+    text-decoration: underline;
+}
+
+nav.navbar a.navbar-brand {
+    font-weight: bold;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+nav.navbar a.navbar-brand:hover {
+    transform: scale(1.1);
+    color: #f5b82e;
+}
+
+
+/* Стили для меток форм и подсказок */
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="email"]:focus,
+form select:focus {
+    border-color: #4c8bf5;
+    outline: none;
+}
+
+form .form-hint {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Стили для кнопок отправки формы */
+form button[type="submit"] {
+    background-color: #537fbe;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #4c8bf5;
+}
+
+form button[type="submit"]:active {
+    transform: scale(0.95);
+}
