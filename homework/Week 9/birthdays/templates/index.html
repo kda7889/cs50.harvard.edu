@@ -1,0 +1,78 @@
+<!-- index.html: Шаблон для отображения списка дней рождения и формы добавления нового дня рождения -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Birthday Tracker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Birthday Tracker</h1>
+
+        <!-- Форма для добавления нового дня рождения -->
+        <form action="/" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="month">Month:</label>
+            <input type="number" id="month" name="month" min="1" max="12" required>
+
+            <label for="day">Day:</label>
+            <input type="number" id="day" name="day" min="1" max="31" required>
+
+            <button type="submit">Add Birthday</button>
+        </form>
+
+        <!-- Форма для редактирования дня рождения, если выбранная запись редактируется -->
+        {% if edit_birthday %}
+        <form action="/update" method="post">
+            <input type="hidden" name="id" value="{{ edit_birthday[0] }}">
+            <label for="name">Edit Name:</label>
+            <input type="text" id="name" name="name" value="{{ edit_birthday[1] }}" required>
+
+            <label for="month">Edit Month:</label>
+            <input type="number" id="month" name="month" min="1" max="12" value="{{ edit_birthday[2] }}" required>
+
+            <label for="day">Edit Day:</label>
+            <input type="number" id="day" name="day" min="1" max="31" value="{{ edit_birthday[3] }}" required>
+
+            <button type="submit">Update Birthday</button>
+        </form>
+        {% endif %}
+
+        <!-- Таблица для отображения всех дней рождения -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Birthday</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Динамическое отображение дней рождения из базы данных -->
+                {% for birthday in birthdays %}
+                <tr>
+                    <td>{{ birthday[1] }}</td>
+                    <td>{{ birthday[2] }}/{{ birthday[3] }}</td>
+                    <td>
+                        <!-- Форма для удаления записи -->
+                        <form action="/delete" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="{{ birthday[0] }}">
+                            <button type="submit">Delete</button>
+                        </form>
+                        <!-- Форма для редактирования записи -->
+                        <form action="/edit" method="post" style="display:inline;">
+                            <input type="hidden" name="id" value="{{ birthday[0] }}">
+                            <button type="submit">Edit</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
