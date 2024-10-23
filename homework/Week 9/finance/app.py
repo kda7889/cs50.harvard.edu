@@ -315,3 +315,10 @@ def sell():
         return render_template("sell.html")
 
 # UNIQUE COMMENT END: sell function
+
+
+@app.route('/logout')
+def logout():
+    """ Обработчик выхода из учетной записи """
+    session.clear()  # Очистка сессии для logout пользователя
+    return redirect('/login')
