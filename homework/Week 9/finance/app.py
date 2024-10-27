@@ -16,6 +16,9 @@ import sqlite3
 # Конфигурация приложения
 app = Flask(__name__)
 
+# Регистрация фильтра usd
+app.jinja_env.filters["usd"] = usd
+
 # Не кэшировать ответы, чтобы всегда получать актуальную версию
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config["SESSION_FILE_DIR"] = mkdtemp()
@@ -154,11 +157,13 @@ def quote():
             flash("Must provide stock symbol.", "error")
             return render_template("quote.html")
 
+        # Получаем данные об акции
         stock = lookup(symbol)
         if stock is None:
             flash("Invalid stock symbol.", "error")
             return render_template("quote.html")
 
+        # Передача данных в шаблон quoted.html
         return render_template("quoted.html", stock=stock)
     else:
         return render_template("quote.html")
