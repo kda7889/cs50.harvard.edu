@@ -235,9 +235,43 @@ def ensure_transactions_table():
 # UNIQUE COMMENT END: ensure_transactions_table function
 
 # UNIQUE COMMENT START: buy function
+
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+
+        if not symbol:
+            flash("Must provide stock symbol.", "error")
+            return redirect("/")
+
+        if not shares or not shares.isdigit() or int(shares) <= 0:
+            flash("Must provide a valid number of shares.", "error")
+            return redirect("/")
+
+        stock = lookup(symbol)
+        if stock is None:
+            flash("Invalid stock symbol.", "error")
+            return redirect("/")
+
+        user_id = session["user_id"]
+        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+        total_cost = stock["price"] * int(shares)
+
+        if user_cash < total_cost:
+            flash("Cannot afford the requested number of shares.", "error")
+            return redirect("/")
+
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)", user_id, stock["symbol"], shares, stock["price"])
+        db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, user_id)
+        flash("Successfully purchased shares!", "success")
+
+        return redirect("/")
+    else:
+        return render_template("buy.html")
+
     """
     RU: Покупка акций.
     EN: Buying stocks.
@@ -279,9 +313,41 @@ def buy():
 # UNIQUE COMMENT END: buy function
 
 # UNIQUE COMMENT START: sell function
+
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
+    if request.method == "POST":
+        symbol = request.form.get("symbol")
+        shares = request.form.get("shares")
+
+        if not symbol:
+            flash("Must provide stock symbol.", "error")
+            return redirect("/")
+        if not shares or not shares.isdigit() or int(shares) <= 0:
+            flash("Must provide a valid number of shares.", "error")
+            return redirect("/")
+
+        user_id = session["user_id"]
+        user_shares = db.execute("SELECT SUM(shares) as total_shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)[0]["total_shares"]
+
+        if user_shares < int(shares):
+            flash("Not enough shares.", "error")
+            return redirect("/")
+
+        stock = lookup(symbol)
+        if stock is None:
+            flash("Invalid stock symbol.", "error")
+            return redirect("/")
+
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)", user_id, stock["symbol"], -int(shares), stock["price"])
+        db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", stock["price"] * int(shares), user_id)
+        flash("Successfully sold shares!", "success")
+
+        return redirect("/")
+    else:
+        return render_template("sell.html")
+
     """
     RU: Продажа акций.
     EN: Selling stocks.
