@@ -23,13 +23,6 @@
     align-items: center;
 }
 
-
-.bg-light {
-    background-color: rgb(8 118 229) !important;
-}
-
-
-
 /* Стили для кнопок */
 button.btn {
     display: block;
@@ -101,7 +94,7 @@ form button[type="submit"]:hover {
 
 /* Улучшение навигационной панели */
 nav.navbar {
-    background-color: #3b5998; /* Увеличили насыщенность фона для повышения контраста */
+    background-color: #000000; /* Увеличили насыщенность фона для повышения контраста */
     padding: 1.2rem;
 }
 
@@ -158,4 +151,9 @@ table th {
 
 table tr:nth-child(even) {
     background-color: #f9f9f9; /* Добавление чередующихся полос для улучшения восприятия */
+}
+
+
+.bg-light {
+    background-color: rgb(8 118 229) !important;
 }

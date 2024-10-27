@@ -29,11 +29,40 @@ Session(app)
 # Подключение к базе данных
 db = SQL("sqlite:///finance.db")
 
+# UNIQUE COMMENT START: ensure_transacted_column function
+def ensure_transacted_column():
+    """
+    RU: Проверка и добавление столбца transacted в таблицу transactions, если его нет.
+    EN: Check and add the transacted column to the transactions table if it doesn't exist.
+    FR: Vérifiez et ajoutez la colonne transacted à la table des transactions si elle n'existe pas.
+    ES: Verifique y agregue la columna transacted a la tabla de transacciones si no existe.
+    """
+    connection = sqlite3.connect("finance.db")
+    cursor = connection.cursor()
+    cursor.execute("PRAGMA table_info(transactions)")
+    columns = cursor.fetchall()
+    column_names = [column[1] for column in columns]
+    if "transacted" not in column_names:
+        cursor.execute("ALTER TABLE transactions ADD COLUMN transacted DATETIME")
+        connection.commit()
+    cursor.execute("UPDATE transactions SET transacted = datetime('now') WHERE transacted IS NULL")
+    connection.commit()
+    connection.close()
+# UNIQUE COMMENT END: ensure_transacted_column function
 
+# Проверка и добавление столбца transacted, если его нет
+ensure_transacted_column()
+
+# UNIQUE COMMENT START: index function
 @app.route("/")
 @login_required
 def index():
-    """Главная страница, отображающая активы пользователя и его баланс."""
+    """
+    RU: Главная страница, отображающая активы пользователя и его баланс.
+    EN: The main page displaying user's assets and their balance.
+    FR: La page principale affichant les actifs de l'utilisateur et son solde.
+    ES: La página principal que muestra los activos del usuario y su saldo.
+    """
     user_id = session["user_id"]
     user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
 
@@ -44,6 +73,7 @@ def index():
     # Обработка данных акций
     stock_data = []
     grand_total = user_cash
+    max_shares_data = {}
     for stock in stocks:
         stock_info = lookup(stock["symbol"])
         if stock_info is None:
@@ -58,18 +88,23 @@ def index():
             "total": total_value
         })
         grand_total += total_value
-      # Расчет максимального количества акций, которые можно купить для каждой акции
-    max_shares_data = {}
-    for stock in stock_data:
-        if stock["price"] > 0:
-            max_shares_data[stock["symbol"]] = user_cash // stock["price"]
+
+        # Расчет максимального количества акций, которые можно купить для каждой акции
+        if stock_info["price"] > 0:
+            max_shares_data[stock_info["symbol"]] = user_cash // stock_info["price"]
 
     return render_template("index.html", stocks=stock_data, cash=user_cash, grand_total=grand_total, max_shares=max_shares_data)
+# UNIQUE COMMENT END: index function
 
-
+# UNIQUE COMMENT START: login function
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    """Авторизация пользователя."""
+    """
+    RU: Авторизация пользователя.
+    EN: User login.
+    FR: Connexion de l'utilisateur.
+    ES: Inicio de sesión del usuario.
+    """
     session.clear()
     if request.method == "POST":
         username = request.form.get("username")
@@ -89,18 +124,31 @@ def login():
         return redirect("/")
     else:
         return render_template("login.html")
+# UNIQUE COMMENT END: login function
 
-
+# UNIQUE COMMENT START: logout function
 @app.route("/logout")
+@login_required
 def logout():
-    """Выход пользователя из системы."""
+    """
+    RU: Выход пользователя из системы.
+    EN: User logout.
+    FR: Déconnexion de l'utilisateur.
+    ES: Cierre de sesión del usuario.
+    """
     session.clear()
     return redirect("/login")
+# UNIQUE COMMENT END: logout function
 
-
+# UNIQUE COMMENT START: register function
 @app.route("/register", methods=["GET", "POST"])
 def register():
-    """Регистрация нового пользователя."""
+    """
+    RU: Регистрация нового пользователя.
+    EN: Register a new user.
+    FR: Enregistrer un nouvel utilisateur.
+    ES: Registrar un nuevo usuario.
+    """
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
@@ -125,45 +173,58 @@ def register():
         return redirect("/")
     else:
         return render_template("register.html")
+# UNIQUE COMMENT END: register function
 
-
+# UNIQUE COMMENT START: quote function
 @app.route("/quote", methods=["GET", "POST"])
 @login_required
 def quote():
-    """Получение информации о стоимости акции."""
+    """
+    RU: Получение информации о стоимости акции.
+    EN: Get stock quote information.
+    FR: Obtenez des informations sur le cours des actions.
+    ES: Obtenga información sobre la cotización de las acciones.
+    """
     if request.method == "POST":
         symbol = request.form.get("symbol")
 
         if not symbol:
-            flash("Must provide stock symbol.", "error")
-            return render_template("quote.html")
+            return apology("must provide stock symbol", 400)
 
         stock = lookup(symbol)
         if stock is None:
-            flash("Invalid stock symbol.", "error")
-            return render_template("quote.html")
+            return apology("invalid stock symbol", 400)
 
         return render_template("quoted.html", stock=stock)
     else:
         return render_template("quote.html")
+# UNIQUE COMMENT END: quote function
 
-
+# UNIQUE COMMENT START: history function
 @app.route("/history", methods=["GET"])
 @login_required
 def history():
-    """Отображение истории транзакций пользователя."""
+    """
+    RU: Отображение истории транзакций пользователя.
+    EN: Display user transaction history.
+    FR: Affichage de l'historique des transactions de l'utilisateur.
+    ES: Mostrar el historial de transacciones del usuario.
+    """
     user_id = session["user_id"]
     transactions = db.execute(
-        "SELECT symbol, shares, price FROM transactions WHERE user_id = ?", user_id)
+        "SELECT symbol, shares, price, transacted FROM transactions WHERE user_id = ? ORDER BY transacted DESC", user_id)
     return render_template("history.html", transactions=transactions)
+# UNIQUE COMMENT END: history function
 
-
+# UNIQUE COMMENT START: add_cash function
 @app.route("/add_cash", methods=["GET", "POST"])
 @login_required
 def add_cash():
     """
     RU: Добавление денег на счёт пользователя.
     EN: Adding cash to the user's account.
+    FR: Ajouter de l'argent au compte de l'utilisateur.
+    ES: Añadir dinero a la cuenta del usuario.
     """
     if request.method == "POST":
         amount = request.form.get("amount")
@@ -176,69 +237,65 @@ def add_cash():
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?", int(amount), user_id)
 
         # Запись транзакции в таблицу transactions
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
-                   user_id, "CASH", 0, int(amount))
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transacted) VALUES (?, ?, ?, ?, datetime('now'))", user_id, "CASH", 0, int(amount))
 
         flash("Successfully added cash!", "success")
         return redirect("/")
     else:
         return render_template("add_cash.html")
+# UNIQUE COMMENT END: add_cash function
 
-
+# UNIQUE COMMENT START: buy function
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
-    """Покупка акций."""
+    """
+    RU: Покупка акций.
+    EN: Buying stocks.
+    FR: Achat d'actions.
+    ES: Compra de acciones.
+    """
     if request.method == "POST":
         symbol = request.form.get("symbol")
         shares = request.form.get("shares")
 
         if not symbol:
-            flash("Must provide stock symbol.", "error")
-            return render_template("buy.html")
+            return apology("must provide stock symbol", 400)
+
         if not shares or not shares.isdigit() or int(shares) <= 0:
-            flash("Must provide a valid number of shares.", "error")
-            return render_template("buy.html")
+            return apology("must provide a valid number of shares", 400)
 
         stock = lookup(symbol)
         if stock is None:
-            flash("Invalid stock symbol.", "error")
-            return render_template("buy.html")
+            return apology("invalid stock symbol", 400)
 
         user_id = session["user_id"]
         user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
         total_cost = stock["price"] * int(shares)
 
         if user_cash < total_cost:
-            flash("Cannot afford the requested number of shares.", "error")
-            return render_template("buy.html")
+            return apology("cannot afford the requested number of shares", 400)
 
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transacted) VALUES (?, ?, ?, ?, datetime('now'))",
                    user_id, stock["symbol"], shares, stock["price"])
         db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_cost, user_id)
         flash("Successfully purchased shares!", "success")
 
         return redirect("/")
     else:
-        # При GET запросе показываем форму покупки и вычисляем максимальное количество акций, которые можно купить
-        symbol = request.args.get("symbol")
-        if symbol:
-            stock = lookup(symbol)
-            if stock is None:
-                flash("Invalid stock symbol.", "error")
-                return redirect("/")
+        return render_template("buy.html")
+# UNIQUE COMMENT END: buy function
 
-            user_id = session["user_id"]
-            user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
-            max_shares = user_cash // stock["price"]
-
-            return render_template("buy.html", stock=stock, max_shares=max_shares)
-        return render_template("buy.html", stock=None, max_shares=None)
-
-
+# UNIQUE COMMENT START: sell function
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
+    """
+    RU: Продажа акций.
+    EN: Selling stocks.
+    FR: Vente d'actions.
+    ES: Venta de acciones.
+    """
     user_id = session["user_id"]
 
     if request.method == "POST":
@@ -246,24 +303,20 @@ def sell():
         shares = request.form.get("shares")
 
         if not symbol:
-            flash("Must provide stock symbol.", "error")
-            return redirect("/sell")
+            return apology("must provide stock symbol", 400)
         if not shares or not shares.isdigit() or int(shares) <= 0:
-            flash("Must provide a valid number of shares.", "error")
-            return redirect("/sell")
+            return apology("must provide a valid number of shares", 400)
 
         user_shares_data = db.execute(
             "SELECT SUM(shares) as total_shares FROM transactions WHERE user_id = ? AND symbol = ? GROUP BY symbol", user_id, symbol)
         if len(user_shares_data) == 0 or user_shares_data[0]["total_shares"] < int(shares):
-            flash("Not enough shares.", "error")
-            return redirect("/sell")
+            return apology("not enough shares", 400)
 
         stock = lookup(symbol)
         if stock is None:
-            flash("Invalid stock symbol.", "error")
-            return redirect("/sell")
+            return apology("invalid stock symbol", 400)
 
-        db.execute("INSERT INTO transactions (user_id, symbol, shares, price) VALUES (?, ?, ?, ?)",
+        db.execute("INSERT INTO transactions (user_id, symbol, shares, price, transacted) VALUES (?, ?, ?, ?, datetime('now'))",
                    user_id, stock["symbol"], -int(shares), stock["price"])
         db.execute("UPDATE users SET cash = cash + ? WHERE id = ?",
                    stock["price"] * int(shares), user_id)
@@ -271,7 +324,7 @@ def sell():
 
         return redirect("/")
     else:
-        # Получение всех акций, принадлежащих пользователю для отображения в select меню
         stocks = db.execute(
             "SELECT symbol, SUM(shares) as total_shares FROM transactions WHERE user_id = ? GROUP BY symbol HAVING total_shares > 0", user_id)
         return render_template("sell.html", stocks=stocks)
+# UNIQUE COMMENT END: sell function
