@@ -17,6 +17,7 @@
                 <th>Shares</th>
                 <th>Price</th>
                 <th>Total</th>
+                <th>Max Shares You Can Buy</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -28,6 +29,7 @@
                 <td>{{ stock.shares }}</td>
                 <td>{{ stock.price | usd }}</td>
                 <td>{{ stock.total | usd }}</td>
+                <td>{{ max_shares[stock.symbol] }}</td>
                 <td>
                     <!-- Форма для покупки акций -->
                     <form action="/buy" method="POST" class="d-inline-block">
