@@ -12,6 +12,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from cs50 import SQL
 from helpers import apology, login_required, lookup, usd
 import sqlite3
+from sqlalchemy import case, func
 
 # Конфигурация приложения
 app = Flask(__name__)
@@ -28,6 +29,37 @@ Session(app)
 
 # Подключение к базе данных
 db = SQL("sqlite:///finance.db")
+
+# UNIQUE COMMENT START: ensure_transactions_table function
+def ensure_transactions_table():
+    """
+    RU: Проверка и добавление таблицы transactions, если её нет.
+    EN: Check and add the transactions table if it doesn't exist.
+    FR: Vérifiez et ajoutez la table des transactions si elle n'existe pas.
+    ES: Verifique y agregue la tabla de transacciones si no existe.
+    """
+    connection = sqlite3.connect("finance.db")
+    cursor = connection.cursor()
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='transactions'")
+    table_exists = cursor.fetchone()
+    if not table_exists:
+        cursor.execute('''
+            CREATE TABLE transactions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL,
+                symbol TEXT NOT NULL,
+                shares INTEGER NOT NULL,
+                price REAL NOT NULL,
+                transacted DATETIME DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY(user_id) REFERENCES users(id)
+            )
+        ''')
+        connection.commit()
+    connection.close()
+# UNIQUE COMMENT END: ensure_transactions_table function
+
+# Проверка и добавление таблицы transactions, если её нет
+ensure_transactions_table()
 
 # UNIQUE COMMENT START: ensure_transacted_column function
 def ensure_transacted_column():
@@ -175,6 +207,48 @@ def register():
         return render_template("register.html")
 # UNIQUE COMMENT END: register function
 
+# UNIQUE COMMENT START: change_password function
+@app.route("/change_password", methods=["GET", "POST"])
+@login_required
+def change_password():
+    """
+    RU: Смена пароля текущего пользователя.
+    EN: Change the current user's password.
+    FR: Changer le mot de passe de l'utilisateur actuel.
+    ES: Cambiar la contraseña del usuario actual.
+    """
+    if request.method == "POST":
+        current_user_id = session["user_id"]
+        old_password = request.form.get("old_password")
+        new_password = request.form.get("new_password")
+        confirmation = request.form.get("confirmation")
+
+        # Проверка, что поля заполнены
+        if not old_password:
+            return apology("must provide current password", 400)
+        elif not new_password:
+            return apology("must provide new password", 400)
+        elif new_password != confirmation:
+            return apology("passwords must match", 400)
+
+        # Получаем информацию о текущем пользователе
+        user_data = db.execute("SELECT * FROM users WHERE id = ?", current_user_id)
+        if len(user_data) != 1 or not check_password_hash(user_data[0]["hash"], old_password):
+            return apology("invalid current password", 400)
+
+        # Генерация хэша для нового пароля
+        new_hash_password = generate_password_hash(new_password)
+
+        # Обновляем пароль в базе данных
+        db.execute("UPDATE users SET hash = ? WHERE id = ?", new_hash_password, current_user_id)
+
+        flash("Password changed successfully!", "success")
+        return redirect("/")
+    else:
+        return render_template("change_password.html")
+# UNIQUE COMMENT END: change_password function
+
+
 # UNIQUE COMMENT START: quote function
 @app.route("/quote", methods=["GET", "POST"])
 @login_required
@@ -201,20 +275,57 @@ def quote():
 # UNIQUE COMMENT END: quote function
 
 # UNIQUE COMMENT START: history function
-@app.route("/history", methods=["GET"])
+@app.route("/history")
 @login_required
 def history():
     """
     RU: Отображение истории транзакций пользователя.
-    EN: Display user transaction history.
-    FR: Affichage de l'historique des transactions de l'utilisateur.
-    ES: Mostrar el historial de transacciones del usuario.
+    EN: Show history of transactions.
+    FR: Affichage de l'historique des transactions.
+    ES: Mostrar el historial de transacciones.
     """
     user_id = session["user_id"]
+
+    # Выполнение запроса на получение транзакций
     transactions = db.execute(
-        "SELECT symbol, shares, price, transacted FROM transactions WHERE user_id = ? ORDER BY transacted DESC", user_id)
-    return render_template("history.html", transactions=transactions)
+        f"SELECT symbol, shares, price, transacted FROM transactions WHERE user_id = {user_id} ORDER BY transacted DESC")
+
+
+    symbols = [transaction["symbol"] for transaction in transactions]
+    unique_symbols = list(set(symbols))
+
+    # Получаем названия акций для всех уникальных символов одним запросом
+    symbol_names = {}
+    for symbol in unique_symbols:
+        stock_info = lookup(symbol)
+        if stock_info:
+            symbol_names[symbol] = stock_info["name"]
+        else:
+            symbol_names[symbol] = "Unknown"
+
+    # Формируем окончательные данные для истории транзакций
+    enhanced_transactions = []
+    for transaction in transactions:
+        symbol = transaction["symbol"]
+        name = symbol_names.get(symbol, "Unknown")
+        transaction_type = "Sell" if transaction["shares"] < 0 else "Buy"
+        enhanced_transactions.append({
+            "symbol": symbol,
+            "name": name,
+            "shares": abs(transaction["shares"]),
+            "price": transaction["price"],
+            "transacted": transaction["transacted"],
+            "transaction_type": transaction_type
+        })
+
+
+
+    return render_template("history.html", transactions=enhanced_transactions)
 # UNIQUE COMMENT END: history function
+
+
+
+
 
 # UNIQUE COMMENT START: add_cash function
 @app.route("/add_cash", methods=["GET", "POST"])
