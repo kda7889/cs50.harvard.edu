@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Шведский\n"
+
+msgid "You have successfully registered!"
+msgstr "Du har framgångsrikt registrerat dig!"
+
+msgid "A user with this email already exists."
+msgstr "En användare med den här e-postadressen finns redan."
+
+msgid "Welcome, %(username)s!"
+msgstr "Välkommen, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Ogiltig e-postadress eller ogiltigt lösenord."
+
+msgid "You have been logged out."
+msgstr "Du har blivit utloggad."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Ämne: Återställning av lösenord\n"
+"\n"
+"Ditt nya lösenord är: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Ett nytt lösenord har skickats till din e-post."
+
+msgid "Error sending email: %(error)s"
+msgstr "Fel vid sändning av e-post: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Ingen användare hittades med detta e-postmeddelande."
+
+msgid "Participant successfully registered!"
+msgstr "Deltagare framgångsrikt registrerad!"
+
+msgid "Participants in a match must be different."
+msgstr "Deltagarna i en match måste vara olika."
+
+msgid "Match successfully created!"
+msgstr "Matchning framgångsrikt skapad!"
+
+msgid "Home"
+msgstr "Hem"
+
+msgid "Register Participant"
+msgstr "Registrera deltagare"
+
+msgid "Create Tournament"
+msgstr "Skapa turnering"
+
+msgid "Create Match"
+msgstr "Skapa matchning"
+
+msgid "Register User"
+msgstr "Registrera användare"
+
+msgid "Login"
+msgstr "Logga in"
+
+msgid "Logout"
+msgstr "Logga ut"
+
+msgid "Language"
+msgstr "Språk"
+
+msgid "Recover Password"
+msgstr "Återställ lösenord"

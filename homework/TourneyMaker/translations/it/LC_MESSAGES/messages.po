@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Итальянский\n"
+
+msgid "You have successfully registered!"
+msgstr "La registrazione è avvenuta con successo!"
+
+msgid "A user with this email already exists."
+msgstr "Esiste già un utente con questo indirizzo e-mail."
+
+msgid "Welcome, %(username)s!"
+msgstr "Benvenuto, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Email o password non valide."
+
+msgid "You have been logged out."
+msgstr "L'utente è stato disconnesso."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Oggetto: Recupero password\n"
+"\n"
+"La nuova password è: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Una nuova password è stata inviata al vostro indirizzo e-mail."
+
+msgid "Error sending email: %(error)s"
+msgstr "Errore nell'invio dell'e-mail: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Non è stato trovato alcun utente con questa e-mail."
+
+msgid "Participant successfully registered!"
+msgstr "Partecipante registrato con successo!"
+
+msgid "Participants in a match must be different."
+msgstr "I partecipanti a un incontro devono essere diversi."
+
+msgid "Match successfully created!"
+msgstr "Partita creata con successo!"
+
+msgid "Home"
+msgstr "Casa"
+
+msgid "Register Participant"
+msgstr "Registrazione del partecipante"
+
+msgid "Create Tournament"
+msgstr "Crea torneo"
+
+msgid "Create Match"
+msgstr "Crea abbinamento"
+
+msgid "Register User"
+msgstr "Registrazione dell'utente"
+
+msgid "Login"
+msgstr "Accesso"
+
+msgid "Logout"
+msgstr "Disconnessione"
+
+msgid "Language"
+msgstr "Lingua"
+
+msgid "Recover Password"
+msgstr "Recuperare la password"

@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Словацкий\n"
+
+msgid "You have successfully registered!"
+msgstr "Úspešne ste sa zaregistrovali!"
+
+msgid "A user with this email already exists."
+msgstr "Používateľ s týmto e-mailom už existuje."
+
+msgid "Welcome, %(username)s!"
+msgstr "Vitaj, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Neplatný e-mail alebo heslo."
+
+msgid "You have been logged out."
+msgstr "Boli ste odhlásení."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Predmet: Obnova hesla\n"
+"\n"
+"Vaše nové heslo je: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Na váš e-mail bolo odoslané nové heslo."
+
+msgid "Error sending email: %(error)s"
+msgstr "Chyba pri odosielaní e-mailu: %(error)s"
+
+msgid "No user found with this email."
+msgstr "S týmto e-mailom nebol nájdený žiadny používateľ."
+
+msgid "Participant successfully registered!"
+msgstr "Účastník sa úspešne zaregistroval!"
+
+msgid "Participants in a match must be different."
+msgstr "Účastníci zápasu musia byť odlišní."
+
+msgid "Match successfully created!"
+msgstr "Zápas úspešne vytvorený!"
+
+msgid "Home"
+msgstr "Domov"
+
+msgid "Register Participant"
+msgstr "Registrácia účastníka"
+
+msgid "Create Tournament"
+msgstr "Vytvoriť turnaj"
+
+msgid "Create Match"
+msgstr "Vytvoriť zápas"
+
+msgid "Register User"
+msgstr "Registrácia používateľa"
+
+msgid "Login"
+msgstr "Prihlásenie"
+
+msgid "Logout"
+msgstr "Odhlásenie"
+
+msgid "Language"
+msgstr "Jazyk"
+
+msgid "Recover Password"
+msgstr "Obnovenie hesla"

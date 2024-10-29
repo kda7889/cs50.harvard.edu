@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Словенский\n"
+
+msgid "You have successfully registered!"
+msgstr "Uspešno ste se registrirali!"
+
+msgid "A user with this email already exists."
+msgstr "Uporabnik s tem e-poštnim naslovom že obstaja."
+
+msgid "Welcome, %(username)s!"
+msgstr "Dobrodošel, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Nepravilno e-poštno sporočilo ali geslo."
+
+msgid "You have been logged out."
+msgstr "Bili ste odjavljeni."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Zadeva: \"Vključevanje v sistem\": Obnovitev gesla\n"
+"\n"
+"Vaše novo geslo je: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Na vaš e-poštni naslov je bilo poslano novo geslo."
+
+msgid "Error sending email: %(error)s"
+msgstr "Napaka pri pošiljanju e-pošte: %(error)s"
+
+msgid "No user found with this email."
+msgstr "S tem e-poštnim naslovom ni bil najden noben uporabnik."
+
+msgid "Participant successfully registered!"
+msgstr "Udeleženec se je uspešno registriral!"
+
+msgid "Participants in a match must be different."
+msgstr "Udeleženci tekme morajo biti različni."
+
+msgid "Match successfully created!"
+msgstr "Tekma je bila uspešno ustvarjena!"
+
+msgid "Home"
+msgstr "Domov"
+
+msgid "Register Participant"
+msgstr "Registracija udeleženca"
+
+msgid "Create Tournament"
+msgstr "Ustvarjanje turnirja"
+
+msgid "Create Match"
+msgstr "Ustvari tekmo"
+
+msgid "Register User"
+msgstr "Registracija uporabnika"
+
+msgid "Login"
+msgstr "Prijava"
+
+msgid "Logout"
+msgstr "Odjava"
+
+msgid "Language"
+msgstr "Jezik"
+
+msgid "Recover Password"
+msgstr "Obnovitev gesla"

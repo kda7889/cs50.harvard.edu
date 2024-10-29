@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Датский\n"
+
+msgid "You have successfully registered!"
+msgstr "Du har registreret dig med succes!"
+
+msgid "A user with this email already exists."
+msgstr "Der findes allerede en bruger med denne e-mail."
+
+msgid "Welcome, %(username)s!"
+msgstr "Velkommen, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Ugyldig e-mail eller adgangskode."
+
+msgid "You have been logged out."
+msgstr "Du er blevet logget ud."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Emne: Gendannelse af adgangskode\n"
+"\n"
+"Din nye adgangskode er: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "En ny adgangskode er blevet sendt til din e-mail."
+
+msgid "Error sending email: %(error)s"
+msgstr "Fejl ved afsendelse af e-mail: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Ingen bruger fundet med denne e-mail."
+
+msgid "Participant successfully registered!"
+msgstr "Deltager registreret med succes!"
+
+msgid "Participants in a match must be different."
+msgstr "Deltagerne i en kamp skal være forskellige."
+
+msgid "Match successfully created!"
+msgstr "Match oprettet med succes!"
+
+msgid "Home"
+msgstr "Hjem"
+
+msgid "Register Participant"
+msgstr "Registrer deltager"
+
+msgid "Create Tournament"
+msgstr "Opret turnering"
+
+msgid "Create Match"
+msgstr "Opret match"
+
+msgid "Register User"
+msgstr "Registrer bruger"
+
+msgid "Login"
+msgstr ""
+
+msgid "Logout"
+msgstr "Log ud"
+
+msgid "Language"
+msgstr "Sprog"
+
+msgid "Recover Password"
+msgstr "Gendan adgangskode"

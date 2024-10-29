@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Русский\n"
+
+msgid "You have successfully registered!"
+msgstr "Вы успешно зарегистрировались!"
+
+msgid "A user with this email already exists."
+msgstr "Пользователь с таким электронным адресом уже существует."
+
+msgid "Welcome, %(username)s!"
+msgstr "Добро пожаловать, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Неверный адрес электронной почты или пароль."
+
+msgid "You have been logged out."
+msgstr "Вы вышли из системы."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Тема: Восстановление пароля\n"
+"\n"
+"Ваш новый пароль: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Новый пароль был отправлен на вашу электронную почту."
+
+msgid "Error sending email: %(error)s"
+msgstr "Ошибка при отправке электронной почты: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Не найдено ни одного пользователя с этим сообщением."
+
+msgid "Participant successfully registered!"
+msgstr "Участник успешно зарегистрирован!"
+
+msgid "Participants in a match must be different."
+msgstr "Участники матча должны быть разными."
+
+msgid "Match successfully created!"
+msgstr "Матч успешно создан!"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "Register Participant"
+msgstr "Зарегистрировать участника"
+
+msgid "Create Tournament"
+msgstr "Создать турнир"
+
+msgid "Create Match"
+msgstr "Создать матч"
+
+msgid "Register User"
+msgstr "Зарегистрировать пользователя"
+
+msgid "Login"
+msgstr "Вход в систему"
+
+msgid "Logout"
+msgstr "Выход из системы"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Recover Password"
+msgstr "Восстановить пароль"

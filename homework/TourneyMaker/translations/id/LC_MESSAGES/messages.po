@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Индонезийский\n"
+
+msgid "You have successfully registered!"
+msgstr "Anda telah berhasil mendaftar!"
+
+msgid "A user with this email already exists."
+msgstr "Pengguna dengan email ini sudah ada."
+
+msgid "Welcome, %(username)s!"
+msgstr "Selamat datang, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Email atau kata sandi tidak valid."
+
+msgid "You have been logged out."
+msgstr "Anda telah keluar."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Subjek: Pemulihan kata sandi\n"
+"\n"
+"Kata sandi baru Anda adalah: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Kata sandi baru telah dikirim ke email Anda."
+
+msgid "Error sending email: %(error)s"
+msgstr "Kesalahan pengiriman email: PEMEGANG TEMPAT_0"
+
+msgid "No user found with this email."
+msgstr "Tidak ditemukan pengguna dengan email ini."
+
+msgid "Participant successfully registered!"
+msgstr "Peserta berhasil terdaftar!"
+
+msgid "Participants in a match must be different."
+msgstr "Peserta dalam sebuah pertandingan haruslah berbeda."
+
+msgid "Match successfully created!"
+msgstr "Pertandingan berhasil dibuat!"
+
+msgid "Home"
+msgstr "Beranda"
+
+msgid "Register Participant"
+msgstr "Daftar Peserta"
+
+msgid "Create Tournament"
+msgstr "Buat Turnamen"
+
+msgid "Create Match"
+msgstr "Buat Kecocokan"
+
+msgid "Register User"
+msgstr "Daftarkan Pengguna"
+
+msgid "Login"
+msgstr "Masuk"
+
+msgid "Logout"
+msgstr "Keluar"
+
+msgid "Language"
+msgstr "Bahasa"
+
+msgid "Recover Password"
+msgstr "Pulihkan Kata Sandi"

@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Немецкий\n"
+
+msgid "You have successfully registered!"
+msgstr "Sie haben sich erfolgreich registriert!"
+
+msgid "A user with this email already exists."
+msgstr "Ein Benutzer mit dieser E-Mail existiert bereits."
+
+msgid "Welcome, %(username)s!"
+msgstr "Willkommen, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Ungültige E-Mail oder ungültiges Passwort."
+
+msgid "You have been logged out."
+msgstr "Sie wurden abgemeldet."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Thema: Wiederherstellung des Passworts\n"
+"\n"
+"Ihr neues Passwort lautet: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Ein neues Passwort wurde Ihnen per E-Mail zugesandt."
+
+msgid "Error sending email: %(error)s"
+msgstr "Fehler beim Senden einer E-Mail: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Kein Benutzer mit dieser E-Mail gefunden."
+
+msgid "Participant successfully registered!"
+msgstr "Teilnehmer erfolgreich registriert!"
+
+msgid "Participants in a match must be different."
+msgstr "Die Teilnehmer an einem Spiel müssen unterschiedlich sein."
+
+msgid "Match successfully created!"
+msgstr "Spiel erfolgreich erstellt!"
+
+msgid "Home"
+msgstr "Startseite"
+
+msgid "Register Participant"
+msgstr "Teilnehmer registrieren"
+
+msgid "Create Tournament"
+msgstr "Turnier erstellen"
+
+msgid "Create Match"
+msgstr "Spiel erstellen"
+
+msgid "Register User"
+msgstr ""
+
+msgid "Login"
+msgstr "Anmeldung"
+
+msgid "Logout"
+msgstr "Abmeldung"
+
+msgid "Language"
+msgstr "Sprache"
+
+msgid "Recover Password"
+msgstr "Passwort wiederherstellen"

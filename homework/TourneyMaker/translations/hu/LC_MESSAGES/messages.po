@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Венгерский\n"
+
+msgid "You have successfully registered!"
+msgstr "Sikeresen regisztráltál!"
+
+msgid "A user with this email already exists."
+msgstr "Ezzel az e-mail címmel már létezik egy felhasználó."
+
+msgid "Welcome, %(username)s!"
+msgstr "Üdvözöljük, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Érvénytelen e-mail cím vagy jelszó."
+
+msgid "You have been logged out."
+msgstr "Önt kijelentkeztették."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Téma: A téma a következő: Jelszó helyreállítása\n"
+"\n"
+"Az új jelszava: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Új jelszót küldtünk az Ön e-mail címére."
+
+msgid "Error sending email: %(error)s"
+msgstr "Hiba az e-mail küldésében: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Nem találtunk felhasználót ezzel az e-mail címmel."
+
+msgid "Participant successfully registered!"
+msgstr "A résztvevő sikeresen regisztrált!"
+
+msgid "Participants in a match must be different."
+msgstr "A mérkőzés résztvevőinek különbözőnek kell lenniük."
+
+msgid "Match successfully created!"
+msgstr "Sikeresen létrehozott mérkőzés!"
+
+msgid "Home"
+msgstr ""
+
+msgid "Register Participant"
+msgstr "Regisztráljon résztvevőt"
+
+msgid "Create Tournament"
+msgstr "Verseny létrehozása"
+
+msgid "Create Match"
+msgstr "Párhuzam létrehozása"
+
+msgid "Register User"
+msgstr "Felhasználó regisztrálása"
+
+msgid "Login"
+msgstr "Bejelentkezés"
+
+msgid "Logout"
+msgstr "Kijelentkezés"
+
+msgid "Language"
+msgstr "Nyelv"
+
+msgid "Recover Password"
+msgstr "Jelszó helyreállítása"

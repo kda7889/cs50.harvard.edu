@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <h1>Список турниров</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Название</th>
+        <th>Тип</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for tournament in tournaments %}
+        <tr>
+          <td>{{ tournament['name'] }}</td>
+          <td>{{ tournament['type'] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

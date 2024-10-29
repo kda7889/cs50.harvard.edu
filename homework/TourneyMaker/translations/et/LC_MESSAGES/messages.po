@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Эстонский\n"
+
+msgid "You have successfully registered!"
+msgstr "Olete edukalt registreerunud!"
+
+msgid "A user with this email already exists."
+msgstr "Selle e-posti aadressiga kasutaja on juba olemas."
+
+msgid "Welcome, %(username)s!"
+msgstr "Tere tulemast, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Vale e-posti aadress või salasõna."
+
+msgid "You have been logged out."
+msgstr "Teid on välja logitud."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Teema: Salasõna taastamine\n"
+"\n"
+"Teie uus parool on: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Teie e-posti aadressile on saadetud uus salasõna."
+
+msgid "Error sending email: %(error)s"
+msgstr "Viga e-kirja saatmisel: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Selle e-posti aadressiga ei leitud ühtegi kasutajat."
+
+msgid "Participant successfully registered!"
+msgstr "Osaleja edukalt registreeritud!"
+
+msgid "Participants in a match must be different."
+msgstr "Mängus osalejad peavad olema erinevad."
+
+msgid "Match successfully created!"
+msgstr "Match edukalt loodud!"
+
+msgid "Home"
+msgstr "Kodu"
+
+msgid "Register Participant"
+msgstr "Registreeri osaleja"
+
+msgid "Create Tournament"
+msgstr "Turniiri loomine"
+
+msgid "Create Match"
+msgstr "Loo matš"
+
+msgid "Register User"
+msgstr "Registreeri kasutaja"
+
+msgid "Login"
+msgstr "Logi sisse"
+
+msgid "Logout"
+msgstr "Väljalogimine"
+
+msgid "Language"
+msgstr "Keel"
+
+msgid "Recover Password"
+msgstr "Parooli taastamine"

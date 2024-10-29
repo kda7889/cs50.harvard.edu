@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Болгарский\n"
+
+msgid "You have successfully registered!"
+msgstr "Успешно сте се регистрирали!"
+
+msgid "A user with this email already exists."
+msgstr "Потребител с този имейл вече съществува."
+
+msgid "Welcome, %(username)s!"
+msgstr "Добре дошъл, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Невалиден имейл или парола."
+
+msgid "You have been logged out."
+msgstr "Излезли сте от системата."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Тема: Възстановяване на парола\n"
+"\n"
+"Новата ви парола е: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "На вашия имейл е изпратена нова парола."
+
+msgid "Error sending email: %(error)s"
+msgstr "Грешка при изпращане на имейл: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Не е намерен потребител с този имейл."
+
+msgid "Participant successfully registered!"
+msgstr "Участникът е успешно регистриран!"
+
+msgid "Participants in a match must be different."
+msgstr "Участниците в мача трябва да са различни."
+
+msgid "Match successfully created!"
+msgstr "Успешно създадено съвпадение!"
+
+msgid "Home"
+msgstr "Начало"
+
+msgid "Register Participant"
+msgstr "Регистрация на участник"
+
+msgid "Create Tournament"
+msgstr "Създаване на турнир"
+
+msgid "Create Match"
+msgstr "Създаване на съвпадение"
+
+msgid "Register User"
+msgstr "Регистрация на потребител"
+
+msgid "Login"
+msgstr "Вход"
+
+msgid "Logout"
+msgstr "Излизане от системата"
+
+msgid "Language"
+msgstr "Език"
+
+msgid "Recover Password"
+msgstr "Възстановяване на парола"

@@ -1,0 +1,79 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Японский\n"
+
+msgid "You have successfully registered!"
+msgstr ""
+
+msgid "A user with this email already exists."
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr ""
+
+msgid "Invalid email or password."
+msgstr ""
+
+msgid "You have been logged out."
+msgstr ""
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+
+msgid "A new password has been sent to your email."
+msgstr ""
+
+msgid "Error sending email: %(error)s"
+msgstr ""
+
+msgid "No user found with this email."
+msgstr ""
+
+msgid "Participant successfully registered!"
+msgstr ""
+
+msgid "Participants in a match must be different."
+msgstr ""
+
+msgid "Match successfully created!"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "Register Participant"
+msgstr ""
+
+msgid "Create Tournament"
+msgstr ""
+
+msgid "Create Match"
+msgstr ""
+
+msgid "Register User"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Logout"
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "Recover Password"
+msgstr ""

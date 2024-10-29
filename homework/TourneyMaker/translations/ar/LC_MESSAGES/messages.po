@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Арабский\n"
+
+msgid "You have successfully registered!"
+msgstr "لقد قمت بالتسجيل بنجاح!"
+
+msgid "A user with this email already exists."
+msgstr "مستخدم بهذا البريد الإلكتروني موجود بالفعل."
+
+msgid "Welcome, %(username)s!"
+msgstr "مرحباً بك يا صاحب المكان_0!"
+
+msgid "Invalid email or password."
+msgstr "البريد الإلكتروني أو كلمة المرور غير صالحة."
+
+msgid "You have been logged out."
+msgstr "لقد تم تسجيل خروجك."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"الموضوع: استعادة كلمة المرور\n"
+"\n"
+"كلمة المرور الجديدة هي: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "تم إرسال كلمة مرور جديدة إلى بريدك الإلكتروني."
+
+msgid "Error sending email: %(error)s"
+msgstr "خطأ في إرسال البريد الإلكتروني: %(error)s"
+
+msgid "No user found with this email."
+msgstr "لم يتم العثور على مستخدم مع هذا البريد الإلكتروني."
+
+msgid "Participant successfully registered!"
+msgstr "تم تسجيل المشارك بنجاح!"
+
+msgid "Participants in a match must be different."
+msgstr "يجب أن يكون المشاركون في المباراة مختلفين."
+
+msgid "Match successfully created!"
+msgstr "تم إنشاء التطابق بنجاح!"
+
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
+msgid "Register Participant"
+msgstr "تسجيل مشارك في السجل"
+
+msgid "Create Tournament"
+msgstr "إنشاء بطولة"
+
+msgid "Create Match"
+msgstr "إنشاء تطابق"
+
+msgid "Register User"
+msgstr "تسجيل المستخدم"
+
+msgid "Login"
+msgstr "تسجيل الدخول"
+
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "Recover Password"
+msgstr "استعادة كلمة المرور"

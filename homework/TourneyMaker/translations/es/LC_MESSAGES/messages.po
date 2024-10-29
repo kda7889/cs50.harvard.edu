@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Испанский\n"
+
+msgid "You have successfully registered!"
+msgstr "Se ha registrado correctamente."
+
+msgid "A user with this email already exists."
+msgstr "Ya existe un usuario con esta dirección de correo electrónico."
+
+msgid "Welcome, %(username)s!"
+msgstr "¡Bienvenido, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Correo electrónico o contraseña no válidos."
+
+msgid "You have been logged out."
+msgstr "Se ha cerrado la sesión."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Asunto: Recuperación de contraseña\n"
+"\n"
+"Su nueva contraseña es: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Se ha enviado una nueva contraseña a su correo electrónico."
+
+msgid "Error sending email: %(error)s"
+msgstr "Error al enviar correo electrónico: %(error)s"
+
+msgid "No user found with this email."
+msgstr "No se ha encontrado ningún usuario con este correo electrónico."
+
+msgid "Participant successfully registered!"
+msgstr "¡Participante registrado con éxito!"
+
+msgid "Participants in a match must be different."
+msgstr "Los participantes en un partido deben ser diferentes."
+
+msgid "Match successfully created!"
+msgstr "¡Partida creada con éxito!"
+
+msgid "Home"
+msgstr "Inicio"
+
+msgid "Register Participant"
+msgstr "Inscribirse Participante"
+
+msgid "Create Tournament"
+msgstr "Crear torneo"
+
+msgid "Create Match"
+msgstr "Crear partido"
+
+msgid "Register User"
+msgstr "Registrar usuario"
+
+msgid "Login"
+msgstr "Inicio de sesión"
+
+msgid "Logout"
+msgstr "Cierre de sesión"
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Recover Password"
+msgstr "Recuperar contraseña"

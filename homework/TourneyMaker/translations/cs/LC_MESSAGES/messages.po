@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Чешский\n"
+
+msgid "You have successfully registered!"
+msgstr "Úspěšně jste se zaregistrovali!"
+
+msgid "A user with this email already exists."
+msgstr "Uživatel s tímto e-mailem již existuje."
+
+msgid "Welcome, %(username)s!"
+msgstr "Vítej, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Neplatný e-mail nebo heslo."
+
+msgid "You have been logged out."
+msgstr "Byli jste odhlášeni."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Předmět: Zpracování informací o projektu, který se uskutečnil v roce 2012, a o jeho výsledcích: Obnova hesla\n"
+"\n"
+"Vaše nové heslo je: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Na váš e-mail bylo zasláno nové heslo."
+
+msgid "Error sending email: %(error)s"
+msgstr "Chyba při odesílání e-mailu: %(error)s"
+
+msgid "No user found with this email."
+msgstr "S tímto e-mailem nebyl nalezen žádný uživatel."
+
+msgid "Participant successfully registered!"
+msgstr "Účastník se úspěšně zaregistroval!"
+
+msgid "Participants in a match must be different."
+msgstr "Účastníci zápasu se musí lišit."
+
+msgid "Match successfully created!"
+msgstr "Zápas úspěšně vytvořen!"
+
+msgid "Home"
+msgstr ""
+
+msgid "Register Participant"
+msgstr "Registrace účastníka"
+
+msgid "Create Tournament"
+msgstr "Vytvořit turnaj"
+
+msgid "Create Match"
+msgstr "Vytvořit shodu"
+
+msgid "Register User"
+msgstr "Registrace uživatele"
+
+msgid "Login"
+msgstr "Přihlášení"
+
+msgid "Logout"
+msgstr "Odhlášení"
+
+msgid "Language"
+msgstr "Jazyk"
+
+msgid "Recover Password"
+msgstr "Obnovení hesla"

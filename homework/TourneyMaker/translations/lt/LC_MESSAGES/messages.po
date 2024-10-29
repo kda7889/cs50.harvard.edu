@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Литовский\n"
+
+msgid "You have successfully registered!"
+msgstr "Sėkmingai užsiregistravote!"
+
+msgid "A user with this email already exists."
+msgstr "Naudotojas su šiuo el. pašto adresu jau egzistuoja."
+
+msgid "Welcome, %(username)s!"
+msgstr "Sveiki atvykę, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Netinkamas el. pašto adresas arba slaptažodis."
+
+msgid "You have been logged out."
+msgstr "Jūs buvote išregistruotas."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Tema: Slaptažodžio atkūrimas\n"
+"\n"
+"Jūsų naujas slaptažodis yra: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Naujas slaptažodis buvo išsiųstas į jūsų el. paštą."
+
+msgid "Error sending email: %(error)s"
+msgstr "Klaida siunčiant el. laišką: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Nerasta naudotojo su šiuo el. pašto adresu."
+
+msgid "Participant successfully registered!"
+msgstr "Dalyvis sėkmingai užregistruotas!"
+
+msgid "Participants in a match must be different."
+msgstr "Rungtynių dalyviai turi būti skirtingi."
+
+msgid "Match successfully created!"
+msgstr "Rungtynės sėkmingai sukurtos!"
+
+msgid "Home"
+msgstr "Pagrindinis"
+
+msgid "Register Participant"
+msgstr "Registruoti dalyvį"
+
+msgid "Create Tournament"
+msgstr "Sukurti turnyrą"
+
+msgid "Create Match"
+msgstr "Sukurti atitikmenį"
+
+msgid "Register User"
+msgstr "Registruoti naudotoją"
+
+msgid "Login"
+msgstr "Prisijungimas"
+
+msgid "Logout"
+msgstr "Atsijungimas"
+
+msgid "Language"
+msgstr "Kalba"
+
+msgid "Recover Password"
+msgstr "Atkurti slaptažodį"

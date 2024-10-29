@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Турецкий\n"
+
+msgid "You have successfully registered!"
+msgstr "Başarıyla kayıt oldunuz!"
+
+msgid "A user with this email already exists."
+msgstr "Bu e-postaya sahip bir kullanıcı zaten mevcut."
+
+msgid "Welcome, %(username)s!"
+msgstr "Hoş geldiniz, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Geçersiz e-posta veya şifre."
+
+msgid "You have been logged out."
+msgstr "Çıkış yaptınız."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Konu Şifre kurtarma\n"
+"\n"
+"Yeni parolanız: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "E-postanıza yeni bir şifre gönderildi."
+
+msgid "Error sending email: %(error)s"
+msgstr "E-posta gönderilirken hata oluştu: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Bu e-postaya sahip kullanıcı bulunamadı."
+
+msgid "Participant successfully registered!"
+msgstr "Katılımcı başarıyla kaydedildi!"
+
+msgid "Participants in a match must be different."
+msgstr "Bir maçtaki katılımcılar farklı olmalıdır."
+
+msgid "Match successfully created!"
+msgstr "Eşleşme başarıyla oluşturuldu!"
+
+msgid "Home"
+msgstr "Ev"
+
+msgid "Register Participant"
+msgstr "Katılımcı Kaydı"
+
+msgid "Create Tournament"
+msgstr "Turnuva Oluştur"
+
+msgid "Create Match"
+msgstr "Eşleşme Oluştur"
+
+msgid "Register User"
+msgstr "Kullanıcı Kaydı"
+
+msgid "Login"
+msgstr "Giriş"
+
+msgid "Logout"
+msgstr "Oturumu Kapat"
+
+msgid "Language"
+msgstr "Dil"
+
+msgid "Recover Password"
+msgstr "Şifre Kurtarma"

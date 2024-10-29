@@ -1,0 +1,110 @@
+# Translations template for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-10-28 13:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.16.0\n"
+
+#: /mnt/data/TourneyMaker_extracted/app.py:129
+msgid "You have successfully registered!"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/app.py:131
+msgid "A user with this email already exists."
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/app.py:154
+#, python-format
+msgid "Welcome, %(username)s!"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/app.py:157
+msgid "Invalid email or password."
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/app.py:168
+msgid "You have been logged out."
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/app.py:196
+#, python-format
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/app.py:199
+msgid "A new password has been sent to your email."
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/app.py:201
+#, python-format
+msgid "Error sending email: %(error)s"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/app.py:203
+msgid "No user found with this email."
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/app.py:221
+msgid "Participant successfully registered!"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/app.py:254
+msgid "Participants in a match must be different."
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/app.py:262
+msgid "Match successfully created!"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/templates/layout.html:7
+#: /mnt/data/TourneyMaker_extracted/templates/layout.html:11
+msgid "TourneyMaker"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/templates/layout.html:15
+msgid "Home"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/templates/layout.html:18
+msgid "Register Participant"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/templates/layout.html:21
+msgid "Create Tournament"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/templates/layout.html:24
+msgid "Create Match"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/templates/layout.html:27
+msgid "Register User"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/templates/layout.html:30
+msgid "Login"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/templates/layout.html:33
+msgid "Logout"
+msgstr ""
+
+#: /mnt/data/TourneyMaker_extracted/templates/layout.html:39
+msgid "Language"
+msgstr ""
+

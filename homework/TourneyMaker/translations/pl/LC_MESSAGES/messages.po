@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Польский\n"
+
+msgid "You have successfully registered!"
+msgstr "Rejestracja przebiegła pomyślnie!"
+
+msgid "A user with this email already exists."
+msgstr "Użytkownik o tym adresie e-mail już istnieje."
+
+msgid "Welcome, %(username)s!"
+msgstr "Witaj, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Nieprawidłowy adres e-mail lub hasło."
+
+msgid "You have been logged out."
+msgstr "Zostałeś wylogowany."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Temat: Odzyskiwanie hasła\n"
+"\n"
+"Twoje nowe hasło to: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Nowe hasło zostało wysłane na Twój adres e-mail."
+
+msgid "Error sending email: %(error)s"
+msgstr "Błąd wysyłania wiadomości e-mail: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Nie znaleziono użytkownika z tym adresem e-mail."
+
+msgid "Participant successfully registered!"
+msgstr "Uczestnik został pomyślnie zarejestrowany!"
+
+msgid "Participants in a match must be different."
+msgstr "Uczestnicy meczu muszą być różni."
+
+msgid "Match successfully created!"
+msgstr "Mecz został pomyślnie utworzony!"
+
+msgid "Home"
+msgstr "Strona główna"
+
+msgid "Register Participant"
+msgstr "Zarejestruj uczestnika"
+
+msgid "Create Tournament"
+msgstr "Utwórz turniej"
+
+msgid "Create Match"
+msgstr "Utwórz dopasowanie"
+
+msgid "Register User"
+msgstr "Zarejestruj użytkownika"
+
+msgid "Login"
+msgstr ""
+
+msgid "Logout"
+msgstr "Wylogowanie"
+
+msgid "Language"
+msgstr "Język"
+
+msgid "Recover Password"
+msgstr "Odzyskaj hasło"

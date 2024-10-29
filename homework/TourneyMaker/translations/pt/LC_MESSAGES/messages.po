@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Португальский\n"
+
+msgid "You have successfully registered!"
+msgstr "O registo foi efectuado com sucesso!"
+
+msgid "A user with this email already exists."
+msgstr "Já existe um utilizador com este e-mail."
+
+msgid "Welcome, %(username)s!"
+msgstr "Bem-vindo, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "E-mail ou palavra-passe inválidos."
+
+msgid "You have been logged out."
+msgstr "A sua sessão foi terminada."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Assunto: Recuperação da palavra-passe\n"
+"\n"
+"A sua nova palavra-passe é: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Foi enviada uma nova palavra-passe para o seu e-mail."
+
+msgid "Error sending email: %(error)s"
+msgstr "Erro no envio de correio eletrónico: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Não foi encontrado nenhum utilizador com este e-mail."
+
+msgid "Participant successfully registered!"
+msgstr "Participante registado com sucesso!"
+
+msgid "Participants in a match must be different."
+msgstr "Os participantes num jogo devem ser diferentes."
+
+msgid "Match successfully created!"
+msgstr "Correspondência criada com sucesso!"
+
+msgid "Home"
+msgstr "Início"
+
+msgid "Register Participant"
+msgstr "Registar Participante"
+
+msgid "Create Tournament"
+msgstr "Criar torneio"
+
+msgid "Create Match"
+msgstr "Criar correspondência"
+
+msgid "Register User"
+msgstr "Registar utilizador"
+
+msgid "Login"
+msgstr "Iniciar sessão"
+
+msgid "Logout"
+msgstr "Terminar sessão"
+
+msgid "Language"
+msgstr "Língua"
+
+msgid "Recover Password"
+msgstr "Recuperar palavra-passe"

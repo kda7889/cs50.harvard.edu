@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Финский\n"
+
+msgid "You have successfully registered!"
+msgstr "Olet rekisteröitynyt onnistuneesti!"
+
+msgid "A user with this email already exists."
+msgstr "Käyttäjä, jolla on tämä sähköpostiosoite, on jo olemassa."
+
+msgid "Welcome, %(username)s!"
+msgstr "Tervetuloa, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Virheellinen sähköpostiosoite tai salasana."
+
+msgid "You have been logged out."
+msgstr "Olet kirjautunut ulos."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Aihe: Salasanan palauttaminen\n"
+"\n"
+"Uusi salasanasi on: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Uusi salasana on lähetetty sähköpostiisi."
+
+msgid "Error sending email: %(error)s"
+msgstr "Virhe sähköpostin lähettämisessä: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Käyttäjää ei löytynyt tällä sähköpostilla."
+
+msgid "Participant successfully registered!"
+msgstr "Osallistuja rekisteröityi onnistuneesti!"
+
+msgid "Participants in a match must be different."
+msgstr "Ottelun osallistujien on oltava erilaisia."
+
+msgid "Match successfully created!"
+msgstr "Ottelu luotu onnistuneesti!"
+
+msgid "Home"
+msgstr "Etusivu"
+
+msgid "Register Participant"
+msgstr "Rekisteröi osallistuja"
+
+msgid "Create Tournament"
+msgstr "Luo turnaus"
+
+msgid "Create Match"
+msgstr "Luo ottelu"
+
+msgid "Register User"
+msgstr "Rekisteröi käyttäjä"
+
+msgid "Login"
+msgstr "Kirjaudu sisään"
+
+msgid "Logout"
+msgstr "Kirjaudu ulos"
+
+msgid "Language"
+msgstr "Kieli"
+
+msgid "Recover Password"
+msgstr "Palauta salasana"

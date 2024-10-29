@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Румынский\n"
+
+msgid "You have successfully registered!"
+msgstr "V-ați înregistrat cu succes!"
+
+msgid "A user with this email already exists."
+msgstr "Un utilizator cu acest e-mail există deja."
+
+msgid "Welcome, %(username)s!"
+msgstr "Bine ai venit, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "E-mail sau parolă invalidă."
+
+msgid "You have been logged out."
+msgstr "Ați fost deconectat."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Subiect: Recuperarea parolei\n"
+"\n"
+"Noua dvs. parolă este: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "O nouă parolă a fost trimisă la adresa dvs. de e-mail."
+
+msgid "Error sending email: %(error)s"
+msgstr "Eroare la trimiterea e-mailului: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Nu a fost găsit niciun utilizator cu acest e-mail."
+
+msgid "Participant successfully registered!"
+msgstr "Participant înregistrat cu succes!"
+
+msgid "Participants in a match must be different."
+msgstr "Participanții la un meci trebuie să fie diferiți."
+
+msgid "Match successfully created!"
+msgstr "Potrivire creată cu succes!"
+
+msgid "Home"
+msgstr "Acasă"
+
+msgid "Register Participant"
+msgstr "Înregistrarea participantului"
+
+msgid "Create Tournament"
+msgstr "Creați un turneu"
+
+msgid "Create Match"
+msgstr "Creează potrivire"
+
+msgid "Register User"
+msgstr "Înregistrare utilizator"
+
+msgid "Login"
+msgstr "Autentificare"
+
+msgid "Logout"
+msgstr "Ieșire"
+
+msgid "Language"
+msgstr "Limba"
+
+msgid "Recover Password"
+msgstr "Recuperează parola"

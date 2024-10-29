@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Японский\n"
+
+msgid "You have successfully registered!"
+msgstr "登録に成功しました！"
+
+msgid "A user with this email already exists."
+msgstr "この電子メールを持つユーザーはすでに存在します。"
+
+msgid "Welcome, %(username)s!"
+msgstr "ようこそ、%(username)s！"
+
+msgid "Invalid email or password."
+msgstr "メールアドレスまたはパスワードが無効です。"
+
+msgid "You have been logged out."
+msgstr "ログアウトされました。"
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"件名パスワード復旧\n"
+"\n"
+"新しいパスワードは %(new_password)s です。"
+
+msgid "A new password has been sent to your email."
+msgstr "新しいパスワードがEメールに送信されました。"
+
+msgid "Error sending email: %(error)s"
+msgstr "メール送信エラー%(error)s"
+
+msgid "No user found with this email."
+msgstr "このメールに該当するユーザーは見つかりませんでした。"
+
+msgid "Participant successfully registered!"
+msgstr "参加者の登録に成功しました！"
+
+msgid "Participants in a match must be different."
+msgstr "試合の参加者は異なっていなければならない。"
+
+msgid "Match successfully created!"
+msgstr "マッチの作成に成功！"
+
+msgid "Home"
+msgstr "ホーム"
+
+msgid "Register Participant"
+msgstr "参加登録"
+
+msgid "Create Tournament"
+msgstr "トーナメント作成"
+
+msgid "Create Match"
+msgstr "マッチ作成"
+
+msgid "Register User"
+msgstr "ユーザー登録"
+
+msgid "Login"
+msgstr "ログイン"
+
+msgid "Logout"
+msgstr "ログアウト"
+
+msgid "Language"
+msgstr "言語"
+
+msgid "Recover Password"
+msgstr "パスワードの回復"

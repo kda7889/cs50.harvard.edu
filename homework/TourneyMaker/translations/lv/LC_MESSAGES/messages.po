@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Латышский\n"
+
+msgid "You have successfully registered!"
+msgstr "Jūs esat veiksmīgi reģistrējies!"
+
+msgid "A user with this email already exists."
+msgstr "Lietotājs ar šo e-pasta adresi jau pastāv."
+
+msgid "Welcome, %(username)s!"
+msgstr "Laipni lūdzam, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Nederīgs e-pasts vai parole."
+
+msgid "You have been logged out."
+msgstr "Jūs esat atteicies no sistēmas."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Temats: Paroles atgūšana\n"
+"\n"
+"Jūsu jaunā parole ir: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Uz jūsu e-pastu ir nosūtīta jauna parole."
+
+msgid "Error sending email: %(error)s"
+msgstr "Kļūda sūtot e-pastu: %(error)s"
+
+msgid "No user found with this email."
+msgstr "Ar šo e-pastu nav atrasts neviens lietotājs."
+
+msgid "Participant successfully registered!"
+msgstr "Dalībnieks veiksmīgi reģistrēts!"
+
+msgid "Participants in a match must be different."
+msgstr "Spēles dalībniekiem jābūt atšķirīgiem."
+
+msgid "Match successfully created!"
+msgstr "Spēle veiksmīgi izveidota!"
+
+msgid "Home"
+msgstr "Sākums"
+
+msgid "Register Participant"
+msgstr "Reģistrēties dalībnieks"
+
+msgid "Create Tournament"
+msgstr "Izveidot turnīru"
+
+msgid "Create Match"
+msgstr "Izveidot atbilstību"
+
+msgid "Register User"
+msgstr "Reģistrēt lietotāju"
+
+msgid "Login"
+msgstr "Pieteikšanās"
+
+msgid "Logout"
+msgstr "Izrakstīšanās"
+
+msgid "Language"
+msgstr "Valoda"
+
+msgid "Recover Password"
+msgstr "Atgūt paroli"

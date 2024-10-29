@@ -1,0 +1,82 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: TourneyMaker 1.0\n"
+"Report-Msgid-Bugs-To: d1kolesnikov@gmail.com\n"
+"POT-Creation-Date: 2024-10-28 12:00+0000\n"
+"PO-Revision-Date: 2024-10-28 12:00+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Name: Голландский\n"
+
+msgid "You have successfully registered!"
+msgstr "Je hebt je succesvol geregistreerd!"
+
+msgid "A user with this email already exists."
+msgstr "Er bestaat al een gebruiker met dit e-mailadres."
+
+msgid "Welcome, %(username)s!"
+msgstr "Welkom, %(username)s!"
+
+msgid "Invalid email or password."
+msgstr "Ongeldig e-mailadres of wachtwoord."
+
+msgid "You have been logged out."
+msgstr "Je bent uitgelogd."
+
+msgid ""
+"Subject: Password recovery\n"
+"\n"
+"Your new password is: %(new_password)s"
+msgstr ""
+"Betreft: Wachtwoord herstel\n"
+"\n"
+"Uw nieuwe wachtwoord is: %(new_password)s"
+
+msgid "A new password has been sent to your email."
+msgstr "Er is een nieuw wachtwoord naar uw e-mailadres verzonden."
+
+msgid "Error sending email: %(error)s"
+msgstr "Fout bij het verzenden van e-mail: PLAATSHOUDER_0"
+
+msgid "No user found with this email."
+msgstr "Geen gebruiker gevonden met deze e-mail."
+
+msgid "Participant successfully registered!"
+msgstr "Deelnemer succesvol geregistreerd!"
+
+msgid "Participants in a match must be different."
+msgstr "Deelnemers aan een wedstrijd moeten verschillend zijn."
+
+msgid "Match successfully created!"
+msgstr "Match succesvol gemaakt!"
+
+msgid "Home"
+msgstr ""
+
+msgid "Register Participant"
+msgstr "Deelnemer registreren"
+
+msgid "Create Tournament"
+msgstr "Maak toernooi"
+
+msgid "Create Match"
+msgstr "Wedstrijd creëren"
+
+msgid "Register User"
+msgstr "Gebruiker registreren"
+
+msgid "Login"
+msgstr "Inloggen"
+
+msgid "Logout"
+msgstr "Afmelden"
+
+msgid "Language"
+msgstr "Taal"
+
+msgid "Recover Password"
+msgstr "Wachtwoord herstellen"
