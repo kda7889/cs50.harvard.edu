@@ -22,6 +22,7 @@
             <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">{{ gettext('Home') }}</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('create_tournament') }}">{{ gettext('Create Tournament') }}</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('create_match') }}">{{ gettext('Create Match') }}</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('participants') }}">{{ gettext('All Participants') }}</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">{{ gettext('Register Participant') }}</a></li>
             {% endif %}
             {% if 'user_id' not in session %}

@@ -1,0 +1,90 @@
+<div class="bracket-container">
+  {% if matches %}
+      {% set current_stage = None %}
+      <div class="bracket-row">
+          {% for match in matches %}
+              {% if match.stage != current_stage %}
+                  {% if current_stage is not none %}
+                      </div> <!-- Закрываем предыдущую стадию -->
+                  {% endif %}
+                  <!-- Заголовок для новой стадии -->
+                  <div class="stage-container">
+                      <h3>Стадия: {{ match.stage }}</h3>
+                      <div class="stage-matches">
+                      {% set current_stage = match.stage %}
+              {% endif %}
+
+              <!-- Карточка матча -->
+              <div class="match-card {% if match.result %}completed{% endif %}" id="match-{{ match.id }}">
+                  <p>Участник 1: {{ match.participant1_name if match.participant1_name else 'N/A' }}</p>
+                  <p>Участник 2: {{ match.participant2_name if match.participant2_name else 'N/A' }}</p>
+                  {% if match.result %}
+                      <p>Результат: Победитель - {{ match.result }}</p>
+                  {% else %}
+                      <p>Матч ещё не сыгран</p>
+                      <form action="{{ url_for('update_match_result', match_id=match.id) }}" method="post">
+                          <input type="hidden" name="tournament_id" value="{{ tournament_id }}">
+                          <label for="winner-{{ match.id }}">Победитель:</label>
+                          <select name="result" id="winner-{{ match.id }}" required>
+                              <option value="" disabled selected>Выберите победителя</option>
+                              {% if match.participant1_name %}
+                                  <option value="{{ match.participant1_name }}">{{ match.participant1_name }}</option>
+                              {% endif %}
+                              {% if match.participant2_name %}
+                                  <option value="{{ match.participant2_name }}">{{ match.participant2_name }}</option>
+                              {% endif %}
+                          </select>
+                          <button type="submit" class="btn btn-success">Обновить результат</button>
+                      </form>
+                  {% endif %}
+              </div>
+
+              {% if loop.last %}
+                  </div> <!-- Закрываем матчи текущей стадии -->
+                  </div> <!-- Закрываем последний этап -->
+              {% endif %}
+          {% endfor %}
+      </div> <!-- Закрываем строку турнирной сетки -->
+  {% else %}
+      <p>Нет матчей для данного турнира.</p>
+  {% endif %}
+</div>
+
+<style>
+    .bracket-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: flex-start;
+    }
+    .stage-container {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 15px;
+        min-width: 300px;
+        background-color: #f8f9fa;
+        margin-bottom: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .stage-matches {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .match-card {
+        border: 2px solid #007bff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        background-color: #ffffff;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    }
+    .match-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 16px rgba(0, 123, 255, 0.3);
+    }
+    .match-card.completed {
+        background-color: #d4edda; /* Светло-зеленый для завершенных матчей */
+        border: 2px solid #28a745;
+    }
+</style>

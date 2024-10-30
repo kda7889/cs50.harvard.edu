@@ -6,13 +6,27 @@
       <tr>
         <th>Название</th>
         <th>Тип</th>
+        <th>Действие</th>
       </tr>
     </thead>
     <tbody>
       {% for tournament in tournaments %}
         <tr>
-          <td>{{ tournament['name'] }}</td>
-          <td>{{ tournament['type'] }}</td>
+          <td>{{ tournament.name }}</td>
+          <td>{{ tournament.type_id }}</td>
+          <td>
+            <form action="{{ url_for('create_bracket', tournament_id=tournament.id) }}" method="post">
+                <button type="submit" class="btn btn-primary">Создать Турнирную Сетку</button>
+            </form>
+          </td>
+          <td>
+          <a href="{{ url_for('tournament_bracket', tournament_id=tournament.id) }}" class="btn btn-secondary">Посмотреть Сетку</a>
+          </td>
+          <td>
+          <form action="{{ url_for('delete_tournament', tournament_id=tournament.id) }}" method="post" style="display:inline;">
+              <button type="submit" class="btn btn-danger" onclick="return confirm('Вы уверены, что хотите удалить этот турнир?')">Удалить</button>
+          </form>
+          </td>
         </tr>
       {% endfor %}
     </tbody>

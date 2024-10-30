@@ -98,6 +98,82 @@ def get_locale():
     # Если нет, используем заголовок из браузера
     return request.accept_languages.best_match(LANGUAGES.keys())
 
+
+@app.route('/tournament/<int:tournament_id>/next_stage', methods=['POST'])
+@login_required
+def next_stage(tournament_id):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # Получаем текущую стадию как число
+    current_stage_query = '''
+        SELECT MAX(stage) AS current_stage
+        FROM matches
+        WHERE tournament_id = ?
+    '''
+    current_stage_result = cursor.execute(current_stage_query, (tournament_id,)).fetchone()
+
+    if current_stage_result['current_stage'] is None:
+        flash('Ошибка: текущая стадия не найдена.', 'error')
+        return redirect(url_for('tournament_bracket', tournament_id=tournament_id))
+
+    # Приводим текущую стадию к числу
+    current_stage = int(current_stage_result['current_stage'])
+
+    # Проверяем, что все матчи текущей стадии завершены
+    matches_query = '''
+        SELECT id, result
+        FROM matches
+        WHERE tournament_id = ? AND stage = ? AND result IS NULL
+    '''
+    incomplete_matches = cursor.execute(matches_query, (tournament_id, current_stage)).fetchall()
+
+    if incomplete_matches:
+        flash('Ошибка: не все матчи текущей стадии завершены.', 'error')
+        return redirect(url_for('tournament_bracket', tournament_id=tournament_id))
+
+    # Получаем всех победителей текущей стадии
+    winners_query = '''
+        SELECT result
+        FROM matches
+        WHERE tournament_id = ? AND stage = ? AND result IS NOT NULL
+    '''
+    winners = [match['result'] for match in cursor.execute(winners_query, (tournament_id, current_stage)).fetchall()]
+
+    # Если количество победителей нечетное, добавляем одного участника автоматически в следующий этап
+    auto_advancing_participant = None
+    if len(winners) % 2 != 0:
+        auto_advancing_participant = winners.pop()
+        flash(f'Участник {str(auto_advancing_participant)} автоматически проходит в следующий этап.', 'info')
+
+    # Создаем матчи для следующего этапа
+    new_stage = current_stage + 1
+    for i in range(0, len(winners), 2):
+        participant1 = winners[i]
+        participant2 = winners[i + 1]
+
+        # Вставляем новый матч в базу данных
+        insert_match_query = '''
+            INSERT INTO matches (tournament_id, stage, participant1_id, participant2_id)
+            VALUES (?, ?, ?, ?)
+        '''
+        cursor.execute(insert_match_query, (tournament_id, new_stage, participant1, participant2))
+
+    # Если участник автоматически проходит в следующий этап, создаем для него матч без пары
+    if auto_advancing_participant:
+        cursor.execute('''
+            INSERT INTO matches (tournament_id, stage, participant1_id, participant2_id, result)
+            VALUES (?, ?, ?, NULL, ?)
+        ''', (tournament_id, new_stage, auto_advancing_participant, auto_advancing_participant))
+
+    conn.commit()
+    conn.close()
+
+    flash('Следующий этап турнира успешно создан!', 'success')
+    return redirect(url_for('tournament_bracket', tournament_id=tournament_id))
+
+
+
 # Маршрут для изменения языка
 @app.route('/set_language/<language>')
 def set_language(language):
@@ -134,6 +210,7 @@ def get_db_connection():
 # EN: Function for creating the database and necessary tables if they do not exist
 # FR: Fonction pour créer la base de données et les tables nécessaires si elles n'existent pas
 # ES: Función para crear la base de datos y las tablas necesarias si no existen
+# Функция для создания базы данных и необходимых таблиц, если они не существуют
 def init_db():
     conn = sqlite3.connect(DATABASE)
     cursor = conn.cursor()
@@ -142,7 +219,8 @@ def init_db():
         CREATE TABLE IF NOT EXISTS tournaments (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
-            type TEXT NOT NULL
+            type TEXT NOT NULL,
+            description TEXT
         )
     """)
     # Проверка и создание таблицы участников
@@ -150,7 +228,9 @@ def init_db():
         CREATE TABLE IF NOT EXISTS participants (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
-            contact TEXT
+            contact TEXT,
+            tournament_id INTEGER,
+            FOREIGN KEY (tournament_id) REFERENCES tournaments (id)
         )
     """)
     # Проверка и создание таблицы матчей
@@ -161,6 +241,7 @@ def init_db():
             participant1_id INTEGER,
             participant2_id INTEGER,
             result TEXT,
+            stage INTEGER,
             FOREIGN KEY (tournament_id) REFERENCES tournaments (id),
             FOREIGN KEY (participant1_id) REFERENCES participants (id),
             FOREIGN KEY (participant2_id) REFERENCES participants (id)
@@ -177,6 +258,7 @@ def init_db():
     """)
     conn.commit()
     conn.close()
+
 
 # Регистрация нового пользователя
 # EN: Registering a new user
@@ -298,6 +380,7 @@ def register():
 # FR: Page d'accueil - liste de tous les tournois
 # ES: Página principal - lista de todos los torneos
 @app.route('/')
+@login_required
 def index():
     conn = get_db_connection()
     tournaments = conn.execute('SELECT * FROM tournaments').fetchall()
@@ -342,17 +425,352 @@ def create_match():
 @app.route('/create_tournament', methods=('GET', 'POST'))
 @login_required
 def create_tournament():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
     if request.method == 'POST':
+        # Считывание данных о турнире
         name = request.form['name']
-        type = request.form['type']
+        description = request.form.get('description', '')
+        participants = request.form.get('participants', '').splitlines()  # Получаем участников, каждый на новой строке
 
-        conn = get_db_connection()
-        conn.execute('INSERT INTO tournaments (name, type) VALUES (?, ?)', (name, type))
-        conn.commit()
-        conn.close()
-        return redirect(url_for('index'))
+        # Пытаемся вставить новый турнир в базу данных
+        try:
+            cursor.execute('INSERT INTO tournaments (name, description) VALUES (?, ?)', (name, description))
+            tournament_id = cursor.lastrowid  # Получаем ID только что созданного турнира
 
+            # Добавление участников в базу данных
+            for participant_name in participants:
+                if participant_name.strip():  # Игнорируем пустые строки
+                    cursor.execute('''
+                        INSERT INTO participants (tournament_id, name)
+                        VALUES (?, ?)
+                    ''', (tournament_id, participant_name.strip()))
+
+            conn.commit()
+            flash('Турнир успешно создан и участники добавлены!', 'success')
+
+        except sqlite3.IntegrityError as e:
+            flash(f'Ошибка при создании турнира: {str(e)}', 'error')
+        finally:
+            conn.close()
+
+        return redirect(url_for('tournament_details', tournament_id=tournament_id))
+
+    # Отправляем форму для создания турнира
     return render_template('create_tournament.html')
+
+
+
+# Функция для создания прямой турнирной сетки
+# EN: Function for creating a single elimination tournament bracket
+# FR: Fonction pour créer un tableau de tournoi à élimination directe
+# ES: Función para crear un cuadro de torneo de eliminación directa
+def create_single_elimination_bracket(tournament_id):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # Получаем всех участников турнира
+    # participants = cursor.execute(
+    #     'SELECT id FROM participants WHERE id IN (SELECT participant_id FROM tournament_participants WHERE tournament_id = ?)',
+    #     (tournament_id,)
+    # ).fetchall()
+    participants = cursor.execute(
+        'SELECT id FROM participants WHERE tournament_id = ?',
+        (tournament_id,)
+    ).fetchall()
+
+    # Проверяем, что есть хотя бы 2 участника
+    if len(participants) < 2:
+        flash(gettext('Tournament must have at least two participants.'), 'error')
+        return
+
+    # Перемешиваем список участников и создаем матчи
+    import random
+    random.shuffle(participants)
+
+    # Создание начальных матчей
+    for i in range(0, len(participants), 2):
+        if i + 1 < len(participants):
+            participant1_id = participants[i][0]
+            participant2_id = participants[i + 1][0]
+            cursor.execute(
+                'INSERT INTO matches (tournament_id, participant1_id, participant2_id, stage) VALUES (?, ?, ?, ?)',
+                (tournament_id, participant1_id, participant2_id, 'Round 1')
+            )
+        else:
+            # Если нечетное количество участников, один из них сразу переходит в следующий раунд
+            participant1_id = participants[i][0]
+            cursor.execute(
+                'INSERT INTO matches (tournament_id, participant1_id, participant2_id, stage) VALUES (?, ?, ?, ?)',
+                (tournament_id, participant1_id, None, 'Round 1')
+            )
+
+    conn.commit()
+    conn.close()
+
+    flash(gettext('Single elimination bracket created successfully!'), 'success')
+
+
+def create_double_elimination_bracket(tournament_id):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # Получаем всех участников турнира
+    # participants = cursor.execute(
+    #     'SELECT id FROM participants WHERE id IN (SELECT participant_id FROM tournament_participants WHERE tournament_id = ?)',
+    #     (tournament_id,)
+    # ).fetchall()
+    participants = cursor.execute(
+        'SELECT id FROM participants WHERE tournament_id = ?',
+        (tournament_id,)
+    ).fetchall()
+
+    # Проверяем, что есть хотя бы 2 участника
+    if len(participants) < 2:
+        flash(gettext('Tournament must have at least two participants.'), 'error')
+        return
+
+    # Перемешиваем список участников и создаем матчи
+    import random
+    random.shuffle(participants)
+
+    conn.commit()
+    conn.close()
+
+    flash(gettext('Double elimination bracket created successfully!'), 'success')
+
+# Маршрут для создания турнирной сетки
+# EN: Route for creating a tournament bracket
+# FR: Route pour créer un tableau de tournoi
+# ES: Ruta para crear un cuadro de torneo
+@app.route('/create_bracket/<int:tournament_id>', methods=['POST'])
+@login_required
+def create_bracket(tournament_id):
+    try:
+        # Вызов функции для создания прямой турнирной сетки
+        create_single_elimination_bracket(tournament_id)
+    except Exception as e:
+        flash(gettext('Error creating bracket: ') + str(e), 'error')
+    return redirect(url_for('index'))
+
+@app.route('/tournament/<int:tournament_id>/bracket', methods=['GET'])
+def tournament_bracket(tournament_id):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # Получаем все матчи данного турнира вместе с именами участников
+    matches = cursor.execute('''
+        SELECT matches.id, matches.stage, matches.result, matches.tournament_id,
+               p1.name AS participant1_name, p2.name AS participant2_name
+        FROM matches
+        LEFT JOIN participants p1 ON matches.participant1_id = p1.id
+        LEFT JOIN participants p2 ON matches.participant2_id = p2.id
+        WHERE matches.tournament_id = ?
+        ORDER BY matches.stage
+    ''', (tournament_id,)).fetchall()
+
+    # Преобразуем список sqlite3.Row в список словарей
+    matches_dict = [
+        {
+            'id': match['id'],
+            'stage': match['stage'],
+            'result': match['result'],
+            'tournament_id': match['tournament_id'],
+            'participant1_name': match['participant1_name'],
+            'participant2_name': match['participant2_name']
+        }
+        for match in matches
+    ]
+
+    conn.close()
+
+    # Передаем преобразованный список словарей в шаблон
+    return render_template('tournament_bracket.html', matches=matches_dict, tournament_id=tournament_id)
+
+
+
+
+
+@app.route('/tournament_details/<int:tournament_id>', methods=['GET', 'POST'])
+@login_required
+def tournament_details(tournament_id):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # Получаем участников турнира
+    participants = cursor.execute('''
+        SELECT name FROM participants
+        WHERE tournament_id = ?
+    ''', (tournament_id,)).fetchall()
+    conn.close()
+
+    num_participants = len(participants)
+    default_match_duration = 2  # Время одного матча по умолчанию - 2 минуты
+
+    if request.method == 'POST':
+        match_duration = int(request.form.get('match_duration', default_match_duration))
+        tournament_type = request.form['tournament_type']
+
+        # Создаем турнирную сетку
+        if tournament_type == 'single':
+            create_single_elimination_bracket(tournament_id)
+        elif tournament_type == 'double':
+            # Здесь должна быть функция для создания обратной сетки
+            create_double_elimination_bracket(tournament_id)
+
+        flash('Турнирная сетка успешно создана!', 'success')
+        return redirect(url_for('tournament_bracket', tournament_id=tournament_id))
+
+    # Рассчитываем время для проведения турнира
+    total_time = (num_participants - 1) * default_match_duration
+
+    return render_template(
+        'tournament_details.html',
+        participants=participants,
+        num_participants=num_participants,
+        total_time=total_time,
+        default_match_duration=default_match_duration,
+        tournament_id=tournament_id  # Передаем tournament_id в шаблон
+    )
+
+
+def create_single_elimination_bracket(tournament_id):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # Получаем всех участников данного турнира
+    participants = cursor.execute('''
+        SELECT id, name FROM participants
+        WHERE tournament_id = ?
+    ''', (tournament_id,)).fetchall()
+
+    # Список всех участников
+    participant_ids = [participant['id'] for participant in participants]
+
+    # Перемешаем участников случайным образом, чтобы создать пары случайным образом
+    import random
+    random.shuffle(participant_ids)
+
+    # Создаем матчи первого раунда
+    for i in range(0, len(participant_ids), 2):
+        if i + 1 < len(participant_ids):
+            participant1_id = participant_ids[i]
+            participant2_id = participant_ids[i + 1]
+            # Создаем матч между двумя участниками
+            cursor.execute('''
+                INSERT INTO matches (tournament_id, stage, participant1_id, participant2_id)
+                VALUES (?, ?, ?, ?)
+            ''', (tournament_id, 1, participant1_id, participant2_id))
+        else:
+            # Если остался один участник без пары, он проходит в следующий раунд автоматически
+            participant1_id = participant_ids[i]
+            cursor.execute('''
+                INSERT INTO matches (tournament_id, stage, participant1_id, participant2_id, result)
+                VALUES (?, ?, ?, NULL, ?)
+            ''', (tournament_id, 1, participant1_id, participant1_id))  # Результат указывает, что он автоматически проходит дальше
+
+    conn.commit()
+    conn.close()
+
+
+@app.route('/update_match_result/<int:match_id>', methods=['POST'])
+@login_required
+def update_match_result(match_id):
+    result = request.form['result']  # Получаем результат (имя победителя)
+    tournament_id = request.form['tournament_id']  # Получаем ID турнира из формы
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    # Обновляем результат матча
+    try:
+        cursor.execute('''
+            UPDATE matches SET result = ?
+            WHERE id = ?
+        ''', (result, match_id))
+        conn.commit()
+        flash('Результат матча успешно обновлён!', 'success')
+    except sqlite3.Error as e:
+        flash(f'Ошибка при обновлении результата: {str(e)}', 'error')
+    finally:
+        conn.close()
+
+    return redirect(url_for('tournament_bracket', tournament_id=tournament_id))
+
+
+@app.route('/participants')
+@login_required
+def participants():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    participants = cursor.execute('SELECT * FROM participants').fetchall()
+    conn.close()
+    return render_template('participants.html', participants=participants)
+
+
+@app.route('/delete_tournament/<int:tournament_id>', methods=['POST'])
+@login_required
+def delete_tournament(tournament_id):
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+
+        # Удаление участников, связанных с турниром
+        cursor.execute('DELETE FROM participants WHERE tournament_id = ?', (tournament_id,))
+
+        # Удаление матчей, связанных с турниром
+        cursor.execute('DELETE FROM matches WHERE tournament_id = ?', (tournament_id,))
+
+        # Удаление самого турнира
+        cursor.execute('DELETE FROM tournaments WHERE id = ?', (tournament_id,))
+
+        conn.commit()
+        flash('Турнир успешно удален!', 'success')
+    except sqlite3.Error as e:
+        flash(f'Ошибка при удалении турнира: {str(e)}', 'error')
+    finally:
+        conn.close()
+
+    return redirect(url_for('index'))
+
+
+@app.route('/delete_participant/<int:participant_id>', methods=['POST'])
+@login_required
+def delete_participant(participant_id):
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+
+        # Удаление участника
+        cursor.execute('DELETE FROM participants WHERE id = ?', (participant_id,))
+        conn.commit()
+        flash('Участник успешно удалён!', 'success')
+    except sqlite3.Error as e:
+        flash(f'Ошибка при удалении участника: {str(e)}', 'error')
+    finally:
+        conn.close()
+
+    return redirect(url_for('participants'))
+
+
+@app.route('/delete_all_participants', methods=['POST'])
+@login_required
+def delete_all_participants():
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
+
+        # Удаление всех участников
+        cursor.execute('DELETE FROM participants')
+        conn.commit()
+        flash('Все участники успешно удалены!', 'success')
+    except sqlite3.Error as e:
+        flash(f'Ошибка при удалении всех участников: {str(e)}', 'error')
+    finally:
+        conn.close()
+
+    return redirect(url_for('participants'))
 
 
 # Запуск приложения
