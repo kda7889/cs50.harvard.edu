@@ -1,6 +1,6 @@
-
 # TourneyMaker
-
+#### Video Demo:  https://youtu.be/PQVH7o3lXgA
+#### Description:
 TourneyMaker is a comprehensive tournament management system designed to simplify the process of creating and managing tournaments for various events. This project features an intuitive user interface, supports multiple languages, and ensures a smooth experience for organizers and participants alike.
 
 ## Project Structure
@@ -43,8 +43,46 @@ The `translations` directory contains language support files:
 - **Localization**: Extensive support for multiple languages enhances global accessibility.
 - **Modularity**: The codebase is divided into reusable components for ease of maintenance and scalability.
 
+### app.py
+
+The `app.py` file is the core of the TourneyMaker project, built using Flask. It handles routing, logic, session management, database interactions, and localization.
+
+#### Key Features
+1. **User Authentication**:
+   - Provides routes for user login, registration, and logout.
+   - Ensures password security with hashing using `Werkzeug`.
+   - Includes a `@login_required` decorator to restrict access to authenticated users.
+
+2. **Tournament Management**:
+   - Routes to create, view, and manage tournaments.
+   - Supports CRUD operations for participants and matches.
+
+3. **Localization**:
+   - Implements multi-language support with Flask-Babel.
+   - Dynamically loads translations based on user preferences.
+
+4. **Database Integration**:
+   - Uses SQLite to store data related to users, tournaments, participants, and matches.
+
+5. **Email Notifications**:
+   - Enables sending emails for tasks like password recovery using `smtplib`.
+
+6. **Logging**:
+   - Employs Python’s `logging` module to track application activities and debug issues.
+
+#### Routes Overview
+- `/`: Home page displaying project information.
+- `/login` and `/register`: User authentication pages.
+- `/tournament/create`: Create a new tournament.
+- `/tournament/<id>`: View tournament details.
+- `/tournament/<id>/bracket`: Display the tournament bracket.
+- `/participants`: Manage participants for a tournament.
+
+#### Conclusion
+The `app.py` file serves as the backbone of the application, integrating various components like authentication, database management, localization, and routing. It ensures a seamless user experience and robust functionality for managing tournaments.
+
 ## Installation
-1. Install dependencies from `requirements.txt`.
+1. Install dependencies from `requirements.txt`. You can use `commands.sh`
 2. Run the application using `python app.py`.
 3. Access the application at `http://localhost:5000`.
 
@@ -94,52 +132,6 @@ TourneyMaker — это система управления турнирами, 
 - **Локализация**: Расширенная поддержка нескольких языков делает приложение доступным для глобальной аудитории.
 - **Модульность**: Кодовая база разделена на повторно используемые компоненты для упрощения обслуживания и масштабируемости.
 
-## Установка
-1. Установите зависимости из файла `requirements.txt`.
-2. Запустите приложение с помощью команды `python app.py`.
-3. Откройте приложение в браузере по адресу `http://localhost:5000`.
-
-
-
-### app.py
-
-The `app.py` file is the core of the TourneyMaker project, built using Flask. It handles routing, logic, session management, database interactions, and localization.
-
-#### Key Features
-1. **User Authentication**:
-   - Provides routes for user login, registration, and logout.
-   - Ensures password security with hashing using `Werkzeug`.
-   - Includes a `@login_required` decorator to restrict access to authenticated users.
-
-2. **Tournament Management**:
-   - Routes to create, view, and manage tournaments.
-   - Supports CRUD operations for participants and matches.
-
-3. **Localization**:
-   - Implements multi-language support with Flask-Babel.
-   - Dynamically loads translations based on user preferences.
-
-4. **Database Integration**:
-   - Uses SQLite to store data related to users, tournaments, participants, and matches.
-
-5. **Email Notifications**:
-   - Enables sending emails for tasks like password recovery using `smtplib`.
-
-6. **Logging**:
-   - Employs Python’s `logging` module to track application activities and debug issues.
-
-#### Routes Overview
-- `/`: Home page displaying project information.
-- `/login` and `/register`: User authentication pages.
-- `/tournament/create`: Create a new tournament.
-- `/tournament/<id>`: View tournament details.
-- `/tournament/<id>/bracket`: Display the tournament bracket.
-- `/participants`: Manage participants for a tournament.
-
-#### Conclusion
-The `app.py` file serves as the backbone of the application, integrating various components like authentication, database management, localization, and routing. It ensures a seamless user experience and robust functionality for managing tournaments.
-
-
 ### app.py
 
 Файл `app.py` является ядром проекта TourneyMaker, построенного на основе Flask. Он отвечает за маршрутизацию, логику, управление сессиями, взаимодействие с базой данных и локализацию.
@@ -177,3 +169,8 @@ The `app.py` file serves as the backbone of the application, integrating various
 
 #### Заключение
 Файл `app.py` является основой приложения, интегрируя такие компоненты, как аутентификация, управление базой данных, локализация и маршрутизация. Он обеспечивает удобство использования и надежный функционал для управления турнирами.
+
+## Установка
+1. Установите зависимости из файла `requirements.txt`. Можно использовать `commands.sh`
+2. Запустите приложение с помощью команды `python app.py`.
+3. Откройте приложение в браузере по адресу `http://localhost:5000`.
