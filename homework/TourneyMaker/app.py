@@ -1,7 +1,14 @@
+#Project name: TourneyMaker
+#Creator name: Danila Kolesnikov
+#GitHub and edX usernames: kda7889
+#My city and country: Krasnodar, Russia
+#Video recording date: November twenty-second, two thousand and twenty-four
 
-# Начальная структура проекта с использованием Flask для проведения турниров
 
-# Импортируем необходимые модули
+# RU: Импортируем необходимые модули
+# EN: Import the necessary modules
+# FR: Importer les modules nécessaires
+# ES: Importar los módulos necesarios
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
 from flask_babel import Babel, gettext
 import sqlite3
@@ -16,7 +23,10 @@ import math
 import random
 import logging
 
-# Настройка логирования для дебага
+# RU: Настройка логирования для дебага
+# EN: Setting up logging for debugging
+# FR: Configuration de la journalisation pour le débogage
+# ES: Configuración del registro para depuración
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 
@@ -29,7 +39,10 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-# Путь к папке с переводами
+# RU: Путь к папке с переводами
+# EN: Path to the translations folder
+# FR: Chemin vers le dossier de traductions
+# ES: Ruta a la carpeta de traducciones
 TRANSLATIONS_PATH = 'translations'
 
 # Функция для получения полного имени языка из .po файла
@@ -106,13 +119,6 @@ def get_locale():
     return request.accept_languages.best_match(LANGUAGES.keys())
 
 
-
-# Изменение в функции next_stage для корректного отображения имени участника
-# Исправленная функция next_stage для корректного отображения имени победителя
-# Унификация функции перехода к следующей стадии турнира
-
-
-
 def get_current_stage(tournament_id, cursor):
     """
     Получает текущую стадию турнира по ID.
@@ -164,9 +170,6 @@ def get_stage_winners(tournament_id, current_stage, cursor):
     winners = cursor.execute(winners_query, (tournament_id, current_stage)).fetchall()
     return winners
 
-
-import random
-import logging
 
 
 def handle_auto_advance(winners, cursor):

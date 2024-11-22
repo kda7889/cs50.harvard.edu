@@ -181,7 +181,7 @@ msgid "Username"
 msgstr "Имя пользователя"
 
 msgid "View bracket"
-msgstr "Посмотреть кронштейн"
+msgstr "Посмотреть сетку турнира"
 
 msgid "vs"
 msgstr "против"

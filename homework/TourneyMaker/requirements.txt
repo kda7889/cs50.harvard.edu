@@ -1,0 +1,33 @@
+
+# English: This file contains the Python dependencies required for the project.
+# Русский: Этот файл содержит зависимости Python, необходимые для проекта.
+
+Flask==2.0.3  # English: Web framework for building the application
+              # Русский: Веб-фреймворк для разработки приложения
+
+Flask-Babel==2.0.0  # English: For internationalization and localization
+                    # Русский: Для интернационализации и локализации
+
+Werkzeug==2.0.3  # English: Utilities for handling passwords and requests
+                 # Русский: Утилиты для работы с паролями и запросами
+
+sqlite3  # English: Database library for SQLite (pre-installed with Python)
+         # Русский: Библиотека базы данных SQLite (предустановлена в Python)
+
+smtplib  # English: SMTP protocol library for sending emails (part of Python standard library)
+         # Русский: Библиотека протокола SMTP для отправки писем (часть стандартной библиотеки Python)
+
+pycountry==22.3.5  # English: Library for accessing country-related data
+                   # Русский: Библиотека для работы с данными о странах
+
+polib==1.1.1  # English: For managing .po and .mo translation files
+              # Русский: Для работы с файлами переводов .po и .mo
+
+math  # English: For mathematical operations (standard Python module)
+      # Русский: Для математических операций (стандартный модуль Python)
+
+random  # English: For generating random numbers (standard Python module)
+        # Русский: Для генерации случайных чисел (стандартный модуль Python)
+
+logging  # English: For logging application activities (standard Python module)
+         # Русский: Для ведения логов приложения (стандартный модуль Python)
