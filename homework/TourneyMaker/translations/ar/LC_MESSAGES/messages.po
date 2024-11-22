@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Арабский\n"
 
-msgid "You have successfully registered!"
-msgstr "لقد قمت بالتسجيل بنجاح!"
+msgid "A new password has been sent to your email."
+msgstr "تم إرسال كلمة مرور جديدة إلى بريدك الإلكتروني."
 
 msgid "A user with this email already exists."
 msgstr "مستخدم بهذا البريد الإلكتروني موجود بالفعل."
 
-msgid "Welcome, %(username)s!"
-msgstr "مرحباً بك يا صاحب المكان_0!"
+msgid "Actions"
+msgstr "الإجراءات"
 
-msgid "Invalid email or password."
-msgstr "البريد الإلكتروني أو كلمة المرور غير صالحة."
+msgid "Close"
+msgstr "إغلاق"
 
-msgid "You have been logged out."
-msgstr "لقد تم تسجيل خروجك."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"الموضوع: استعادة كلمة المرور\n"
-"\n"
-"كلمة المرور الجديدة هي: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "تم إرسال كلمة مرور جديدة إلى بريدك الإلكتروني."
-
-msgid "Error sending email: %(error)s"
-msgstr "خطأ في إرسال البريد الإلكتروني: %(error)s"
-
-msgid "No user found with this email."
-msgstr "لم يتم العثور على مستخدم مع هذا البريد الإلكتروني."
-
-msgid "Participant successfully registered!"
-msgstr "تم تسجيل المشارك بنجاح!"
-
-msgid "Participants in a match must be different."
-msgstr "يجب أن يكون المشاركون في المباراة مختلفين."
-
-msgid "Match successfully created!"
-msgstr "تم إنشاء التطابق بنجاح!"
-
-msgid "Home"
-msgstr "الصفحة الرئيسية"
-
-msgid "Register Participant"
-msgstr "تسجيل مشارك في السجل"
-
-msgid "Create Tournament"
-msgstr "إنشاء بطولة"
+msgid "Contact"
+msgstr "اتصل بنا"
 
 msgid "Create Match"
 msgstr "إنشاء تطابق"
 
-msgid "Register User"
-msgstr "تسجيل المستخدم"
+msgid "Create Tournament Bracket"
+msgstr "إنشاء شريحة البطولة"
+
+msgid "Create Tournament"
+msgstr "إنشاء بطولة"
+
+msgid "Delete all participants"
+msgstr "حذف جميع المشاركين"
+
+msgid "Delete tournament"
+msgstr "حذف البطولة"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Description"
+msgstr "الوصف"
+
+msgid "Double Elimination Bracket"
+msgstr "شريحة الإقصاء المزدوج"
+
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+msgid "Error sending email: %(error)s"
+msgstr "خطأ في إرسال البريد الإلكتروني: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "الوقت المتوقع للبطولة"
+
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "كم تستغرق المباراة الواحدة (بالدقائق)؟"
+
+msgid "Invalid email or password."
+msgstr "البريد الإلكتروني أو كلمة المرور غير صالحة."
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "List of Participants"
+msgstr "قائمة المشاركين"
+
+msgid "List of tournaments"
+msgstr "قائمة البطولات"
+
+msgid "Log in"
+msgstr "تسجيل الدخول"
 
 msgid "Login"
 msgstr "تسجيل الدخول"
@@ -75,8 +87,116 @@ msgstr "تسجيل الدخول"
 msgid "Logout"
 msgstr "تسجيل الخروج"
 
-msgid "Language"
-msgstr "اللغة"
+msgid "Match successfully created!"
+msgstr "تم إنشاء التطابق بنجاح!"
+
+msgid "Name"
+msgstr "الاسم"
+
+msgid "No user found with this email."
+msgstr "لم يتم العثور على مستخدم مع هذا البريد الإلكتروني."
+
+msgid "Number of participants:"
+msgstr "عدد المشاركين:"
+
+msgid "Participant 1"
+msgstr "المشارك 1"
+
+msgid "Participant 2"
+msgstr "المشارك 2"
+
+msgid "Participant Registration"
+msgstr "تسجيل المشاركين"
+
+msgid "Participant successfully registered!"
+msgstr "تم تسجيل المشارك بنجاح!"
+
+msgid "Participants (each on a new line)"
+msgstr "المشاركون (كل منهم في سطر جديد)"
+
+msgid "Participants in a match must be different."
+msgstr "يجب أن يكون المشاركون في المباراة مختلفين."
+
+msgid "passed to the next stage automatically"
+msgstr "إلى المرحلة التالية تلقائيًا"
+
+msgid "Password"
+msgstr "كلمة المرور"
+
+msgid "Proceed to next stage"
+msgstr "الانتقال إلى المرحلة التالية"
 
 msgid "Recover Password"
 msgstr "استعادة كلمة المرور"
+
+msgid "Register Participant"
+msgstr "تسجيل مشارك في السجل"
+
+msgid "Register User"
+msgstr "تسجيل المستخدم"
+
+msgid "Register"
+msgstr "التسجيل"
+
+msgid "Select tournament type:"
+msgstr "اختر نوع البطولة:"
+
+msgid "Select winner"
+msgstr "اختر الفائز"
+
+msgid "Single Elimination Bracket"
+msgstr "شريحة الإقصاء الفردي"
+
+msgid "Stage 0 (Play-in)"
+msgstr "المرحلة 0 (تشغيل في)"
+
+msgid "Stage"
+msgstr "المرحلة"
+
+msgid "The tournament is over! Winner"
+msgstr "انتهت البطولة! الفائز"
+
+msgid "Tournament Bracket"
+msgstr "شريحة البطولة"
+
+msgid "Tournament Description"
+msgstr "وصف البطولة"
+
+msgid "Tournament Details"
+msgstr "تفاصيل البطولة"
+
+msgid "Tournament Name"
+msgstr "اسم البطولة"
+
+msgid "Tournament"
+msgstr "البطولة"
+
+msgid "Type"
+msgstr "النوع"
+
+msgid "User Registration"
+msgstr "تسجيل المستخدم"
+
+msgid "Username"
+msgstr "اسم المستخدم"
+
+msgid "View bracket"
+msgstr "عرض القوس"
+
+msgid "vs"
+msgstr "مقابل"
+
+msgid "Welcome, %(username)s!"
+msgstr "مرحباً بك يا صاحب المكان_0!"
+
+msgid "Winner determined"
+msgstr "تحديد الفائز"
+
+msgid "Winner"
+msgstr "الفائز"
+
+msgid "You have been logged out."
+msgstr "لقد تم تسجيل خروجك."
+
+msgid "You have successfully registered!"
+msgstr "لقد قمت بالتسجيل بنجاح!"

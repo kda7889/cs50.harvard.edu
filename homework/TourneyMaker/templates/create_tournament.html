@@ -1,19 +1,46 @@
 {% extends 'layout.html' %}
 {% block content %}
-  <h1>Создать Турнир</h1>
-  <form action="{{ url_for('create_tournament') }}" method="post">
+  <h1>{{ gettext('Create Tournament') }}</h1>
+<form id="createTournamentForm" method="POST" action="{{ url_for('create_tournament') }}">
     <div class="form-group">
-      <label for="name">Название турнира:</label>
-      <input type="text" name="name" id="name" class="form-control" required>
+        <label for="tournamentName">{{ gettext('Tournament Name') }}</label>
+        <input type="text" class="form-control" id="tournamentName" name="name" value="{{ name }}" required>
     </div>
     <div class="form-group">
-      <label for="description">Описание турнира:</label>
-      <textarea name="description" id="description" class="form-control"></textarea>
+        <label for="tournamentDescription">{{ gettext('Tournament Description') }}</label>
+        <textarea class="form-control" id="tournamentDescription" name="description">{{ description }}</textarea>
     </div>
     <div class="form-group">
-      <label for="participants">Участники (каждое имя на новой строке):</label>
-      <textarea name="participants" id="participants" class="form-control" rows="10" required></textarea>
+        <label for="participants">{{ gettext('Participants (each on a new line)') }}</label>
+        <textarea class="form-control" id="participants" name="participants" rows="5">{{ participants }}</textarea>
     </div>
-    <button type="submit" class="btn btn-primary">Создать Турнир</button>
-  </form>
+    <button type="submit" class="btn btn-primary">{{ gettext('Create Tournament') }}</button>
+</form>
+
+<script>
+    document.getElementById('createTournamentForm').onsubmit = function(e) {
+        // Получаем содержимое текстового поля для участников
+        const participantsInput = document.getElementById('participants');
+        const participantNames = participantsInput.value
+            .split('\n')  // Разбиваем содержимое по строкам
+            .map(name => name.trim())  // Удаляем лишние пробелы
+            .filter(name => name);  // Убираем пустые строки
+
+        // Создаем Set для проверки уникальности
+        const uniqueNames = new Set(participantNames);
+
+        // Если количество уникальных имен не совпадает с количеством введенных имен
+        if (uniqueNames.size !== participantNames.length) {
+            // Показываем сообщение и выделяем поле красным
+            alert('Имена участников должны быть уникальными!');
+            participantsInput.style.border = '2px solid red';
+            e.preventDefault();  // Останавливаем отправку формы
+        } else {
+            // Если все хорошо, убираем красное выделение
+            participantsInput.style.border = '';
+        }
+    };
+</script>
+
+
 {% endblock %}

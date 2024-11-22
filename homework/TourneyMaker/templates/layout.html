@@ -18,25 +18,21 @@
     <a class="navbar-brand" href="{{ url_for('index') }}">{{ gettext('TourneyMaker') }}</a>
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
-    {% if 'user_id' in session %}
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">{{ gettext('Home') }}</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('create_tournament') }}">{{ gettext('Create Tournament') }}</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('create_match') }}">{{ gettext('Create Match') }}</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('participants') }}">{{ gettext('All Participants') }}</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">{{ gettext('Register Participant') }}</a></li>
+            {% if 'user_id' in session %}
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">{{ gettext('Home') }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('create_tournament') }}">{{ gettext('Create Tournament') }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('participants') }}">{{ gettext('All Participants') }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">{{ gettext('Register Participant') }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('create_match') }}">{{ gettext('Create Match') }}</a></li>
             {% endif %}
             {% if 'user_id' not in session %}
-    <li class="nav-item"><a class="nav-link" href="{{ url_for('register_user') }}">{{ gettext('Register User') }}</a></li>
-{% endif %}
-            {% if 'user_id' not in session %}
-    <li class="nav-item"><a class="nav-link" href="{{ url_for('login_user') }}">{{ gettext('Login') }}</a></li>
-{% endif %}
-            {% if 'user_id' not in session %}
-    <li class="nav-item"><a class="nav-link" href="{{ url_for('recover_password') }}">{{ gettext('Recover Password') }}</a></li>
-{% endif %}
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('register_user') }}">{{ gettext('Register User') }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('login_user') }}">{{ gettext('Login') }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('recover_password') }}">{{ gettext('Recover Password') }}</a></li>
+            {% endif %}
             {% if 'user_id' in session %}
-    <li class="nav-item"><a class="nav-link" href="{{ url_for('logout_user') }}">{{ gettext('Logout') }}</a></li>
-{% endif %}
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('logout_user') }}">{{ gettext('Logout') }}</a></li>
+            {% endif %}
         </ul>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
@@ -54,10 +50,27 @@
         </ul>
     </div>
 </nav>
+
 <div class="container mt-4">
+    <!-- Flash сообщения -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <!-- Основной контент страницы -->
     {% block content %}{% endblock %}
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>

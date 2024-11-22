@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Испанский\n"
 
-msgid "You have successfully registered!"
-msgstr "Se ha registrado correctamente."
+msgid "A new password has been sent to your email."
+msgstr "Se ha enviado una nueva contraseña a su correo electrónico."
 
 msgid "A user with this email already exists."
 msgstr "Ya existe un usuario con esta dirección de correo electrónico."
 
-msgid "Welcome, %(username)s!"
-msgstr "¡Bienvenido, %(username)s!"
+msgid "Actions"
+msgstr "Acciones"
 
-msgid "Invalid email or password."
-msgstr "Correo electrónico o contraseña no válidos."
+msgid "Close"
+msgstr "Cerrar"
 
-msgid "You have been logged out."
-msgstr "Se ha cerrado la sesión."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
+msgid "Contact"
 msgstr ""
-"Asunto: Recuperación de contraseña\n"
-"\n"
-"Su nueva contraseña es: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "Se ha enviado una nueva contraseña a su correo electrónico."
-
-msgid "Error sending email: %(error)s"
-msgstr "Error al enviar correo electrónico: %(error)s"
-
-msgid "No user found with this email."
-msgstr "No se ha encontrado ningún usuario con este correo electrónico."
-
-msgid "Participant successfully registered!"
-msgstr "¡Participante registrado con éxito!"
-
-msgid "Participants in a match must be different."
-msgstr "Los participantes en un partido deben ser diferentes."
-
-msgid "Match successfully created!"
-msgstr "¡Partida creada con éxito!"
-
-msgid "Home"
-msgstr "Inicio"
-
-msgid "Register Participant"
-msgstr "Inscribirse Participante"
-
-msgid "Create Tournament"
-msgstr "Crear torneo"
 
 msgid "Create Match"
 msgstr "Crear partido"
 
-msgid "Register User"
-msgstr "Registrar usuario"
+msgid "Create Tournament Bracket"
+msgstr "Crear un cuadro de competición"
+
+msgid "Create Tournament"
+msgstr "Crear torneo"
+
+msgid "Delete all participants"
+msgstr "Eliminar todos los participantes"
+
+msgid "Delete tournament"
+msgstr "Borrar torneo"
+
+msgid "Delete"
+msgstr "Borrar"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Double Elimination Bracket"
+msgstr "Cuadro de doble eliminación"
+
+msgid "Email"
+msgstr "Correo electrónico"
+
+msgid "Error sending email: %(error)s"
+msgstr "Error al enviar correo electrónico: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "Hora prevista del torneo:"
+
+msgid "Home"
+msgstr "Inicio"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "¿Cuánto dura un partido (en minutos)?"
+
+msgid "Invalid email or password."
+msgstr "Correo electrónico o contraseña no válidos."
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "List of Participants"
+msgstr "Lista de participantes"
+
+msgid "List of tournaments"
+msgstr "Lista de torneos"
+
+msgid "Log in"
+msgstr "Conectarse"
 
 msgid "Login"
 msgstr "Inicio de sesión"
@@ -75,8 +87,116 @@ msgstr "Inicio de sesión"
 msgid "Logout"
 msgstr "Cierre de sesión"
 
-msgid "Language"
-msgstr "Idioma"
+msgid "Match successfully created!"
+msgstr "¡Partida creada con éxito!"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "No user found with this email."
+msgstr "No se ha encontrado ningún usuario con este correo electrónico."
+
+msgid "Number of participants:"
+msgstr "Número de participantes:"
+
+msgid "Participant 1"
+msgstr "Participante 1"
+
+msgid "Participant 2"
+msgstr "Participante 2"
+
+msgid "Participant Registration"
+msgstr "Inscripción de participantes"
+
+msgid "Participant successfully registered!"
+msgstr "¡Participante registrado con éxito!"
+
+msgid "Participants (each on a new line)"
+msgstr "Participantes (cada uno en una nueva línea)"
+
+msgid "Participants in a match must be different."
+msgstr "Los participantes en un partido deben ser diferentes."
+
+msgid "passed to the next stage automatically"
+msgstr "pasa automáticamente a la etapa siguiente"
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "Proceed to next stage"
+msgstr "Pasar a la etapa siguiente"
 
 msgid "Recover Password"
 msgstr "Recuperar contraseña"
+
+msgid "Register Participant"
+msgstr "Inscripción Participante"
+
+msgid "Register User"
+msgstr "Registrar usuario"
+
+msgid "Register"
+msgstr "Regístrese en"
+
+msgid "Select tournament type:"
+msgstr "Seleccione el tipo de torneo:"
+
+msgid "Select winner"
+msgstr "Seleccionar ganador"
+
+msgid "Single Elimination Bracket"
+msgstr "Eliminatoria simple"
+
+msgid "Stage 0 (Play-in)"
+msgstr "Fase 0 (Play-in)"
+
+msgid "Stage"
+msgstr "Escenario"
+
+msgid "The tournament is over! Winner"
+msgstr "¡Se acabó el torneo! Ganador"
+
+msgid "Tournament Bracket"
+msgstr "Torneo"
+
+msgid "Tournament Description"
+msgstr "Descripción del torneo"
+
+msgid "Tournament Details"
+msgstr "Detalles del torneo"
+
+msgid "Tournament Name"
+msgstr "Nombre del torneo"
+
+msgid "Tournament"
+msgstr "Torneo"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "User Registration"
+msgstr "Registro de usuarios"
+
+msgid "Username"
+msgstr "Nombre de usuario"
+
+msgid "View bracket"
+msgstr "Ver soporte"
+
+msgid "vs"
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr "¡Bienvenido, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Se determina el ganador"
+
+msgid "Winner"
+msgstr "Ganador"
+
+msgid "You have been logged out."
+msgstr "Se ha cerrado la sesión."
+
+msgid "You have successfully registered!"
+msgstr "Se ha registrado correctamente."

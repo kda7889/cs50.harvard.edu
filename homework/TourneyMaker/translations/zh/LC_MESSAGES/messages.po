@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Китайский\n"
 
-msgid "You have successfully registered!"
-msgstr "您已成功注册！"
+msgid "A new password has been sent to your email."
+msgstr "新密码已发送到您的电子邮箱。"
 
 msgid "A user with this email already exists."
 msgstr "已存在使用此电子邮件的用户。"
 
-msgid "Welcome, %(username)s!"
-msgstr "欢迎您，%(username)s！"
+msgid "Actions"
+msgstr "行动"
 
-msgid "Invalid email or password."
-msgstr "电子邮件或密码无效。"
+msgid "Close"
+msgstr "关闭"
 
-msgid "You have been logged out."
-msgstr "您已退出登录。"
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"主题密码恢复\n"
-"\n"
-"您的新密码是： %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "新密码已发送到您的电子邮箱。"
-
-msgid "Error sending email: %(error)s"
-msgstr "发送电子邮件时出错：%(error)s"
-
-msgid "No user found with this email."
-msgstr "未找到使用此电子邮件的用户。"
-
-msgid "Participant successfully registered!"
-msgstr "参与者成功注册！"
-
-msgid "Participants in a match must be different."
-msgstr "比赛参与者必须不同。"
-
-msgid "Match successfully created!"
-msgstr "匹配成功创建！"
-
-msgid "Home"
-msgstr "首页"
-
-msgid "Register Participant"
-msgstr "注册参与者"
-
-msgid "Create Tournament"
-msgstr "创建锦标赛"
+msgid "Contact"
+msgstr "联系方式"
 
 msgid "Create Match"
 msgstr "创建匹配"
 
-msgid "Register User"
-msgstr "注册用户"
+msgid "Create Tournament Bracket"
+msgstr "创建锦标赛分组"
+
+msgid "Create Tournament"
+msgstr "创建锦标赛"
+
+msgid "Delete all participants"
+msgstr "删除所有参与者"
+
+msgid "Delete tournament"
+msgstr "删除比赛"
+
+msgid "Delete"
+msgstr "删除"
+
+msgid "Description"
+msgstr "说明"
+
+msgid "Double Elimination Bracket"
+msgstr "双败淘汰赛"
+
+msgid "Email"
+msgstr "电子邮件"
+
+msgid "Error sending email: %(error)s"
+msgstr "发送电子邮件时出错：%(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "预计比赛时间："
+
+msgid "Home"
+msgstr "首页"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "一场比赛需要多长时间（分钟）？"
+
+msgid "Invalid email or password."
+msgstr "电子邮件或密码无效。"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "List of Participants"
+msgstr "与会者名单"
+
+msgid "List of tournaments"
+msgstr "赛事列表"
+
+msgid "Log in"
+msgstr "登录"
 
 msgid "Login"
 msgstr "登录"
@@ -75,8 +87,116 @@ msgstr "登录"
 msgid "Logout"
 msgstr "注销"
 
-msgid "Language"
-msgstr "语言"
+msgid "Match successfully created!"
+msgstr "匹配成功创建！"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "No user found with this email."
+msgstr "未找到使用此电子邮件的用户。"
+
+msgid "Number of participants:"
+msgstr "参与人数"
+
+msgid "Participant 1"
+msgstr "参与者 1"
+
+msgid "Participant 2"
+msgstr "参与者 2"
+
+msgid "Participant Registration"
+msgstr "与会者注册"
+
+msgid "Participant successfully registered!"
+msgstr "参与者成功注册！"
+
+msgid "Participants (each on a new line)"
+msgstr "参与者（各在一行中）"
+
+msgid "Participants in a match must be different."
+msgstr "比赛参与者必须不同。"
+
+msgid "passed to the next stage automatically"
+msgstr "自动进入下一阶段"
+
+msgid "Password"
+msgstr "密码"
+
+msgid "Proceed to next stage"
+msgstr "进入下一阶段"
 
 msgid "Recover Password"
 msgstr "恢复密码"
+
+msgid "Register Participant"
+msgstr "注册参与者"
+
+msgid "Register User"
+msgstr "注册用户"
+
+msgid "Register"
+msgstr "注册"
+
+msgid "Select tournament type:"
+msgstr "选择锦标赛类型："
+
+msgid "Select winner"
+msgstr "选择获胜者"
+
+msgid "Single Elimination Bracket"
+msgstr "单败淘汰赛"
+
+msgid "Stage 0 (Play-in)"
+msgstr "第 0 阶段（上场比赛）"
+
+msgid "Stage"
+msgstr "舞台"
+
+msgid "The tournament is over! Winner"
+msgstr "比赛结束优胜者"
+
+msgid "Tournament Bracket"
+msgstr "锦标赛赛程"
+
+msgid "Tournament Description"
+msgstr "赛事介绍"
+
+msgid "Tournament Details"
+msgstr "比赛详情"
+
+msgid "Tournament Name"
+msgstr "赛事名称"
+
+msgid "Tournament"
+msgstr "锦标赛"
+
+msgid "Type"
+msgstr "类型"
+
+msgid "User Registration"
+msgstr "用户注册"
+
+msgid "Username"
+msgstr "用户名"
+
+msgid "View bracket"
+msgstr "查看支架"
+
+msgid "vs"
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr "欢迎您，%(username)s！"
+
+msgid "Winner determined"
+msgstr "确定优胜者"
+
+msgid "Winner"
+msgstr "优胜者"
+
+msgid "You have been logged out."
+msgstr "您已退出登录。"
+
+msgid "You have successfully registered!"
+msgstr "您已成功注册！"

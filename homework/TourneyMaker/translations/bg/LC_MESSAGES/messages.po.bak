@@ -12,58 +12,73 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Болгарский\n"
 
-msgid "You have successfully registered!"
+msgid "A new password has been sent to your email."
 msgstr ""
 
 msgid "A user with this email already exists."
 msgstr ""
 
-msgid "Welcome, %(username)s!"
+msgid "Actions"
 msgstr ""
 
-msgid "Invalid email or password."
+msgid "Close"
 msgstr ""
 
-msgid "You have been logged out."
-msgstr ""
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-
-msgid "A new password has been sent to your email."
-msgstr ""
-
-msgid "Error sending email: %(error)s"
-msgstr ""
-
-msgid "No user found with this email."
-msgstr ""
-
-msgid "Participant successfully registered!"
-msgstr ""
-
-msgid "Participants in a match must be different."
-msgstr ""
-
-msgid "Match successfully created!"
-msgstr ""
-
-msgid "Home"
-msgstr ""
-
-msgid "Register Participant"
-msgstr ""
-
-msgid "Create Tournament"
+msgid "Contact"
 msgstr ""
 
 msgid "Create Match"
 msgstr ""
 
-msgid "Register User"
+msgid "Create Tournament Bracket"
+msgstr ""
+
+msgid "Create Tournament"
+msgstr ""
+
+msgid "Delete all participants"
+msgstr ""
+
+msgid "Delete tournament"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "Double Elimination Bracket"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Error sending email: %(error)s"
+msgstr ""
+
+msgid "Expected time of the tournament:"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "How long does one match take (in minutes)?"
+msgstr ""
+
+msgid "Invalid email or password."
+msgstr ""
+
+msgid "Language"
+msgstr ""
+
+msgid "List of Participants"
+msgstr ""
+
+msgid "List of tournaments"
+msgstr ""
+
+msgid "Log in"
 msgstr ""
 
 msgid "Login"
@@ -72,8 +87,116 @@ msgstr ""
 msgid "Logout"
 msgstr ""
 
-msgid "Language"
+msgid "Match successfully created!"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "No user found with this email."
+msgstr ""
+
+msgid "Number of participants:"
+msgstr ""
+
+msgid "Participant 1"
+msgstr ""
+
+msgid "Participant 2"
+msgstr ""
+
+msgid "Participant Registration"
+msgstr ""
+
+msgid "Participant successfully registered!"
+msgstr ""
+
+msgid "Participants (each on a new line)"
+msgstr ""
+
+msgid "Participants in a match must be different."
+msgstr ""
+
+msgid "passed to the next stage automatically"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Proceed to next stage"
 msgstr ""
 
 msgid "Recover Password"
+msgstr ""
+
+msgid "Register Participant"
+msgstr ""
+
+msgid "Register User"
+msgstr ""
+
+msgid "Register"
+msgstr ""
+
+msgid "Select tournament type:"
+msgstr ""
+
+msgid "Select winner"
+msgstr ""
+
+msgid "Single Elimination Bracket"
+msgstr ""
+
+msgid "Stage 0 (Play-in)"
+msgstr ""
+
+msgid "Stage"
+msgstr ""
+
+msgid "The tournament is over! Winner"
+msgstr ""
+
+msgid "Tournament Bracket"
+msgstr ""
+
+msgid "Tournament Description"
+msgstr ""
+
+msgid "Tournament Details"
+msgstr ""
+
+msgid "Tournament Name"
+msgstr ""
+
+msgid "Tournament"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "User Registration"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "View bracket"
+msgstr ""
+
+msgid "vs"
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr ""
+
+msgid "Winner determined"
+msgstr ""
+
+msgid "Winner"
+msgstr ""
+
+msgid "You have been logged out."
+msgstr ""
+
+msgid "You have successfully registered!"
 msgstr ""

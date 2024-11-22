@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Словенский\n"
 
-msgid "You have successfully registered!"
-msgstr "Uspešno ste se registrirali!"
+msgid "A new password has been sent to your email."
+msgstr "Na vaš e-poštni naslov je bilo poslano novo geslo."
 
 msgid "A user with this email already exists."
 msgstr "Uporabnik s tem e-poštnim naslovom že obstaja."
 
-msgid "Welcome, %(username)s!"
-msgstr "Dobrodošel, %(username)s!"
+msgid "Actions"
+msgstr "Ukrepi"
 
-msgid "Invalid email or password."
-msgstr "Nepravilno e-poštno sporočilo ali geslo."
+msgid "Close"
+msgstr "Zapri"
 
-msgid "You have been logged out."
-msgstr "Bili ste odjavljeni."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Zadeva: \"Vključevanje v sistem\": Obnovitev gesla\n"
-"\n"
-"Vaše novo geslo je: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "Na vaš e-poštni naslov je bilo poslano novo geslo."
-
-msgid "Error sending email: %(error)s"
-msgstr "Napaka pri pošiljanju e-pošte: %(error)s"
-
-msgid "No user found with this email."
-msgstr "S tem e-poštnim naslovom ni bil najden noben uporabnik."
-
-msgid "Participant successfully registered!"
-msgstr "Udeleženec se je uspešno registriral!"
-
-msgid "Participants in a match must be different."
-msgstr "Udeleženci tekme morajo biti različni."
-
-msgid "Match successfully created!"
-msgstr "Tekma je bila uspešno ustvarjena!"
-
-msgid "Home"
-msgstr "Domov"
-
-msgid "Register Participant"
-msgstr "Registracija udeleženca"
-
-msgid "Create Tournament"
-msgstr "Ustvarjanje turnirja"
+msgid "Contact"
+msgstr "Pišite na"
 
 msgid "Create Match"
 msgstr "Ustvari tekmo"
 
-msgid "Register User"
-msgstr "Registracija uporabnika"
+msgid "Create Tournament Bracket"
+msgstr "Ustvarjanje turnirskega nosilca"
+
+msgid "Create Tournament"
+msgstr "Ustvarjanje turnirja"
+
+msgid "Delete all participants"
+msgstr "Brisanje vseh udeležencev"
+
+msgid "Delete tournament"
+msgstr "Izbriši turnir"
+
+msgid "Delete"
+msgstr "Izbriši"
+
+msgid "Description"
+msgstr "Opis"
+
+msgid "Double Elimination Bracket"
+msgstr "Dvojni eliminacijski vijak"
+
+msgid "Email"
+msgstr "E-pošta"
+
+msgid "Error sending email: %(error)s"
+msgstr "Napaka pri pošiljanju e-pošte: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "Pričakovani čas turnirja:"
+
+msgid "Home"
+msgstr "Domov"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Koliko časa traja ena tekma (v minutah)?"
+
+msgid "Invalid email or password."
+msgstr "Nepravilno e-poštno sporočilo ali geslo."
+
+msgid "Language"
+msgstr "Jezik"
+
+msgid "List of Participants"
+msgstr "Seznam udeležencev"
+
+msgid "List of tournaments"
+msgstr "Seznam turnirjev"
+
+msgid "Log in"
+msgstr "Prijavite se"
 
 msgid "Login"
 msgstr "Prijava"
@@ -75,8 +87,116 @@ msgstr "Prijava"
 msgid "Logout"
 msgstr "Odjava"
 
-msgid "Language"
-msgstr "Jezik"
+msgid "Match successfully created!"
+msgstr "Tekma je bila uspešno ustvarjena!"
+
+msgid "Name"
+msgstr "Ime"
+
+msgid "No user found with this email."
+msgstr "S tem e-poštnim naslovom ni bil najden noben uporabnik."
+
+msgid "Number of participants:"
+msgstr "Število udeležencev:"
+
+msgid "Participant 1"
+msgstr "Udeleženec 1"
+
+msgid "Participant 2"
+msgstr "Udeleženec 2"
+
+msgid "Participant Registration"
+msgstr "Registracija udeležencev"
+
+msgid "Participant successfully registered!"
+msgstr "Udeleženec se je uspešno registriral!"
+
+msgid "Participants (each on a new line)"
+msgstr "Udeleženci (vsak v novi vrstici)"
+
+msgid "Participants in a match must be different."
+msgstr "Udeleženci tekme morajo biti različni."
+
+msgid "passed to the next stage automatically"
+msgstr "se samodejno prenese v naslednjo fazo."
+
+msgid "Password"
+msgstr "Geslo"
+
+msgid "Proceed to next stage"
+msgstr "Prehod na naslednjo fazo"
 
 msgid "Recover Password"
 msgstr "Obnovitev gesla"
+
+msgid "Register Participant"
+msgstr "Registracija udeleženca"
+
+msgid "Register User"
+msgstr "Registracija uporabnika"
+
+msgid "Register"
+msgstr ""
+
+msgid "Select tournament type:"
+msgstr "Izberite vrsto turnirja:"
+
+msgid "Select winner"
+msgstr "Izberite zmagovalca"
+
+msgid "Single Elimination Bracket"
+msgstr "Eliminacijski ožiček"
+
+msgid "Stage 0 (Play-in)"
+msgstr "Faza 0 (predtekmovanje)"
+
+msgid "Stage"
+msgstr "Faza"
+
+msgid "The tournament is over! Winner"
+msgstr "Turnir je končan! Zmagovalec"
+
+msgid "Tournament Bracket"
+msgstr "Turnirski nosilec"
+
+msgid "Tournament Description"
+msgstr "Opis turnirja"
+
+msgid "Tournament Details"
+msgstr "Podrobnosti o turnirju"
+
+msgid "Tournament Name"
+msgstr "Ime turnirja"
+
+msgid "Tournament"
+msgstr "Turnir"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "User Registration"
+msgstr "Registracija uporabnika"
+
+msgid "Username"
+msgstr "Uporabniško ime"
+
+msgid "View bracket"
+msgstr "Ogled nosilca"
+
+msgid "vs"
+msgstr "proti"
+
+msgid "Welcome, %(username)s!"
+msgstr "Dobrodošel, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Določitev zmagovalca"
+
+msgid "Winner"
+msgstr "Zmagovalec"
+
+msgid "You have been logged out."
+msgstr "Bili ste odjavljeni."
+
+msgid "You have successfully registered!"
+msgstr "Uspešno ste se registrirali!"

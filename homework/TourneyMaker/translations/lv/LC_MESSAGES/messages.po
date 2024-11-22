@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Латышский\n"
 
-msgid "You have successfully registered!"
-msgstr "Jūs esat veiksmīgi reģistrējies!"
+msgid "A new password has been sent to your email."
+msgstr "Uz jūsu e-pastu ir nosūtīta jauna parole."
 
 msgid "A user with this email already exists."
 msgstr "Lietotājs ar šo e-pasta adresi jau pastāv."
 
-msgid "Welcome, %(username)s!"
-msgstr "Laipni lūdzam, %(username)s!"
+msgid "Actions"
+msgstr "Darbības"
 
-msgid "Invalid email or password."
-msgstr "Nederīgs e-pasts vai parole."
+msgid "Close"
+msgstr "Aizvērt"
 
-msgid "You have been logged out."
-msgstr "Jūs esat atteicies no sistēmas."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Temats: Paroles atgūšana\n"
-"\n"
-"Jūsu jaunā parole ir: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "Uz jūsu e-pastu ir nosūtīta jauna parole."
-
-msgid "Error sending email: %(error)s"
-msgstr "Kļūda sūtot e-pastu: %(error)s"
-
-msgid "No user found with this email."
-msgstr "Ar šo e-pastu nav atrasts neviens lietotājs."
-
-msgid "Participant successfully registered!"
-msgstr "Dalībnieks veiksmīgi reģistrēts!"
-
-msgid "Participants in a match must be different."
-msgstr "Spēles dalībniekiem jābūt atšķirīgiem."
-
-msgid "Match successfully created!"
-msgstr "Spēle veiksmīgi izveidota!"
-
-msgid "Home"
-msgstr "Sākums"
-
-msgid "Register Participant"
-msgstr "Reģistrēties dalībnieks"
-
-msgid "Create Tournament"
-msgstr "Izveidot turnīru"
+msgid "Contact"
+msgstr "Sazinieties ar"
 
 msgid "Create Match"
 msgstr "Izveidot atbilstību"
 
-msgid "Register User"
-msgstr "Reģistrēt lietotāju"
+msgid "Create Tournament Bracket"
+msgstr "Izveidot turnīra kronšteinu"
+
+msgid "Create Tournament"
+msgstr "Izveidot turnīru"
+
+msgid "Delete all participants"
+msgstr "Dzēst visus dalībniekus"
+
+msgid "Delete tournament"
+msgstr "Dzēst turnīru"
+
+msgid "Delete"
+msgstr "Dzēst"
+
+msgid "Description"
+msgstr "Apraksts"
+
+msgid "Double Elimination Bracket"
+msgstr "Dubultās izslēgšanas sacensības"
+
+msgid "Email"
+msgstr "E-pasts"
+
+msgid "Error sending email: %(error)s"
+msgstr "Kļūda sūtot e-pastu: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "Paredzamais turnīra laiks:"
+
+msgid "Home"
+msgstr "Sākums"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Cik ilgi (minūtēs) ilgst viens mačs?"
+
+msgid "Invalid email or password."
+msgstr "Nederīgs e-pasts vai parole."
+
+msgid "Language"
+msgstr "Valoda"
+
+msgid "List of Participants"
+msgstr "Dalībnieku saraksts"
+
+msgid "List of tournaments"
+msgstr "Turnīru saraksts"
+
+msgid "Log in"
+msgstr "Piesakieties"
 
 msgid "Login"
 msgstr "Pieteikšanās"
@@ -75,8 +87,116 @@ msgstr "Pieteikšanās"
 msgid "Logout"
 msgstr "Izrakstīšanās"
 
-msgid "Language"
-msgstr "Valoda"
+msgid "Match successfully created!"
+msgstr "Spēle veiksmīgi izveidota!"
+
+msgid "Name"
+msgstr "Nosaukums"
+
+msgid "No user found with this email."
+msgstr "Ar šo e-pastu nav atrasts neviens lietotājs."
+
+msgid "Number of participants:"
+msgstr "Dalībnieku skaits:"
+
+msgid "Participant 1"
+msgstr "Dalībnieks 1"
+
+msgid "Participant 2"
+msgstr "2. dalībnieks"
+
+msgid "Participant Registration"
+msgstr "Dalībnieku reģistrācija"
+
+msgid "Participant successfully registered!"
+msgstr "Dalībnieks veiksmīgi reģistrēts!"
+
+msgid "Participants (each on a new line)"
+msgstr "Dalībnieki (katrs jaunā rindā)"
+
+msgid "Participants in a match must be different."
+msgstr "Spēles dalībniekiem jābūt atšķirīgiem."
+
+msgid "passed to the next stage automatically"
+msgstr "automātiski pāriet uz nākamo posmu."
+
+msgid "Password"
+msgstr "Parole"
+
+msgid "Proceed to next stage"
+msgstr "Pārejiet uz nākamo posmu"
 
 msgid "Recover Password"
 msgstr "Atgūt paroli"
+
+msgid "Register Participant"
+msgstr "Reģistrēties dalībnieks"
+
+msgid "Register User"
+msgstr "Reģistrēt lietotāju"
+
+msgid "Register"
+msgstr "Reģistrēties"
+
+msgid "Select tournament type:"
+msgstr "Izvēlieties turnīra veidu:"
+
+msgid "Select winner"
+msgstr "Izvēlieties uzvarētāju"
+
+msgid "Single Elimination Bracket"
+msgstr "Viena izslēgšanas kārta"
+
+msgid "Stage 0 (Play-in)"
+msgstr "0. posms (Play-in)"
+
+msgid "Stage"
+msgstr "Posms"
+
+msgid "The tournament is over! Winner"
+msgstr "Turnīrs ir beidzies! Uzvarētājs"
+
+msgid "Tournament Bracket"
+msgstr "Turnīra lozungs"
+
+msgid "Tournament Description"
+msgstr "Turnīra apraksts"
+
+msgid "Tournament Details"
+msgstr "Turnīra informācija"
+
+msgid "Tournament Name"
+msgstr "Turnīra nosaukums"
+
+msgid "Tournament"
+msgstr "Turnīrs"
+
+msgid "Type"
+msgstr "Tips"
+
+msgid "User Registration"
+msgstr "Lietotāja reģistrācija"
+
+msgid "Username"
+msgstr "Lietotājvārds"
+
+msgid "View bracket"
+msgstr "Skatīt kronšteinu"
+
+msgid "vs"
+msgstr "pret"
+
+msgid "Welcome, %(username)s!"
+msgstr "Laipni lūdzam, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Noteikts uzvarētājs"
+
+msgid "Winner"
+msgstr "Uzvarētājs"
+
+msgid "You have been logged out."
+msgstr "Jūs esat atteicies no sistēmas."
+
+msgid "You have successfully registered!"
+msgstr "Jūs esat veiksmīgi reģistrējies!"

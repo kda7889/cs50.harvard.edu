@@ -31,7 +31,7 @@ DEBUG_MODE = False
 setup_logging(debug=DEBUG_MODE)
 
 # DeepL API Key (provided by user)
-DEEPL_API_KEY = "dc65358a-25d6-4b59-b119-735d26f3fa13:fx"
+DEEPL_API_KEY = "rtX-dc65358a-25d6-4b59-b119-735d26f3fa13:fx"
 DEEPL_API_URL = "https://api-free.deepl.com/v2/translate"
 
 # Список доступных языков для перевода

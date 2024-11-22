@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Литовский\n"
 
-msgid "You have successfully registered!"
-msgstr "Sėkmingai užsiregistravote!"
+msgid "A new password has been sent to your email."
+msgstr "Naujas slaptažodis buvo išsiųstas į jūsų el. paštą."
 
 msgid "A user with this email already exists."
 msgstr "Naudotojas su šiuo el. pašto adresu jau egzistuoja."
 
-msgid "Welcome, %(username)s!"
-msgstr "Sveiki atvykę, %(username)s!"
+msgid "Actions"
+msgstr "Veiksmai"
 
-msgid "Invalid email or password."
-msgstr "Netinkamas el. pašto adresas arba slaptažodis."
+msgid "Close"
+msgstr "Uždaryti"
 
-msgid "You have been logged out."
-msgstr "Jūs buvote išregistruotas."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Tema: Slaptažodžio atkūrimas\n"
-"\n"
-"Jūsų naujas slaptažodis yra: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "Naujas slaptažodis buvo išsiųstas į jūsų el. paštą."
-
-msgid "Error sending email: %(error)s"
-msgstr "Klaida siunčiant el. laišką: %(error)s"
-
-msgid "No user found with this email."
-msgstr "Nerasta naudotojo su šiuo el. pašto adresu."
-
-msgid "Participant successfully registered!"
-msgstr "Dalyvis sėkmingai užregistruotas!"
-
-msgid "Participants in a match must be different."
-msgstr "Rungtynių dalyviai turi būti skirtingi."
-
-msgid "Match successfully created!"
-msgstr "Rungtynės sėkmingai sukurtos!"
-
-msgid "Home"
-msgstr "Pagrindinis"
-
-msgid "Register Participant"
-msgstr "Registruoti dalyvį"
-
-msgid "Create Tournament"
-msgstr "Sukurti turnyrą"
+msgid "Contact"
+msgstr "Susisiekite su"
 
 msgid "Create Match"
 msgstr "Sukurti atitikmenį"
 
-msgid "Register User"
-msgstr "Registruoti naudotoją"
+msgid "Create Tournament Bracket"
+msgstr "Sukurti turnyro laikiklį"
+
+msgid "Create Tournament"
+msgstr "Sukurti turnyrą"
+
+msgid "Delete all participants"
+msgstr "Ištrinti visus dalyvius"
+
+msgid "Delete tournament"
+msgstr "Ištrinti turnyrą"
+
+msgid "Delete"
+msgstr "Ištrinti"
+
+msgid "Description"
+msgstr "Aprašymas"
+
+msgid "Double Elimination Bracket"
+msgstr "Dvigubo eliminavimo varžybos"
+
+msgid "Email"
+msgstr "El. paštas"
+
+msgid "Error sending email: %(error)s"
+msgstr "Klaida siunčiant el. laišką: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "Numatomas turnyro laikas:"
+
+msgid "Home"
+msgstr "Pagrindinis"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Kiek laiko trunka vienos rungtynės (minutėmis)?"
+
+msgid "Invalid email or password."
+msgstr "Netinkamas el. pašto adresas arba slaptažodis."
+
+msgid "Language"
+msgstr "Kalba"
+
+msgid "List of Participants"
+msgstr "Dalyvių sąrašas"
+
+msgid "List of tournaments"
+msgstr "Turnyrų sąrašas"
+
+msgid "Log in"
+msgstr "Prisijungti"
 
 msgid "Login"
 msgstr "Prisijungimas"
@@ -75,8 +87,116 @@ msgstr "Prisijungimas"
 msgid "Logout"
 msgstr "Atsijungimas"
 
-msgid "Language"
-msgstr "Kalba"
+msgid "Match successfully created!"
+msgstr "Rungtynės sėkmingai sukurtos!"
+
+msgid "Name"
+msgstr "Pavadinimas"
+
+msgid "No user found with this email."
+msgstr "Nerasta naudotojo su šiuo el. pašto adresu."
+
+msgid "Number of participants:"
+msgstr "Dalyvių skaičius:"
+
+msgid "Participant 1"
+msgstr "1 dalyvis"
+
+msgid "Participant 2"
+msgstr "2 dalyvis"
+
+msgid "Participant Registration"
+msgstr "Dalyvių registracija"
+
+msgid "Participant successfully registered!"
+msgstr "Dalyvis sėkmingai užregistruotas!"
+
+msgid "Participants (each on a new line)"
+msgstr "Dalyviai (kiekvienas naujoje eilutėje)"
+
+msgid "Participants in a match must be different."
+msgstr "Rungtynių dalyviai turi būti skirtingi."
+
+msgid "passed to the next stage automatically"
+msgstr "automatiškai perduodama į kitą etapą."
+
+msgid "Password"
+msgstr "Slaptažodis"
+
+msgid "Proceed to next stage"
+msgstr "Pereiti į kitą etapą"
 
 msgid "Recover Password"
 msgstr "Atkurti slaptažodį"
+
+msgid "Register Participant"
+msgstr "Registruoti dalyvį"
+
+msgid "Register User"
+msgstr "Registruoti naudotoją"
+
+msgid "Register"
+msgstr "Registruotis"
+
+msgid "Select tournament type:"
+msgstr "Pasirinkite turnyro tipą:"
+
+msgid "Select winner"
+msgstr "Pasirinkite nugalėtoją"
+
+msgid "Single Elimination Bracket"
+msgstr "Vieno etapo atrankos varžybos"
+
+msgid "Stage 0 (Play-in)"
+msgstr "0 etapas (\"Play-in\")"
+
+msgid "Stage"
+msgstr "Etapas"
+
+msgid "The tournament is over! Winner"
+msgstr "Turnyras baigėsi! Nugalėtojas"
+
+msgid "Tournament Bracket"
+msgstr "Turnyro laikiklis"
+
+msgid "Tournament Description"
+msgstr "Turnyro aprašymas"
+
+msgid "Tournament Details"
+msgstr "Turnyro informacija"
+
+msgid "Tournament Name"
+msgstr "Turnyro pavadinimas"
+
+msgid "Tournament"
+msgstr "Turnyras"
+
+msgid "Type"
+msgstr "Tipas"
+
+msgid "User Registration"
+msgstr "Naudotojo registracija"
+
+msgid "Username"
+msgstr "Vartotojo vardas"
+
+msgid "View bracket"
+msgstr "Peržiūrėti laikiklį"
+
+msgid "vs"
+msgstr "prieš"
+
+msgid "Welcome, %(username)s!"
+msgstr "Sveiki atvykę, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Nustatytas nugalėtojas"
+
+msgid "Winner"
+msgstr "Nugalėtojas"
+
+msgid "You have been logged out."
+msgstr "Jūs buvote išregistruotas."
+
+msgid "You have successfully registered!"
+msgstr "Sėkmingai užsiregistravote!"

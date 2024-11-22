@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Болгарский\n"
 
-msgid "You have successfully registered!"
-msgstr "Успешно сте се регистрирали!"
+msgid "A new password has been sent to your email."
+msgstr "На вашия имейл е изпратена нова парола."
 
 msgid "A user with this email already exists."
 msgstr "Потребител с този имейл вече съществува."
 
-msgid "Welcome, %(username)s!"
-msgstr "Добре дошъл, %(username)s!"
+msgid "Actions"
+msgstr "Действия"
 
-msgid "Invalid email or password."
-msgstr "Невалиден имейл или парола."
+msgid "Close"
+msgstr "Затвори"
 
-msgid "You have been logged out."
-msgstr "Излезли сте от системата."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Тема: Възстановяване на парола\n"
-"\n"
-"Новата ви парола е: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "На вашия имейл е изпратена нова парола."
-
-msgid "Error sending email: %(error)s"
-msgstr "Грешка при изпращане на имейл: %(error)s"
-
-msgid "No user found with this email."
-msgstr "Не е намерен потребител с този имейл."
-
-msgid "Participant successfully registered!"
-msgstr "Участникът е успешно регистриран!"
-
-msgid "Participants in a match must be different."
-msgstr "Участниците в мача трябва да са различни."
-
-msgid "Match successfully created!"
-msgstr "Успешно създадено съвпадение!"
-
-msgid "Home"
-msgstr "Начало"
-
-msgid "Register Participant"
-msgstr "Регистрация на участник"
-
-msgid "Create Tournament"
-msgstr "Създаване на турнир"
+msgid "Contact"
+msgstr "Свържете се с"
 
 msgid "Create Match"
 msgstr "Създаване на съвпадение"
 
-msgid "Register User"
-msgstr "Регистрация на потребител"
+msgid "Create Tournament Bracket"
+msgstr "Създаване на турнирна скоба"
+
+msgid "Create Tournament"
+msgstr "Създаване на турнир"
+
+msgid "Delete all participants"
+msgstr "Изтриване на всички участници"
+
+msgid "Delete tournament"
+msgstr "Изтриване на турнира"
+
+msgid "Delete"
+msgstr "Изтриване на"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Double Elimination Bracket"
+msgstr "Двойна елиминация"
+
+msgid "Email"
+msgstr "Имейл"
+
+msgid "Error sending email: %(error)s"
+msgstr "Грешка при изпращане на имейл: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "Очакван час на турнира:"
+
+msgid "Home"
+msgstr "Начало"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Колко време отнема един мач (в минути)?"
+
+msgid "Invalid email or password."
+msgstr "Невалиден имейл или парола."
+
+msgid "Language"
+msgstr "Език"
+
+msgid "List of Participants"
+msgstr "Списък на участниците"
+
+msgid "List of tournaments"
+msgstr "Списък на турнирите"
+
+msgid "Log in"
+msgstr "Влезте в системата"
 
 msgid "Login"
 msgstr "Вход"
@@ -75,8 +87,116 @@ msgstr "Вход"
 msgid "Logout"
 msgstr "Излизане от системата"
 
-msgid "Language"
-msgstr "Език"
+msgid "Match successfully created!"
+msgstr "Успешно създадено съвпадение!"
+
+msgid "Name"
+msgstr "Име"
+
+msgid "No user found with this email."
+msgstr "Не е намерен потребител с този имейл."
+
+msgid "Number of participants:"
+msgstr "Брой участници:"
+
+msgid "Participant 1"
+msgstr "Участник 1"
+
+msgid "Participant 2"
+msgstr "Участник 2"
+
+msgid "Participant Registration"
+msgstr "Регистрация на участниците"
+
+msgid "Participant successfully registered!"
+msgstr "Участникът е успешно регистриран!"
+
+msgid "Participants (each on a new line)"
+msgstr "Участници (всеки на нов ред)"
+
+msgid "Participants in a match must be different."
+msgstr "Участниците в мача трябва да са различни."
+
+msgid "passed to the next stage automatically"
+msgstr "автоматично преминава към следващия етап"
+
+msgid "Password"
+msgstr "Парола"
+
+msgid "Proceed to next stage"
+msgstr "Преминаване към следващия етап"
 
 msgid "Recover Password"
 msgstr "Възстановяване на парола"
+
+msgid "Register Participant"
+msgstr "Регистрация на участник"
+
+msgid "Register User"
+msgstr "Регистрация на потребител"
+
+msgid "Register"
+msgstr "Регистрация"
+
+msgid "Select tournament type:"
+msgstr "Изберете типа на турнира:"
+
+msgid "Select winner"
+msgstr "Изберете победител"
+
+msgid "Single Elimination Bracket"
+msgstr "Единична елиминационна скоба"
+
+msgid "Stage 0 (Play-in)"
+msgstr "Етап 0 (Play-in)"
+
+msgid "Stage"
+msgstr "Етап"
+
+msgid "The tournament is over! Winner"
+msgstr "Турнирът приключи! Победител"
+
+msgid "Tournament Bracket"
+msgstr "Конзола на турнира"
+
+msgid "Tournament Description"
+msgstr "Описание на турнира"
+
+msgid "Tournament Details"
+msgstr "Подробности за турнира"
+
+msgid "Tournament Name"
+msgstr "Име на турнира"
+
+msgid "Tournament"
+msgstr "Турнир"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "User Registration"
+msgstr "Регистрация на потребителя"
+
+msgid "Username"
+msgstr "Потребителско име"
+
+msgid "View bracket"
+msgstr "Преглед на скобата"
+
+msgid "vs"
+msgstr "срещу"
+
+msgid "Welcome, %(username)s!"
+msgstr "Добре дошъл, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Определяне на победителя"
+
+msgid "Winner"
+msgstr "Победител"
+
+msgid "You have been logged out."
+msgstr "Излезли сте от системата."
+
+msgid "You have successfully registered!"
+msgstr "Успешно сте се регистрирали!"

@@ -12,62 +12,75 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Индонезийский\n"
 
-msgid "You have successfully registered!"
-msgstr "Anda telah berhasil mendaftar!"
+msgid "A new password has been sent to your email."
+msgstr "Kata sandi baru telah dikirim ke email Anda."
 
 msgid "A user with this email already exists."
 msgstr "Pengguna dengan email ini sudah ada."
 
-msgid "Welcome, %(username)s!"
-msgstr "Selamat datang, %(username)s!"
+msgid "Actions"
+msgstr "Tindakan"
 
-msgid "Invalid email or password."
-msgstr "Email atau kata sandi tidak valid."
+msgid "Close"
+msgstr "Tutup"
 
-msgid "You have been logged out."
-msgstr "Anda telah keluar."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Subjek: Pemulihan kata sandi\n"
-"\n"
-"Kata sandi baru Anda adalah: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "Kata sandi baru telah dikirim ke email Anda."
-
-msgid "Error sending email: %(error)s"
-msgstr "Kesalahan pengiriman email: PEMEGANG TEMPAT_0"
-
-msgid "No user found with this email."
-msgstr "Tidak ditemukan pengguna dengan email ini."
-
-msgid "Participant successfully registered!"
-msgstr "Peserta berhasil terdaftar!"
-
-msgid "Participants in a match must be different."
-msgstr "Peserta dalam sebuah pertandingan haruslah berbeda."
-
-msgid "Match successfully created!"
-msgstr "Pertandingan berhasil dibuat!"
-
-msgid "Home"
-msgstr "Beranda"
-
-msgid "Register Participant"
-msgstr "Daftar Peserta"
-
-msgid "Create Tournament"
-msgstr "Buat Turnamen"
+msgid "Contact"
+msgstr "Kontak"
 
 msgid "Create Match"
 msgstr "Buat Kecocokan"
 
-msgid "Register User"
-msgstr "Daftarkan Pengguna"
+msgid "Create Tournament Bracket"
+msgstr "Buat Braket Turnamen"
+
+msgid "Create Tournament"
+msgstr "Buat Turnamen"
+
+msgid "Delete all participants"
+msgstr "Menghapus semua peserta"
+
+msgid "Delete tournament"
+msgstr "Menghapus turnamen"
+
+msgid "Delete"
+msgstr "Menghapus"
+
+msgid "Description"
+msgstr "Deskripsi"
+
+msgid "Double Elimination Bracket"
+msgstr "Braket Eliminasi Ganda"
+
+msgid "Email"
+msgstr ""
+
+msgid "Error sending email: %(error)s"
+msgstr "Kesalahan pengiriman email: PEMEGANG TEMPAT_0"
+
+msgid "Expected time of the tournament:"
+msgstr "Waktu yang diharapkan dari turnamen:"
+
+msgid "Home"
+msgstr "Beranda"
+
+msgid "How long does one match take (in minutes)?"
+msgstr ""
+"Berapa lama waktu yang dibutuhkan untuk satu pertandingan (dalam menit)?"
+
+msgid "Invalid email or password."
+msgstr "Email atau kata sandi tidak valid."
+
+msgid "Language"
+msgstr "Bahasa"
+
+msgid "List of Participants"
+msgstr "Daftar Peserta"
+
+msgid "List of tournaments"
+msgstr "Daftar turnamen"
+
+msgid "Log in"
+msgstr "Masuk"
 
 msgid "Login"
 msgstr "Masuk"
@@ -75,8 +88,116 @@ msgstr "Masuk"
 msgid "Logout"
 msgstr "Keluar"
 
-msgid "Language"
-msgstr "Bahasa"
+msgid "Match successfully created!"
+msgstr "Pertandingan berhasil dibuat!"
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "No user found with this email."
+msgstr "Tidak ditemukan pengguna dengan email ini."
+
+msgid "Number of participants:"
+msgstr "Jumlah peserta:"
+
+msgid "Participant 1"
+msgstr "Peserta 1"
+
+msgid "Participant 2"
+msgstr "Peserta 2"
+
+msgid "Participant Registration"
+msgstr "Pendaftaran Peserta"
+
+msgid "Participant successfully registered!"
+msgstr "Peserta berhasil terdaftar!"
+
+msgid "Participants (each on a new line)"
+msgstr "Peserta (masing-masing di baris baru)"
+
+msgid "Participants in a match must be different."
+msgstr "Peserta dalam sebuah pertandingan haruslah berbeda."
+
+msgid "passed to the next stage automatically"
+msgstr "lolos ke tahap berikutnya secara otomatis"
+
+msgid "Password"
+msgstr "Kata sandi"
+
+msgid "Proceed to next stage"
+msgstr "Lanjutkan ke tahap berikutnya"
 
 msgid "Recover Password"
 msgstr "Pulihkan Kata Sandi"
+
+msgid "Register Participant"
+msgstr "Daftar Peserta"
+
+msgid "Register User"
+msgstr "Daftarkan Pengguna"
+
+msgid "Register"
+msgstr "Daftar"
+
+msgid "Select tournament type:"
+msgstr "Pilih jenis turnamen:"
+
+msgid "Select winner"
+msgstr "Pilih pemenang"
+
+msgid "Single Elimination Bracket"
+msgstr "Braket Eliminasi Tunggal"
+
+msgid "Stage 0 (Play-in)"
+msgstr "Tahap 0 (Play-in)"
+
+msgid "Stage"
+msgstr "Panggung"
+
+msgid "The tournament is over! Winner"
+msgstr "Turnamen sudah berakhir! Pemenang"
+
+msgid "Tournament Bracket"
+msgstr "Braket Turnamen"
+
+msgid "Tournament Description"
+msgstr "Deskripsi Turnamen"
+
+msgid "Tournament Details"
+msgstr "Detail Turnamen"
+
+msgid "Tournament Name"
+msgstr "Nama Turnamen"
+
+msgid "Tournament"
+msgstr "Turnamen"
+
+msgid "Type"
+msgstr "Jenis"
+
+msgid "User Registration"
+msgstr "Pendaftaran Pengguna"
+
+msgid "Username"
+msgstr "Nama pengguna"
+
+msgid "View bracket"
+msgstr "Lihat braket"
+
+msgid "vs"
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr "Selamat datang, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Pemenang ditentukan"
+
+msgid "Winner"
+msgstr "Pemenang"
+
+msgid "You have been logged out."
+msgstr "Anda telah keluar."
+
+msgid "You have successfully registered!"
+msgstr "Anda telah berhasil mendaftar!"

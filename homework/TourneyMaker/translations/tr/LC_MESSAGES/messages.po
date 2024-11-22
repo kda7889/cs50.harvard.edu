@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Турецкий\n"
 
-msgid "You have successfully registered!"
-msgstr "Başarıyla kayıt oldunuz!"
+msgid "A new password has been sent to your email."
+msgstr "E-postanıza yeni bir şifre gönderildi."
 
 msgid "A user with this email already exists."
 msgstr "Bu e-postaya sahip bir kullanıcı zaten mevcut."
 
-msgid "Welcome, %(username)s!"
-msgstr "Hoş geldiniz, %(username)s!"
+msgid "Actions"
+msgstr "Eylemler"
 
-msgid "Invalid email or password."
-msgstr "Geçersiz e-posta veya şifre."
+msgid "Close"
+msgstr "Kapat"
 
-msgid "You have been logged out."
-msgstr "Çıkış yaptınız."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Konu Şifre kurtarma\n"
-"\n"
-"Yeni parolanız: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "E-postanıza yeni bir şifre gönderildi."
-
-msgid "Error sending email: %(error)s"
-msgstr "E-posta gönderilirken hata oluştu: %(error)s"
-
-msgid "No user found with this email."
-msgstr "Bu e-postaya sahip kullanıcı bulunamadı."
-
-msgid "Participant successfully registered!"
-msgstr "Katılımcı başarıyla kaydedildi!"
-
-msgid "Participants in a match must be different."
-msgstr "Bir maçtaki katılımcılar farklı olmalıdır."
-
-msgid "Match successfully created!"
-msgstr "Eşleşme başarıyla oluşturuldu!"
-
-msgid "Home"
-msgstr "Ev"
-
-msgid "Register Participant"
-msgstr "Katılımcı Kaydı"
-
-msgid "Create Tournament"
-msgstr "Turnuva Oluştur"
+msgid "Contact"
+msgstr "İletişim"
 
 msgid "Create Match"
 msgstr "Eşleşme Oluştur"
 
-msgid "Register User"
-msgstr "Kullanıcı Kaydı"
+msgid "Create Tournament Bracket"
+msgstr "Turnuva Braketi Oluştur"
+
+msgid "Create Tournament"
+msgstr "Turnuva Oluştur"
+
+msgid "Delete all participants"
+msgstr "Tüm katılımcıları sil"
+
+msgid "Delete tournament"
+msgstr "Turnuvayı sil"
+
+msgid "Delete"
+msgstr "Silme"
+
+msgid "Description"
+msgstr "Açıklama"
+
+msgid "Double Elimination Bracket"
+msgstr "Çift Eleme Grubu"
+
+msgid "Email"
+msgstr "E-posta"
+
+msgid "Error sending email: %(error)s"
+msgstr "E-posta gönderilirken hata oluştu: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "Turnuvanın beklenen zamanı:"
+
+msgid "Home"
+msgstr "Ev"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Bir maç ne kadar sürer (dakika olarak)?"
+
+msgid "Invalid email or password."
+msgstr "Geçersiz e-posta veya şifre."
+
+msgid "Language"
+msgstr "Dil"
+
+msgid "List of Participants"
+msgstr "Katılımcı Listesi"
+
+msgid "List of tournaments"
+msgstr "Turnuvaların listesi"
+
+msgid "Log in"
+msgstr "Giriş yap"
 
 msgid "Login"
 msgstr "Giriş"
@@ -75,8 +87,116 @@ msgstr "Giriş"
 msgid "Logout"
 msgstr "Oturumu Kapat"
 
-msgid "Language"
-msgstr "Dil"
+msgid "Match successfully created!"
+msgstr "Eşleşme başarıyla oluşturuldu!"
+
+msgid "Name"
+msgstr "İsim"
+
+msgid "No user found with this email."
+msgstr "Bu e-postaya sahip kullanıcı bulunamadı."
+
+msgid "Number of participants:"
+msgstr "Katılımcı sayısı:"
+
+msgid "Participant 1"
+msgstr "Katılımcı 1"
+
+msgid "Participant 2"
+msgstr "Katılımcı 2"
+
+msgid "Participant Registration"
+msgstr "Katılımcı Kaydı"
+
+msgid "Participant successfully registered!"
+msgstr "Katılımcı başarıyla kaydedildi!"
+
+msgid "Participants (each on a new line)"
+msgstr "Katılımcılar (her biri yeni bir satırda)"
+
+msgid "Participants in a match must be different."
+msgstr "Bir maçtaki katılımcılar farklı olmalıdır."
+
+msgid "passed to the next stage automatically"
+msgstr "otomatik olarak bir sonraki aşamaya geçer"
+
+msgid "Password"
+msgstr "Şifre"
+
+msgid "Proceed to next stage"
+msgstr "Bir sonraki aşamaya geçin"
 
 msgid "Recover Password"
 msgstr "Şifre Kurtarma"
+
+msgid "Register Participant"
+msgstr "Katılımcı Kaydı"
+
+msgid "Register User"
+msgstr "Kullanıcı Kaydı"
+
+msgid "Register"
+msgstr "Kayıt Olun"
+
+msgid "Select tournament type:"
+msgstr "Turnuva türünü seçin:"
+
+msgid "Select winner"
+msgstr "Kazananı seçin"
+
+msgid "Single Elimination Bracket"
+msgstr "Tekli Eleme Grubu"
+
+msgid "Stage 0 (Play-in)"
+msgstr "Aşama 0 (Play-in)"
+
+msgid "Stage"
+msgstr "Sahne"
+
+msgid "The tournament is over! Winner"
+msgstr "Turnuva sona erdi! Kazanan"
+
+msgid "Tournament Bracket"
+msgstr "Turnuva Braketi"
+
+msgid "Tournament Description"
+msgstr "Turnuva Açıklaması"
+
+msgid "Tournament Details"
+msgstr "Turnuva Detayları"
+
+msgid "Tournament Name"
+msgstr "Turnuva Adı"
+
+msgid "Tournament"
+msgstr "Turnuva"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "User Registration"
+msgstr "Kullanıcı Kaydı"
+
+msgid "Username"
+msgstr "Kullanıcı Adı"
+
+msgid "View bracket"
+msgstr "Braketi görüntüle"
+
+msgid "vs"
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr "Hoş geldiniz, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Kazanan belirlendi"
+
+msgid "Winner"
+msgstr "Kazanan"
+
+msgid "You have been logged out."
+msgstr "Çıkış yaptınız."
+
+msgid "You have successfully registered!"
+msgstr "Başarıyla kayıt oldunuz!"

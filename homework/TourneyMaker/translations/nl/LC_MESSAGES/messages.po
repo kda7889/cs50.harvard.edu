@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Голландский\n"
 
-msgid "You have successfully registered!"
-msgstr "Je hebt je succesvol geregistreerd!"
+msgid "A new password has been sent to your email."
+msgstr "Er is een nieuw wachtwoord naar uw e-mailadres verzonden."
 
 msgid "A user with this email already exists."
 msgstr "Er bestaat al een gebruiker met dit e-mailadres."
 
-msgid "Welcome, %(username)s!"
-msgstr "Welkom, %(username)s!"
+msgid "Actions"
+msgstr "Acties"
 
-msgid "Invalid email or password."
-msgstr "Ongeldig e-mailadres of wachtwoord."
+msgid "Close"
+msgstr "Sluit"
 
-msgid "You have been logged out."
-msgstr "Je bent uitgelogd."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Betreft: Wachtwoord herstel\n"
-"\n"
-"Uw nieuwe wachtwoord is: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "Er is een nieuw wachtwoord naar uw e-mailadres verzonden."
-
-msgid "Error sending email: %(error)s"
-msgstr "Fout bij het verzenden van e-mail: PLAATSHOUDER_0"
-
-msgid "No user found with this email."
-msgstr "Geen gebruiker gevonden met deze e-mail."
-
-msgid "Participant successfully registered!"
-msgstr "Deelnemer succesvol geregistreerd!"
-
-msgid "Participants in a match must be different."
-msgstr "Deelnemers aan een wedstrijd moeten verschillend zijn."
-
-msgid "Match successfully created!"
-msgstr "Match succesvol gemaakt!"
-
-msgid "Home"
-msgstr ""
-
-msgid "Register Participant"
-msgstr "Deelnemer registreren"
-
-msgid "Create Tournament"
-msgstr "Maak toernooi"
+msgid "Contact"
+msgstr "Neem contact op met"
 
 msgid "Create Match"
 msgstr "Wedstrijd creëren"
 
-msgid "Register User"
-msgstr "Gebruiker registreren"
+msgid "Create Tournament Bracket"
+msgstr "Toernooi Bracket Maken"
+
+msgid "Create Tournament"
+msgstr "Maak toernooi"
+
+msgid "Delete all participants"
+msgstr "Alle deelnemers verwijderen"
+
+msgid "Delete tournament"
+msgstr "Toernooi verwijderen"
+
+msgid "Delete"
+msgstr "Verwijder"
+
+msgid "Description"
+msgstr "Beschrijving"
+
+msgid "Double Elimination Bracket"
+msgstr "Dubbele eliminatie"
+
+msgid "Email"
+msgstr ""
+
+msgid "Error sending email: %(error)s"
+msgstr "Fout bij het verzenden van e-mail: PLAATSHOUDER_0"
+
+msgid "Expected time of the tournament:"
+msgstr "Verwachte tijd van het toernooi:"
+
+msgid "Home"
+msgstr ""
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Hoe lang duurt een wedstrijd (in minuten)?"
+
+msgid "Invalid email or password."
+msgstr "Ongeldig e-mailadres of wachtwoord."
+
+msgid "Language"
+msgstr "Taal"
+
+msgid "List of Participants"
+msgstr "Lijst van deelnemers"
+
+msgid "List of tournaments"
+msgstr "Lijst van toernooien"
+
+msgid "Log in"
+msgstr "Inloggen"
 
 msgid "Login"
 msgstr "Inloggen"
@@ -75,8 +87,116 @@ msgstr "Inloggen"
 msgid "Logout"
 msgstr "Afmelden"
 
-msgid "Language"
-msgstr "Taal"
+msgid "Match successfully created!"
+msgstr "Match succesvol gemaakt!"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "No user found with this email."
+msgstr "Geen gebruiker gevonden met deze e-mail."
+
+msgid "Number of participants:"
+msgstr "Aantal deelnemers:"
+
+msgid "Participant 1"
+msgstr "Deelnemer 1"
+
+msgid "Participant 2"
+msgstr "Deelnemer 2"
+
+msgid "Participant Registration"
+msgstr "Registratie deelnemers"
+
+msgid "Participant successfully registered!"
+msgstr "Deelnemer succesvol geregistreerd!"
+
+msgid "Participants (each on a new line)"
+msgstr "Deelnemers (elk op een nieuwe regel)"
+
+msgid "Participants in a match must be different."
+msgstr "Deelnemers aan een wedstrijd moeten verschillend zijn."
+
+msgid "passed to the next stage automatically"
+msgstr "automatisch doorgegeven aan de volgende stap"
+
+msgid "Password"
+msgstr "Wachtwoord"
+
+msgid "Proceed to next stage"
+msgstr "Doorgaan naar de volgende stap"
 
 msgid "Recover Password"
 msgstr "Wachtwoord herstellen"
+
+msgid "Register Participant"
+msgstr "Deelnemer registreren"
+
+msgid "Register User"
+msgstr "Gebruiker registreren"
+
+msgid "Register"
+msgstr "Registreer"
+
+msgid "Select tournament type:"
+msgstr "Selecteer het toernooitype:"
+
+msgid "Select winner"
+msgstr "Winnaar kiezen"
+
+msgid "Single Elimination Bracket"
+msgstr "Enkele eliminatie"
+
+msgid "Stage 0 (Play-in)"
+msgstr "Fase 0 (Play-in)"
+
+msgid "Stage"
+msgstr "Stadium"
+
+msgid "The tournament is over! Winner"
+msgstr "Het toernooi is voorbij! Winnaar"
+
+msgid "Tournament Bracket"
+msgstr "Toernooi Bracket"
+
+msgid "Tournament Description"
+msgstr "Toernooi Beschrijving"
+
+msgid "Tournament Details"
+msgstr "Toernooi Details"
+
+msgid "Tournament Name"
+msgstr "Toernooinaam"
+
+msgid "Tournament"
+msgstr "Toernooi"
+
+msgid "Type"
+msgstr ""
+
+msgid "User Registration"
+msgstr "Gebruikersregistratie"
+
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+msgid "View bracket"
+msgstr "Bekijk steun"
+
+msgid "vs"
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr "Welkom, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Winnaar bepaald"
+
+msgid "Winner"
+msgstr "Winnaar"
+
+msgid "You have been logged out."
+msgstr "Je bent uitgelogd."
+
+msgid "You have successfully registered!"
+msgstr "Je hebt je succesvol geregistreerd!"

@@ -1,90 +1,407 @@
-<div class="bracket-container">
-  {% if matches %}
-      {% set current_stage = None %}
-      <div class="bracket-row">
-          {% for match in matches %}
-              {% if match.stage != current_stage %}
-                  {% if current_stage is not none %}
-                      </div> <!-- Закрываем предыдущую стадию -->
-                  {% endif %}
-                  <!-- Заголовок для новой стадии -->
-                  <div class="stage-container">
-                      <h3>Стадия: {{ match.stage }}</h3>
-                      <div class="stage-matches">
-                      {% set current_stage = match.stage %}
-              {% endif %}
+{% extends 'layout.html' %}
+{% block content %}
+  <h1>{{ gettext('Tournament Bracket') }}</h1>
+  <input type="hidden" id="tournament_id" value="{{ tournament_id }}">
+  <input type="hidden" id="my_winner_id" value="{{ tournament.winner_id }}">
+  <div id="bracket-container">
+    <!-- Сетка турнира по стадиям после завершения и определения победителя -->
+    {% if tournament.winner_id %}
+      <h2>{{ gettext('The tournament is over! Winner') }}: {{ tournament.winner_name }} ID {{ tournament.winner_id }}</h2>
+    {% endif %}
 
-              <!-- Карточка матча -->
-              <div class="match-card {% if match.result %}completed{% endif %}" id="match-{{ match.id }}">
-                  <p>Участник 1: {{ match.participant1_name if match.participant1_name else 'N/A' }}</p>
-                  <p>Участник 2: {{ match.participant2_name if match.participant2_name else 'N/A' }}</p>
-                  {% if match.result %}
-                      <p>Результат: Победитель - {{ match.result }}</p>
-                  {% else %}
-                      <p>Матч ещё не сыгран</p>
-                      <form action="{{ url_for('update_match_result', match_id=match.id) }}" method="post">
-                          <input type="hidden" name="tournament_id" value="{{ tournament_id }}">
-                          <label for="winner-{{ match.id }}">Победитель:</label>
-                          <select name="result" id="winner-{{ match.id }}" required>
-                              <option value="" disabled selected>Выберите победителя</option>
-                              {% if match.participant1_name %}
-                                  <option value="{{ match.participant1_name }}">{{ match.participant1_name }}</option>
-                              {% endif %}
-                              {% if match.participant2_name %}
-                                  <option value="{{ match.participant2_name }}">{{ match.participant2_name }}</option>
-                              {% endif %}
-                          </select>
-                          <button type="submit" class="btn btn-success">Обновить результат</button>
-                      </form>
+    <!-- Сетка турнира по стадиям -->
+    {% for stage, matches in stages.items() %}
+      {% if stage == 0 and matches|length > 0 %}
+        <div class="stage-container">
+          <h2 onclick="toggleStage(0)" class="stage-title">{{ gettext('Stage 0 (Play-in)') }}</h2>
+          <div class="stage-matches" id="stage-0">
+            {% for match in matches %}
+              <div class="match-card" id="match-{{ match.id }}">
+                <p>{{ match.participant1_name }} {{ gettext('vs') }} {{ match.participant2_name }}<br><br>
+                {{ gettext('Winner') }} <b>{{ match.result }}</b> <br>ID: {{ match.result_id }}</p>
+                {% if match.participant2_id == -1 %}
+                  <p>{{ match.participant1_name }} {{ gettext('passed to the next stage automatically')}}/p>
+                {% else %}
+                  {% if not tournament.winner_id %}
+                  <select class="winner-select"
+                          data-match-id="{{ match.id }}"
+                          data-stage="{{ stage }}"
+                          data-winner-id="{{ match.result_id }}"
+                          data-participant1-id="{{ match.participant1_id }}"
+                          data-participant1-name="{{ match.participant1_name }}"
+                          data-participant2-id="{{ match.participant2_id }}"
+                          data-participant2-name="{{ match.participant2_name }}"
+                          onchange="updateMatchResult({{ match.id }})">
+                      <option value="">{{ gettext('Select winner') }}</option>
+                      <option value="{{ match.participant1_id }}" {% if match.result_id == match.participant1_id %}selected{% endif %}>
+                          {{ match.participant1_name }}
+                      </option>
+                      <option value="{{ match.participant2_id }}" {% if match.result_id == match.participant2_id %}selected{% endif %}>
+                          {{ match.participant2_name }}
+                      </option>
+                  </select>
                   {% endif %}
+                {% endif %}
               </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% elif stage > 0 %}
+        <div class="stage-container">
+          <h2 onclick="toggleStage({{ stage }})" class="stage-title">{{ gettext('Stage') }} {{ stage }}</h2>
+          <div class="stage-matches" id="stage-{{ stage }}">
+            {% for match in matches %}
+              <div class="match-card" id="match-{{ match.id }}">
+                <p>{{ match.participant1_name }} {{ gettext('vs') }} {{ match.participant2_name }}<br><br>
+                {{ gettext('Winner') }} <b>{{ match.result }}</b> <br>ID: {{ match.result_id }}</p>
+                {% if match.participant2_id == -1 %}
+                  <p>{{ match.participant1_name }} {{ gettext('passed to the next stage automatically')}}</p>
+                {% endif %}
+                {% if not tournament.winner_id %}
+                  <select class="winner-select"
+                          data-match-id="{{ match.id }}"
+                          data-stage="{{ stage }}"
+                          data-winner-id="{{ match.result_id }}"
+                          data-participant1-id="{{ match.participant1_id }}"
+                          data-participant1-name="{{ match.participant1_name }}"
+                          data-participant2-id="{{ match.participant2_id }}"
+                          data-participant2-name="{{ match.participant2_name }}"
+                          onchange="updateMatchResult({{ match.id }})">
+                      <option value="">{{ gettext('Select winner') }}</option>
+                      <option value="{{ match.participant1_id }}" {% if match.result_id == match.participant1_id %}selected{% endif %}>
+                          {{ match.participant1_name }}
+                      </option>
+                      <option value="{{ match.participant2_id }}" {% if match.result_id == match.participant2_id %}selected{% endif %}>
+                          {{ match.participant2_name }}
+                      </option>
+                  </select>
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
 
-              {% if loop.last %}
-                  </div> <!-- Закрываем матчи текущей стадии -->
-                  </div> <!-- Закрываем последний этап -->
-              {% endif %}
-          {% endfor %}
-      </div> <!-- Закрываем строку турнирной сетки -->
-  {% else %}
-      <p>Нет матчей для данного турнира.</p>
-  {% endif %}
-</div>
+    {% if not tournament.winner_id %}
+      <button id="next-stage-button" style="display: none;">{{ gettext('Proceed to next stage') }}</button>
+    {% endif %}
+  </div>
 
-<style>
-    .bracket-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 40px;
-        align-items: flex-start;
+  <script src="{{ url_for('static', filename='jquery-3.6.0.min.js') }}"></script>
+   <script>
+    if (typeof jQuery !== 'undefined') {
+        console.log('jQuery загружен успешно');
+    } else {
+        console.error('Ошибка: jQuery не загружен');
     }
+
+    function toggleStage(stageId) {
+      const stageElement = document.getElementById(`stage-${stageId}`);
+      if (stageElement.style.display === 'none') {
+        stageElement.style.display = 'block';
+      } else {
+        stageElement.style.display = 'none';
+      }
+    }
+
+function updateMatchResult(matchId) {
+    // Извлекаем выбранного победителя
+    const selectedWinner = document.querySelector(`[data-match-id="${matchId}"]`).value;
+
+    if (selectedWinner) {
+        console.log(`Updating match ${matchId} with winner ${selectedWinner}`);
+
+        $.ajax({
+            url: "{{ url_for('set_winner') }}",
+            method: 'POST',
+            data: {
+                match_id: matchId,
+                winner_id: selectedWinner
+            },
+            success: function(response) {
+              console.log('Победитель успешно установлен на сервере');
+              // Обновляем атрибут data-winner-id у соответствующего элемента
+              let matchElement = $(`[data-match-id="${matchId}"]`);
+              matchElement.attr('data-winner-id', selectedWinner);
+              console.log(`Атрибут data-winner-id для матча ${matchId} обновлен на: ${matchElement.attr('data-winner-id')}`);
+
+              // Обновляем текстовое описание матча
+              let participant1Name = matchElement.data('participant1-name');
+              let participant2Name = matchElement.data('participant2-name');
+              let winnerName = (selectedWinner == matchElement.data('participant1-id'))
+                  ? participant1Name
+                  : participant2Name;
+
+              // Проверяем, что переменные определены перед использованием
+              if (!participant1Name || !participant2Name) {
+                  console.error(`Не удалось найти имена участников для матча с ID: ${matchId}`);
+                  return;
+              }
+
+            // Обновляем текст элемента матча
+            $(`#match-${matchId} p`).empty().html(`${participant1Name} {{ gettext('vs') }} ${participant2Name}<br><br>{{ gettext('Winner determined') }}: <b>${winnerName}</b>`);
+
+            // Логируем обновление текста для матча
+            console.log(`Обновленное описание матча ${matchId}: ${participant1Name} против ${participant2Name}, Победитель: ${winnerName}`);
+
+            // **Вызываем проверку завершения всех матчей после успешного обновления**
+            checkAllMatchesCompleted();
+        },
+
+            error: function(xhr, status, error) {
+                console.error(`Ошибка при отправке запроса: ${status}, ${error}`);
+            }
+        });
+    }
+}
+
+
+
+function reloadMatchData() {
+    let tournamentId = $('#tournament_id').val();
+
+    $.ajax({
+        url: `/tournament/${tournamentId}/bracket_data`, // Подразумевается, что такой endpoint существует
+        method: 'GET',
+        success: function(response) {
+            // Здесь мы заново обновляем каждый матч на странице
+            response.matches.forEach(match => {
+                $(`#match-${match.id} p`).html(`${match.participant1_name} против ${match.participant2_name}<br><br>Победитель: ${match.winner_name || 'Еще не определен'}`);
+            });
+            checkAllMatchesCompleted(); // Проверка после обновления данных
+        },
+        error: function(xhr, status, error) {
+            console.error('Ошибка при перезагрузке данных:', error);
+        }
+    });
+}
+
+
+let isTournamentCompleted = false;
+
+function checkAllMatchesCompleted() {
+    console.log("function checkAllMatchesCompleted: Начало проверки завершения всех матчей.");
+    try {
+        console.log(`---> Содержимое winners при запуске функции = ${winners.join(', ')}`);
+        // Ваш код для проверки завершения матчей
+    } catch (error) {
+        console.log(`Cannot access 'winners' before initialization`)
+        //console.error("Ошибка при проверке winners", error);
+    }
+
+    // Получаем ID победителя турнира из скрытого элемента
+    const my_winnerId = $('#my_winner_id').val();
+
+    // Проверяем, завершен ли турнир или уже установлен победитель
+    if (isTournamentCompleted || (my_winnerId && my_winnerId !== "None" && my_winnerId !== "null")) {
+        console.log(`isTournamentCompleted=${isTournamentCompleted}   tournament.winner_id=${my_winnerId}`);
+        console.log("Турнир уже завершен. Повторная проверка не требуется.");
+        return;
+    }
+
+    console.log(`isTournamentCompleted=${isTournamentCompleted}   tournament.winner_id=${my_winnerId}`);
+
+    let allCompleted = true; // Флаг завершения всех матчей
+    let completedMatchesCount = 0; // Счетчик завершенных матчей
+    //let winners = []; // Список победителей на текущей стадии
+    //console.log(`> Содержимое winners до очистки = ${winners.join(', ')}`);
+    const winners = []; // Очищаем массив победителей перед началом проверки
+    console.log(`---> Содержимое winners после очистки = ${winners.join(', ')}`);
+
+    // Определяем текущую стадию турнира
+    const currentStage = Math.max(...$('.winner-select').map(function () {
+        return $(this).data('stage');
+    }).get());
+
+    // Проходим по всем матчам турнира
+    $('.winner-select').each(function () {
+        const matchId = $(this).data('match-id'); // ID матча
+        const stage = $(this).data('stage'); // Стадия матча
+        const winnerId = $(this).attr('data-winner-id'); // ID победителя матча
+        const participant1Id = $(this).data('participant1-id'); // ID первого участника
+        const participant2Id = $(this).data('participant2-id'); // ID второго участника
+        const participant1Name = $(this).data('participant1-name'); // Имя первого участника
+        const participant2Name = $(this).data('participant2-name'); // Имя второго участника
+
+        // Логируем основные данные матча
+        console.log(`Match ID: ${matchId}, Stage: ${stage}, Winner ID: ${winnerId}`);
+        console.log(`Participant 1: ${participant1Name} (ID: ${participant1Id}), Participant 2: ${participant2Name} (ID: ${participant2Id})`);
+
+        // Обработка ситуации, если второй участник отсутствует
+        if (participant2Id === -1 || participant2Id === undefined || participant2Id === null) {
+            console.log(`Стадия=${stage}, матч с ID=${matchId}, участник ${participant1Name} проходит автоматически, так как соперника нет.`);
+            //winners.push(participant1Id); // Добавляем победителя автоматически
+            if (stage === currentStage) { // **добавляем в winners только для текущей стадии**
+                winners.push(participant1Id);
+            }
+            completedMatchesCount++;
+            console.log(`---> Содержимое winners [если второй участник отсутствует] = ${winners.join(', ')}`);
+            return;
+        }
+
+        // Если победитель еще не определен
+        if (!winnerId || winnerId === "None" || winnerId === "null" || winnerId === "undefined") {
+            allCompleted = false; // Устанавливаем флаг, что не все матчи завершены
+            console.log(`Стадия=${stage}, матч с ID=${matchId}, еще не завершен.`);
+        } else {
+            // Если победитель определен
+            console.log(`Стадия=${stage}, матч с ID=${matchId}, завершен, победитель=${winnerId}`);
+            if (stage === currentStage) {
+                winners.push(winnerId); // Добавляем победителя текущей стадии
+            }
+            completedMatchesCount++;
+            console.log(`---> Содержимое winners [если победитель еще не определен] = ${winners.join(', ')}`);
+        }
+    });
+
+    console.log(`function checkAllMatchesCompleted: Проверка завершена. Количество завершенных матчей: ${completedMatchesCount}, всего матчей: ${$('.winner-select').length}.`);
+    console.log(`winners test after '.winner-select').each(function () ---> ${winners.join(', ')}`);
+
+
+    if (allCompleted) {
+        console.log("Все матчи завершены. Проверяем количество победителей на текущей стадии.");
+        console.log(`Список ID победителей на стадии ${currentStage}: ${winners.join(', ')}`);
+
+        if (winners.length === 1 && currentStage !== 0) {
+            console.log("Остался один победитель, и стадия не play-in [0].");
+
+            // Проверяем, остались ли незавершенные стадии или матчи
+            const remainingMatches = $('.winner-select').filter(function () {
+                return $(this).data('stage') > currentStage;
+            }).length;
+
+            if (remainingMatches === 0) {
+                console.log("Турнир завершен! Победитель: " + winners[0]);
+                isTournamentCompleted = true; // Устанавливаем флаг завершения турнира
+                setFinalWinner(winners[0]); // Отправляем данные о финальном победителе
+            }
+        } else if (winners.length > 1 || winners.length === 1) {
+            console.log(`Все матчи текущей стадии завершены, победителей больше одного. Список победителей: ${winners.join(', ')}. Показываем кнопку перехода к следующей стадии.`);
+            $('#next-stage-button').show();
+        } else {
+            console.log(`Все матчи завершены, но победителей не найдено. Скрываем кнопки. Список winners: ${winners.join(', ')}.`);
+            $('#next-stage-button').hide();
+        }
+    } else {
+        console.log("Не все матчи завершены, скрываем кнопки.");
+        $('#next-stage-button').hide();
+    }
+
+    console.log(`winners test (allCompleted) ---> ${winners.join(', ')}`);
+    console.log("Конец проверки завершения всех матчей.");
+}
+
+
+
+
+$(document).ready(function() {
+    // Проверяем наличие победителей после загрузки страницы
+    $('.winner-select').each(function() {
+        let matchId = $(this).data('match-id');
+        let winnerId = $(this).data('winner-id');
+        // Вы можете добавить дополнительную логику для обработки этих данных
+    });
+
+    // Проверяем, завершены ли все матчи
+    checkAllMatchesCompleted();
+
+
+// Обработчик события click для кнопки "Перейти к следующей стадии"
+$('#next-stage-button').click(function() {
+    let tournamentId = $('#tournament_id').val();
+
+    $.ajax({
+        url: `/tournament/${tournamentId}/proceed_stage`,
+        method: 'POST',
+        success: function(response) {
+            if (response && response.success) {
+                alert('Переход к следующей стадии выполнен успешно!');
+                location.reload();
+            } else {
+                alert('Произошла ошибка при переходе к следующей стадии: ' + (response.message || 'Неизвестная ошибка'));
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error('Ошибка сервера:', error);
+            alert('Не удалось выполнить переход к следующей стадии. Ошибка сервера.');
+        }
+    });
+  });
+});
+
+  function setFinalWinner() {
+    let tournamentId = $('#tournament_id').val();
+    let winnerId = $('.winner-select').last().val(); // Допустим, что последний матч определяет финального победителя
+    let winnerName = $('.winner-select option:selected').last().text().trim(); // Удаляем пробелы и переносы строк
+
+    $.ajax({
+        url: `/set_final_winner`,
+        method: 'POST',
+        data: {
+            'tournament_id': tournamentId,
+            'winner_id': winnerId,
+            'winner_name': winnerName
+        },
+        success: function(response) {
+            alert('Победитель турнира успешно определен!');
+            $('#next-stage-button').hide();
+            location.reload();
+        },
+        error: function(xhr, status, error) {
+            console.error('Ошибка сервера:', error);
+            alert('Не удалось определить победителя турнира. Ошибка сервера.');
+        }
+    });
+  }
+
+  </script>
+
+  <style>
+    #bracket-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
     .stage-container {
-        border: 1px solid #ccc;
-        padding: 20px;
-        border-radius: 15px;
-        min-width: 300px;
-        background-color: #f8f9fa;
-        margin-bottom: 20px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
     }
+
+    .stage-title {
+      cursor: pointer;
+      font-size: 1.5em;
+      margin: 0;
+      padding: 10px;
+      background-color: #eee;
+      border-radius: 4px;
+    }
+
     .stage-matches {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
     }
+
     .match-card {
-        border: 2px solid #007bff;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        background-color: #ffffff;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #fff;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
+
     .match-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 8px 16px rgba(0, 123, 255, 0.3);
+      transform: scale(1.02);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    .match-card.completed {
-        background-color: #d4edda; /* Светло-зеленый для завершенных матчей */
-        border: 2px solid #28a745;
+
+    .winner-select {
+      margin-top: 10px;
     }
-</style>
+  </style>
+{% endblock %}

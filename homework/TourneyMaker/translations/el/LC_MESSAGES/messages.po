@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Греческий\n"
 
-msgid "You have successfully registered!"
-msgstr "Έχετε εγγραφεί επιτυχώς!"
+msgid "A new password has been sent to your email."
+msgstr "Ένας νέος κωδικός πρόσβασης έχει σταλεί στο email σας."
 
 msgid "A user with this email already exists."
 msgstr "Ένας χρήστης με αυτό το email υπάρχει ήδη."
 
-msgid "Welcome, %(username)s!"
-msgstr "Καλώς ήρθες, %(username)s!"
+msgid "Actions"
+msgstr "Δράσεις"
 
-msgid "Invalid email or password."
-msgstr "Μη έγκυρο email ή κωδικός πρόσβασης."
+msgid "Close"
+msgstr "Κλείστε το"
 
-msgid "You have been logged out."
-msgstr "Έχετε αποσυνδεθεί."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Θέμα: Θέμα: Ανάκτηση κωδικού πρόσβασης\n"
-"\n"
-"Ο νέος σας κωδικός πρόσβασης είναι: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "Ένας νέος κωδικός πρόσβασης έχει σταλεί στο email σας."
-
-msgid "Error sending email: %(error)s"
-msgstr "Σφάλμα αποστολής email: %(error)s"
-
-msgid "No user found with this email."
-msgstr "Δεν βρέθηκε χρήστης με αυτό το email."
-
-msgid "Participant successfully registered!"
-msgstr "Η εγγραφή του συμμετέχοντα ολοκληρώθηκε επιτυχώς!"
-
-msgid "Participants in a match must be different."
-msgstr "Οι συμμετέχοντες σε έναν αγώνα πρέπει να είναι διαφορετικοί."
-
-msgid "Match successfully created!"
-msgstr "Ο αγώνας δημιουργήθηκε επιτυχώς!"
-
-msgid "Home"
-msgstr "Αρχική σελίδα"
-
-msgid "Register Participant"
-msgstr "Εγγραφή Συμμετέχοντα"
-
-msgid "Create Tournament"
-msgstr "Δημιουργία τουρνουά"
+msgid "Contact"
+msgstr "Επικοινωνία"
 
 msgid "Create Match"
 msgstr "Δημιουργία αγώνα"
 
-msgid "Register User"
-msgstr "Εγγραφή χρήστη"
+msgid "Create Tournament Bracket"
+msgstr "Δημιουργία βραχίονα τουρνουά"
+
+msgid "Create Tournament"
+msgstr "Δημιουργία τουρνουά"
+
+msgid "Delete all participants"
+msgstr "Διαγραφή όλων των συμμετεχόντων"
+
+msgid "Delete tournament"
+msgstr "Διαγραφή τουρνουά"
+
+msgid "Delete"
+msgstr "Διαγραφή"
+
+msgid "Description"
+msgstr "Περιγραφή"
+
+msgid "Double Elimination Bracket"
+msgstr "Βραχίονας διπλής αποβολής"
+
+msgid "Email"
+msgstr "Ηλεκτρονικό ταχυδρομείο"
+
+msgid "Error sending email: %(error)s"
+msgstr "Σφάλμα αποστολής email: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "Αναμενόμενη ώρα του τουρνουά:"
+
+msgid "Home"
+msgstr "Αρχική σελίδα"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Πόση ώρα διαρκεί ένας αγώνας (σε λεπτά);"
+
+msgid "Invalid email or password."
+msgstr "Μη έγκυρο email ή κωδικός πρόσβασης."
+
+msgid "Language"
+msgstr "Γλώσσα"
+
+msgid "List of Participants"
+msgstr "Κατάλογος συμμετεχόντων"
+
+msgid "List of tournaments"
+msgstr "Κατάλογος τουρνουά"
+
+msgid "Log in"
+msgstr "Συνδεθείτε"
 
 msgid "Login"
 msgstr "Σύνδεση"
@@ -75,8 +87,116 @@ msgstr "Σύνδεση"
 msgid "Logout"
 msgstr "Αποσύνδεση"
 
-msgid "Language"
-msgstr "Γλώσσα"
+msgid "Match successfully created!"
+msgstr "Ο αγώνας δημιουργήθηκε επιτυχώς!"
+
+msgid "Name"
+msgstr "Όνομα"
+
+msgid "No user found with this email."
+msgstr "Δεν βρέθηκε χρήστης με αυτό το email."
+
+msgid "Number of participants:"
+msgstr "Αριθμός συμμετεχόντων:"
+
+msgid "Participant 1"
+msgstr "Συμμετέχων 1"
+
+msgid "Participant 2"
+msgstr "Συμμετέχων 2"
+
+msgid "Participant Registration"
+msgstr "Εγγραφή συμμετεχόντων"
+
+msgid "Participant successfully registered!"
+msgstr "Η εγγραφή του συμμετέχοντα ολοκληρώθηκε επιτυχώς!"
+
+msgid "Participants (each on a new line)"
+msgstr "Συμμετέχοντες (ο καθένας σε νέα γραμμή)"
+
+msgid "Participants in a match must be different."
+msgstr "Οι συμμετέχοντες σε έναν αγώνα πρέπει να είναι διαφορετικοί."
+
+msgid "passed to the next stage automatically"
+msgstr "περνάει αυτόματα στο επόμενο στάδιο"
+
+msgid "Password"
+msgstr "Κωδικός πρόσβασης"
+
+msgid "Proceed to next stage"
+msgstr "Προχωρήστε στο επόμενο στάδιο"
 
 msgid "Recover Password"
 msgstr "Ανάκτηση κωδικού πρόσβασης"
+
+msgid "Register Participant"
+msgstr "Εγγραφή Συμμετέχοντα"
+
+msgid "Register User"
+msgstr "Εγγραφή χρήστη"
+
+msgid "Register"
+msgstr "Εγγραφή"
+
+msgid "Select tournament type:"
+msgstr "Επιλέξτε τον τύπο τουρνουά:"
+
+msgid "Select winner"
+msgstr "Επιλέξτε νικητή"
+
+msgid "Single Elimination Bracket"
+msgstr "Ενιαία αποβολή Bracket"
+
+msgid "Stage 0 (Play-in)"
+msgstr "Στάδιο 0 (Play-in)"
+
+msgid "Stage"
+msgstr "Στάδιο"
+
+msgid "The tournament is over! Winner"
+msgstr "Το τουρνουά τελείωσε! Νικητής"
+
+msgid "Tournament Bracket"
+msgstr "Βραχίονας του τουρνουά"
+
+msgid "Tournament Description"
+msgstr "Περιγραφή τουρνουά"
+
+msgid "Tournament Details"
+msgstr "Λεπτομέρειες τουρνουά"
+
+msgid "Tournament Name"
+msgstr "Όνομα τουρνουά"
+
+msgid "Tournament"
+msgstr "Τουρνουά"
+
+msgid "Type"
+msgstr "Τύπος"
+
+msgid "User Registration"
+msgstr "Εγγραφή χρήστη"
+
+msgid "Username"
+msgstr "Όνομα χρήστη"
+
+msgid "View bracket"
+msgstr "Προβολή βραχίονα"
+
+msgid "vs"
+msgstr "εναντίον"
+
+msgid "Welcome, %(username)s!"
+msgstr "Καλώς ήρθες, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Ο νικητής καθορίζεται"
+
+msgid "Winner"
+msgstr "Νικητής"
+
+msgid "You have been logged out."
+msgstr "Έχετε αποσυνδεθεί."
+
+msgid "You have successfully registered!"
+msgstr "Έχετε εγγραφεί επιτυχώς!"

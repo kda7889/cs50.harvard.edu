@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Эстонский\n"
 
-msgid "You have successfully registered!"
-msgstr "Olete edukalt registreerunud!"
+msgid "A new password has been sent to your email."
+msgstr "Teie e-posti aadressile on saadetud uus salasõna."
 
 msgid "A user with this email already exists."
 msgstr "Selle e-posti aadressiga kasutaja on juba olemas."
 
-msgid "Welcome, %(username)s!"
-msgstr "Tere tulemast, %(username)s!"
+msgid "Actions"
+msgstr "Meetmed"
 
-msgid "Invalid email or password."
-msgstr "Vale e-posti aadress või salasõna."
+msgid "Close"
+msgstr "Sulge"
 
-msgid "You have been logged out."
-msgstr "Teid on välja logitud."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Teema: Salasõna taastamine\n"
-"\n"
-"Teie uus parool on: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "Teie e-posti aadressile on saadetud uus salasõna."
-
-msgid "Error sending email: %(error)s"
-msgstr "Viga e-kirja saatmisel: %(error)s"
-
-msgid "No user found with this email."
-msgstr "Selle e-posti aadressiga ei leitud ühtegi kasutajat."
-
-msgid "Participant successfully registered!"
-msgstr "Osaleja edukalt registreeritud!"
-
-msgid "Participants in a match must be different."
-msgstr "Mängus osalejad peavad olema erinevad."
-
-msgid "Match successfully created!"
-msgstr "Match edukalt loodud!"
-
-msgid "Home"
-msgstr "Kodu"
-
-msgid "Register Participant"
-msgstr "Registreeri osaleja"
-
-msgid "Create Tournament"
-msgstr "Turniiri loomine"
+msgid "Contact"
+msgstr "Kontakt"
 
 msgid "Create Match"
 msgstr "Loo matš"
 
-msgid "Register User"
-msgstr "Registreeri kasutaja"
+msgid "Create Tournament Bracket"
+msgstr "Turniiri sulgude loomine"
+
+msgid "Create Tournament"
+msgstr "Turniiri loomine"
+
+msgid "Delete all participants"
+msgstr "Kustuta kõik osalejad"
+
+msgid "Delete tournament"
+msgstr "Turniiri kustutamine"
+
+msgid "Delete"
+msgstr "Kustuta"
+
+msgid "Description"
+msgstr "Kirjeldus"
+
+msgid "Double Elimination Bracket"
+msgstr ""
+
+msgid "Email"
+msgstr "E-post"
+
+msgid "Error sending email: %(error)s"
+msgstr "Viga e-kirja saatmisel: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "Turniiri eeldatav aeg:"
+
+msgid "Home"
+msgstr "Kodu"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Kui kaua kestab üks mäng (minutites)?"
+
+msgid "Invalid email or password."
+msgstr "Vale e-posti aadress või salasõna."
+
+msgid "Language"
+msgstr "Keel"
+
+msgid "List of Participants"
+msgstr "Osalejate nimekiri"
+
+msgid "List of tournaments"
+msgstr "Turniiride nimekiri"
+
+msgid "Log in"
+msgstr "Logi sisse"
 
 msgid "Login"
 msgstr "Logi sisse"
@@ -75,8 +87,116 @@ msgstr "Logi sisse"
 msgid "Logout"
 msgstr "Väljalogimine"
 
-msgid "Language"
-msgstr "Keel"
+msgid "Match successfully created!"
+msgstr "Match edukalt loodud!"
+
+msgid "Name"
+msgstr "Nimi"
+
+msgid "No user found with this email."
+msgstr "Selle e-posti aadressiga ei leitud ühtegi kasutajat."
+
+msgid "Number of participants:"
+msgstr "Osalejate arv:"
+
+msgid "Participant 1"
+msgstr "Osaleja 1"
+
+msgid "Participant 2"
+msgstr "Osaleja 2"
+
+msgid "Participant Registration"
+msgstr "Osalejate registreerimine"
+
+msgid "Participant successfully registered!"
+msgstr "Osaleja edukalt registreeritud!"
+
+msgid "Participants (each on a new line)"
+msgstr "Osalejad (igaüks uuel real)"
+
+msgid "Participants in a match must be different."
+msgstr "Mängus osalejad peavad olema erinevad."
+
+msgid "passed to the next stage automatically"
+msgstr "automaatselt järgmisesse etappi"
+
+msgid "Password"
+msgstr "Parool"
+
+msgid "Proceed to next stage"
+msgstr "Edasi järgmisse etappi"
 
 msgid "Recover Password"
 msgstr "Parooli taastamine"
+
+msgid "Register Participant"
+msgstr "Registreeri osaleja"
+
+msgid "Register User"
+msgstr "Registreeri kasutaja"
+
+msgid "Register"
+msgstr "Registreeri"
+
+msgid "Select tournament type:"
+msgstr "Valige turniiri tüüp:"
+
+msgid "Select winner"
+msgstr "Valige võitja"
+
+msgid "Single Elimination Bracket"
+msgstr "Üksiku kõrvaldamise sulgemine Bracket"
+
+msgid "Stage 0 (Play-in)"
+msgstr "Etapp 0 (sisse mängimine)"
+
+msgid "Stage"
+msgstr "Etapp"
+
+msgid "The tournament is over! Winner"
+msgstr "Turniir on lõppenud! Võitja"
+
+msgid "Tournament Bracket"
+msgstr "Turniiri sulgudes"
+
+msgid "Tournament Description"
+msgstr "Turniiri kirjeldus"
+
+msgid "Tournament Details"
+msgstr "Turniiri üksikasjad"
+
+msgid "Tournament Name"
+msgstr "Turniiri nimi"
+
+msgid "Tournament"
+msgstr "Turniir"
+
+msgid "Type"
+msgstr "Tüüp"
+
+msgid "User Registration"
+msgstr "Kasutaja registreerimine"
+
+msgid "Username"
+msgstr "Kasutajanimi"
+
+msgid "View bracket"
+msgstr "Vaata klambrit"
+
+msgid "vs"
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr "Tere tulemast, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Võitja määratud"
+
+msgid "Winner"
+msgstr "Võitja"
+
+msgid "You have been logged out."
+msgstr "Teid on välja logitud."
+
+msgid "You have successfully registered!"
+msgstr "Olete edukalt registreerunud!"

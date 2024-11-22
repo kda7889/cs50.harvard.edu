@@ -1,9 +1,9 @@
 {% extends 'layout.html' %}
 {% block content %}
-  <h1>Создать матч</h1>
+  <h1>{{ gettext('Create match') }}</h1>
   <form method="post">
     <div class="form-group">
-      <label for="tournament_id">Турнир</label>
+      <label for="tournament_id">{{ gettext('Tournament') }}</label>
       <select class="form-control" id="tournament_id" name="tournament_id" required>
         {% for tournament in tournaments %}
           <option value="{{ tournament['id'] }}">{{ tournament['name'] }}</option>
@@ -11,7 +11,7 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="participant1_id">Участник 1</label>
+      <label for="participant1_id">{{ gettext('Participant 1') }}</label>
       <select class="form-control" id="participant1_id" name="participant1_id" required>
         {% for participant in participants %}
           <option value="{{ participant['id'] }}">{{ participant['name'] }}</option>
@@ -19,13 +19,13 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="participant2_id">Участник 2</label>
+      <label for="participant2_id">{{ gettext('Participant 2') }}</label>
       <select class="form-control" id="participant2_id" name="participant2_id" required>
         {% for participant in participants %}
           <option value="{{ participant['id'] }}">{{ participant['name'] }}</option>
         {% endfor %}
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">Создать матч</button>
+    <button type="submit" class="btn btn-primary">{{ gettext('Create match') }}</button>
   </form>
 {% endblock %}

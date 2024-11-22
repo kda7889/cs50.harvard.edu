@@ -1,15 +1,15 @@
 {% extends 'layout.html' %}
 {% block content %}
-  <h1>Регистрация участников</h1>
+  <h1>{{ gettext('Participant Registration') }}</h1>
   <form method="post">
     <div class="form-group">
-      <label for="name">Имя</label>
+      <label for="name">{{ gettext('Name') }}</label>
       <input type="text" class="form-control" id="name" name="name" required>
     </div>
     <div class="form-group">
-      <label for="contact">Контакт</label>
+      <label for="contact">{{ gettext('Contact') }}</label>
       <input type="text" class="form-control" id="contact" name="contact">
     </div>
-    <button type="submit" class="btn btn-primary">Зарегистрировать</button>
+    <button type="submit" class="btn btn-primary">{{ gettext('Register') }}</button>
   </form>
 {% endblock %}

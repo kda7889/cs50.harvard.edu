@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Румынский\n"
 
-msgid "You have successfully registered!"
-msgstr "V-ați înregistrat cu succes!"
+msgid "A new password has been sent to your email."
+msgstr "O nouă parolă a fost trimisă la adresa dvs. de e-mail."
 
 msgid "A user with this email already exists."
 msgstr "Un utilizator cu acest e-mail există deja."
 
-msgid "Welcome, %(username)s!"
-msgstr "Bine ai venit, %(username)s!"
+msgid "Actions"
+msgstr "Acțiuni"
 
-msgid "Invalid email or password."
-msgstr "E-mail sau parolă invalidă."
+msgid "Close"
+msgstr "Închidere"
 
-msgid "You have been logged out."
-msgstr "Ați fost deconectat."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Subiect: Recuperarea parolei\n"
-"\n"
-"Noua dvs. parolă este: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "O nouă parolă a fost trimisă la adresa dvs. de e-mail."
-
-msgid "Error sending email: %(error)s"
-msgstr "Eroare la trimiterea e-mailului: %(error)s"
-
-msgid "No user found with this email."
-msgstr "Nu a fost găsit niciun utilizator cu acest e-mail."
-
-msgid "Participant successfully registered!"
-msgstr "Participant înregistrat cu succes!"
-
-msgid "Participants in a match must be different."
-msgstr "Participanții la un meci trebuie să fie diferiți."
-
-msgid "Match successfully created!"
-msgstr "Potrivire creată cu succes!"
-
-msgid "Home"
-msgstr "Acasă"
-
-msgid "Register Participant"
-msgstr "Înregistrarea participantului"
-
-msgid "Create Tournament"
-msgstr "Creați un turneu"
+msgid "Contact"
+msgstr "Persoană de contact"
 
 msgid "Create Match"
 msgstr "Creează potrivire"
 
-msgid "Register User"
-msgstr "Înregistrare utilizator"
+msgid "Create Tournament Bracket"
+msgstr "Creați suportul de turneu"
+
+msgid "Create Tournament"
+msgstr "Creați un turneu"
+
+msgid "Delete all participants"
+msgstr "Ștergeți toți participanții"
+
+msgid "Delete tournament"
+msgstr "Ștergeți turneul"
+
+msgid "Delete"
+msgstr "Ștergeți"
+
+msgid "Description"
+msgstr "Descriere"
+
+msgid "Double Elimination Bracket"
+msgstr "Bracket dublă eliminare"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Error sending email: %(error)s"
+msgstr "Eroare la trimiterea e-mailului: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "Ora preconizată a turneului:"
+
+msgid "Home"
+msgstr "Acasă"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Cât durează un meci (în minute)?"
+
+msgid "Invalid email or password."
+msgstr "E-mail sau parolă invalidă."
+
+msgid "Language"
+msgstr "Limba"
+
+msgid "List of Participants"
+msgstr "Lista participanților"
+
+msgid "List of tournaments"
+msgstr "Lista turneelor"
+
+msgid "Log in"
+msgstr "Conectați-vă"
 
 msgid "Login"
 msgstr "Autentificare"
@@ -75,8 +87,116 @@ msgstr "Autentificare"
 msgid "Logout"
 msgstr "Ieșire"
 
-msgid "Language"
-msgstr "Limba"
+msgid "Match successfully created!"
+msgstr "Potrivire creată cu succes!"
+
+msgid "Name"
+msgstr "Nume și prenume"
+
+msgid "No user found with this email."
+msgstr "Nu a fost găsit niciun utilizator cu acest e-mail."
+
+msgid "Number of participants:"
+msgstr "Numărul de participanți:"
+
+msgid "Participant 1"
+msgstr ""
+
+msgid "Participant 2"
+msgstr ""
+
+msgid "Participant Registration"
+msgstr "Înregistrarea participanților"
+
+msgid "Participant successfully registered!"
+msgstr "Participant înregistrat cu succes!"
+
+msgid "Participants (each on a new line)"
+msgstr "Participanți (fiecare pe o linie nouă)"
+
+msgid "Participants in a match must be different."
+msgstr "Participanții la un meci trebuie să fie diferiți."
+
+msgid "passed to the next stage automatically"
+msgstr "trece automat la etapa următoare"
+
+msgid "Password"
+msgstr "Parolă"
+
+msgid "Proceed to next stage"
+msgstr "Treceți la etapa următoare"
 
 msgid "Recover Password"
 msgstr "Recuperează parola"
+
+msgid "Register Participant"
+msgstr "Înregistrarea participantului"
+
+msgid "Register User"
+msgstr "Înregistrare utilizator"
+
+msgid "Register"
+msgstr "Înregistrare"
+
+msgid "Select tournament type:"
+msgstr "Selectați tipul de turneu:"
+
+msgid "Select winner"
+msgstr "Selectați câștigătorul"
+
+msgid "Single Elimination Bracket"
+msgstr "Grupa de eliminare unică"
+
+msgid "Stage 0 (Play-in)"
+msgstr "Etapa 0 (Play-in)"
+
+msgid "Stage"
+msgstr "Etapa"
+
+msgid "The tournament is over! Winner"
+msgstr "Turneul s-a încheiat! Câștigător"
+
+msgid "Tournament Bracket"
+msgstr "Grupa de turneu"
+
+msgid "Tournament Description"
+msgstr "Descrierea turneului"
+
+msgid "Tournament Details"
+msgstr "Detalii despre turneu"
+
+msgid "Tournament Name"
+msgstr "Numele turneului"
+
+msgid "Tournament"
+msgstr "Turneu"
+
+msgid "Type"
+msgstr "Tip"
+
+msgid "User Registration"
+msgstr "Înregistrarea utilizatorului"
+
+msgid "Username"
+msgstr "Nume utilizator"
+
+msgid "View bracket"
+msgstr "Vezi suportul"
+
+msgid "vs"
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr "Bine ai venit, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Câștigătorul a fost desemnat"
+
+msgid "Winner"
+msgstr "Câștigător"
+
+msgid "You have been logged out."
+msgstr "Ați fost deconectat."
+
+msgid "You have successfully registered!"
+msgstr "V-ați înregistrat cu succes!"

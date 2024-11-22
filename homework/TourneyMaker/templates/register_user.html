@@ -1,19 +1,19 @@
 {% extends 'layout.html' %}
 {% block content %}
-  <h1>Регистрация пользователя</h1>
+  <h1>{{ gettext('User Registration') }}</h1>
   <form method="post">
     <div class="form-group">
-      <label for="username">Имя пользователя</label>
+      <label for="username">{{ gettext('Username') }}</label>
       <input type="text" class="form-control" id="username" name="username" required>
     </div>
     <div class="form-group">
-      <label for="email">Email</label>
+      <label for="email">{{ gettext('Email') }}</label>
       <input type="email" class="form-control" id="email" name="email" required>
     </div>
     <div class="form-group">
-      <label for="password">Пароль</label>
+      <label for="password">{{ gettext('Password') }}</label>
       <input type="password" class="form-control" id="password" name="password" required>
     </div>
-    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+    <button type="submit" class="btn btn-primary">{{ gettext('Register') }}</button>
   </form>
 {% endblock %}

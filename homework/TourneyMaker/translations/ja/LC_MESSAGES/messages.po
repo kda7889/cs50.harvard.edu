@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Японский\n"
 
-msgid "You have successfully registered!"
-msgstr "登録に成功しました！"
+msgid "A new password has been sent to your email."
+msgstr "新しいパスワードがEメールに送信されました。"
 
 msgid "A user with this email already exists."
 msgstr "この電子メールを持つユーザーはすでに存在します。"
 
-msgid "Welcome, %(username)s!"
-msgstr "ようこそ、%(username)s！"
+msgid "Actions"
+msgstr "行動"
 
-msgid "Invalid email or password."
-msgstr "メールアドレスまたはパスワードが無効です。"
+msgid "Close"
+msgstr "閉じる"
 
-msgid "You have been logged out."
-msgstr "ログアウトされました。"
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"件名パスワード復旧\n"
-"\n"
-"新しいパスワードは %(new_password)s です。"
-
-msgid "A new password has been sent to your email."
-msgstr "新しいパスワードがEメールに送信されました。"
-
-msgid "Error sending email: %(error)s"
-msgstr "メール送信エラー%(error)s"
-
-msgid "No user found with this email."
-msgstr "このメールに該当するユーザーは見つかりませんでした。"
-
-msgid "Participant successfully registered!"
-msgstr "参加者の登録に成功しました！"
-
-msgid "Participants in a match must be different."
-msgstr "試合の参加者は異なっていなければならない。"
-
-msgid "Match successfully created!"
-msgstr "マッチの作成に成功！"
-
-msgid "Home"
-msgstr "ホーム"
-
-msgid "Register Participant"
-msgstr "参加登録"
-
-msgid "Create Tournament"
-msgstr "トーナメント作成"
+msgid "Contact"
+msgstr "連絡先"
 
 msgid "Create Match"
 msgstr "マッチ作成"
 
-msgid "Register User"
-msgstr "ユーザー登録"
+msgid "Create Tournament Bracket"
+msgstr "トーナメント表の作成"
+
+msgid "Create Tournament"
+msgstr "トーナメント作成"
+
+msgid "Delete all participants"
+msgstr "参加者全員の削除"
+
+msgid "Delete tournament"
+msgstr "トーナメント削除"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Description"
+msgstr "説明"
+
+msgid "Double Elimination Bracket"
+msgstr "ダブル・エリミネーション・ブラケット"
+
+msgid "Email"
+msgstr "電子メール"
+
+msgid "Error sending email: %(error)s"
+msgstr "メール送信エラー%(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "大会予定時刻"
+
+msgid "Home"
+msgstr "ホーム"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "1試合の所要時間（分）は？"
+
+msgid "Invalid email or password."
+msgstr "メールアドレスまたはパスワードが無効です。"
+
+msgid "Language"
+msgstr "言語"
+
+msgid "List of Participants"
+msgstr "参加者リスト"
+
+msgid "List of tournaments"
+msgstr "トーナメント一覧"
+
+msgid "Log in"
+msgstr "ログイン"
 
 msgid "Login"
 msgstr "ログイン"
@@ -75,8 +87,116 @@ msgstr "ログイン"
 msgid "Logout"
 msgstr "ログアウト"
 
-msgid "Language"
-msgstr "言語"
+msgid "Match successfully created!"
+msgstr "マッチの作成に成功！"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "No user found with this email."
+msgstr "このメールに該当するユーザーは見つかりませんでした。"
+
+msgid "Number of participants:"
+msgstr "参加者数"
+
+msgid "Participant 1"
+msgstr "参加者1"
+
+msgid "Participant 2"
+msgstr "参加者2"
+
+msgid "Participant Registration"
+msgstr "参加登録"
+
+msgid "Participant successfully registered!"
+msgstr "参加者の登録に成功しました！"
+
+msgid "Participants (each on a new line)"
+msgstr "参加者（それぞれ改行）"
+
+msgid "Participants in a match must be different."
+msgstr "試合の参加者は異なっていなければならない。"
+
+msgid "passed to the next stage automatically"
+msgstr "自動的に次のステージへ"
+
+msgid "Password"
+msgstr "パスワード"
+
+msgid "Proceed to next stage"
+msgstr "次のステージへ進む"
 
 msgid "Recover Password"
 msgstr "パスワードの回復"
+
+msgid "Register Participant"
+msgstr "参加登録"
+
+msgid "Register User"
+msgstr "ユーザー登録"
+
+msgid "Register"
+msgstr "登録"
+
+msgid "Select tournament type:"
+msgstr "トーナメントの種類を選択する："
+
+msgid "Select winner"
+msgstr "勝者を選ぶ"
+
+msgid "Single Elimination Bracket"
+msgstr "シングル・エリミネーション・ブラケット"
+
+msgid "Stage 0 (Play-in)"
+msgstr "ステージ0（プレーイン）"
+
+msgid "Stage"
+msgstr "ステージ"
+
+msgid "The tournament is over! Winner"
+msgstr "トーナメントは終了した！優勝"
+
+msgid "Tournament Bracket"
+msgstr "トーナメント・ブラケット"
+
+msgid "Tournament Description"
+msgstr "大会概要"
+
+msgid "Tournament Details"
+msgstr "大会詳細"
+
+msgid "Tournament Name"
+msgstr "大会名"
+
+msgid "Tournament"
+msgstr "トーナメント"
+
+msgid "Type"
+msgstr "タイプ"
+
+msgid "User Registration"
+msgstr "ユーザー登録"
+
+msgid "Username"
+msgstr "ユーザー名"
+
+msgid "View bracket"
+msgstr "ブラケットを見る"
+
+msgid "vs"
+msgstr "対"
+
+msgid "Welcome, %(username)s!"
+msgstr "ようこそ、%(username)s！"
+
+msgid "Winner determined"
+msgstr "優勝決定"
+
+msgid "Winner"
+msgstr "優勝"
+
+msgid "You have been logged out."
+msgstr "ログアウトされました。"
+
+msgid "You have successfully registered!"
+msgstr "登録に成功しました！"

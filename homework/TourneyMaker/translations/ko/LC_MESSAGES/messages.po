@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Корейский\n"
 
-msgid "You have successfully registered!"
-msgstr "등록에 성공했습니다!"
+msgid "A new password has been sent to your email."
+msgstr "새 비밀번호가 이메일로 전송되었습니다."
 
 msgid "A user with this email already exists."
 msgstr "이 이메일을 받은 사용자가 이미 존재합니다."
 
-msgid "Welcome, %(username)s!"
-msgstr "환영합니다, %(username)s!"
+msgid "Actions"
+msgstr "작업"
 
-msgid "Invalid email or password."
-msgstr "이메일 또는 비밀번호가 잘못되었습니다."
+msgid "Close"
+msgstr "닫기"
 
-msgid "You have been logged out."
-msgstr "로그아웃되었습니다."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"제목: 제목: 비밀번호 복구\n"
-"\n"
-"새 비밀번호: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "새 비밀번호가 이메일로 전송되었습니다."
-
-msgid "Error sending email: %(error)s"
-msgstr "이메일 전송 중 오류가 발생했습니다: %(error)s"
-
-msgid "No user found with this email."
-msgstr "이 이메일을 받은 사용자를 찾을 수 없습니다."
-
-msgid "Participant successfully registered!"
-msgstr "참가자가 성공적으로 등록했습니다!"
-
-msgid "Participants in a match must be different."
-msgstr "경기 참가자는 서로 달라야 합니다."
-
-msgid "Match successfully created!"
-msgstr "경기가 성공적으로 생성되었습니다!"
-
-msgid "Home"
-msgstr "홈"
-
-msgid "Register Participant"
-msgstr "참가자 등록"
-
-msgid "Create Tournament"
-msgstr "토너먼트 만들기"
+msgid "Contact"
+msgstr "연락처"
 
 msgid "Create Match"
 msgstr "경기 만들기"
 
-msgid "Register User"
-msgstr "사용자 등록"
+msgid "Create Tournament Bracket"
+msgstr "토너먼트 대진표 만들기"
+
+msgid "Create Tournament"
+msgstr "토너먼트 만들기"
+
+msgid "Delete all participants"
+msgstr "모든 참가자 삭제"
+
+msgid "Delete tournament"
+msgstr "토너먼트 삭제"
+
+msgid "Delete"
+msgstr "삭제"
+
+msgid "Description"
+msgstr "설명"
+
+msgid "Double Elimination Bracket"
+msgstr "더블 엘리미네이션 브래킷"
+
+msgid "Email"
+msgstr "이메일"
+
+msgid "Error sending email: %(error)s"
+msgstr "이메일 전송 중 오류가 발생했습니다: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "토너먼트 예상 시간:"
+
+msgid "Home"
+msgstr "홈"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "한 경기는 얼마나 걸리나요(분 단위)?"
+
+msgid "Invalid email or password."
+msgstr "이메일 또는 비밀번호가 잘못되었습니다."
+
+msgid "Language"
+msgstr "언어"
+
+msgid "List of Participants"
+msgstr "참가자 목록"
+
+msgid "List of tournaments"
+msgstr "토너먼트 목록"
+
+msgid "Log in"
+msgstr "로그인"
 
 msgid "Login"
 msgstr "로그인"
@@ -75,8 +87,116 @@ msgstr "로그인"
 msgid "Logout"
 msgstr "로그아웃"
 
-msgid "Language"
-msgstr "언어"
+msgid "Match successfully created!"
+msgstr "경기가 성공적으로 생성되었습니다!"
+
+msgid "Name"
+msgstr "이름"
+
+msgid "No user found with this email."
+msgstr "이 이메일을 받은 사용자를 찾을 수 없습니다."
+
+msgid "Number of participants:"
+msgstr "참가자 수:"
+
+msgid "Participant 1"
+msgstr "참가자 1"
+
+msgid "Participant 2"
+msgstr "참가자 2"
+
+msgid "Participant Registration"
+msgstr "참가자 등록"
+
+msgid "Participant successfully registered!"
+msgstr "참가자가 성공적으로 등록했습니다!"
+
+msgid "Participants (each on a new line)"
+msgstr "참가자(각각 새 줄에 있음)"
+
+msgid "Participants in a match must be different."
+msgstr "경기 참가자는 서로 달라야 합니다."
+
+msgid "passed to the next stage automatically"
+msgstr "자동으로 다음 단계로 넘어갑니다."
+
+msgid "Password"
+msgstr "비밀번호"
+
+msgid "Proceed to next stage"
+msgstr "다음 단계로 진행"
 
 msgid "Recover Password"
 msgstr "비밀번호 복구"
+
+msgid "Register Participant"
+msgstr "참가자 등록"
+
+msgid "Register User"
+msgstr "사용자 등록"
+
+msgid "Register"
+msgstr "등록하기"
+
+msgid "Select tournament type:"
+msgstr "토너먼트 유형을 선택합니다:"
+
+msgid "Select winner"
+msgstr "수상자 선택"
+
+msgid "Single Elimination Bracket"
+msgstr "싱글 엘리미네이션 브래킷"
+
+msgid "Stage 0 (Play-in)"
+msgstr "0단계(플레이인)"
+
+msgid "Stage"
+msgstr "스테이지"
+
+msgid "The tournament is over! Winner"
+msgstr "토너먼트가 끝났습니다! 우승자"
+
+msgid "Tournament Bracket"
+msgstr "토너먼트 대진표"
+
+msgid "Tournament Description"
+msgstr "토너먼트 설명"
+
+msgid "Tournament Details"
+msgstr "토너먼트 세부 정보"
+
+msgid "Tournament Name"
+msgstr "토너먼트 이름"
+
+msgid "Tournament"
+msgstr "토너먼트"
+
+msgid "Type"
+msgstr "유형"
+
+msgid "User Registration"
+msgstr "사용자 등록"
+
+msgid "Username"
+msgstr "사용자 이름"
+
+msgid "View bracket"
+msgstr "브래킷 보기"
+
+msgid "vs"
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr "환영합니다, %(username)s!"
+
+msgid "Winner determined"
+msgstr "우승자 결정"
+
+msgid "Winner"
+msgstr "우승자"
+
+msgid "You have been logged out."
+msgstr "로그아웃되었습니다."
+
+msgid "You have successfully registered!"
+msgstr "등록에 성공했습니다!"

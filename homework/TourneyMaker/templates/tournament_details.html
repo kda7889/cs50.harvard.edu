@@ -1,21 +1,22 @@
 {% extends 'layout.html' %}
 {% block content %}
-  <h1>Детали Турнира</h1>
-  <p>Количество участников: {{ num_participants }}</p>
-  <p>Ожидаемое время проведения турнира: {{ total_time }} минут</p>
+  <h1>{{ gettext('Tournament Details') }}</h1>
+  <p>{{ gettext('Number of participants:') }} {{ num_participants }}</p>
+  <p>{{ gettext('Expected time of the tournament:') }} {{ total_time }} минут</p>
 
   <form action="{{ url_for('tournament_details', tournament_id=tournament_id) }}" method="post">
     <div class="form-group">
-      <label for="match_duration">Сколько времени длится один матч (в минутах)?</label>
+      <label for="match_duration">{{ gettext('How long does one match take (in minutes)?') }}</label>
       <input type="number" name="match_duration" id="match_duration" class="form-control" value="{{ default_match_duration }}" min="1">
     </div>
     <div class="form-group">
-      <label for="tournament_type">Выберите тип турнира:</label>
+      <label for="tournament_type">{{ gettext('Select tournament type:') }}</label>
       <select name="tournament_type" id="tournament_type" class="form-control" required>
-        <option value="single">Прямая Сетка (Single Elimination)</option>
-        <option value="double">Обратная Сетка (Double Elimination)</option>
+        <option value="single">{{ gettext('Single Elimination Bracket') }}</option>
+<!--        <option value="double">{{ gettext('Double Elimination Bracket') }}</option>-->
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">Создать Турнирную Сетку</button>
+    <button type="submit" class="btn btn-primary">{{ gettext('Create Tournament Bracket') }}</button>
   </form>
 {% endblock %}
+

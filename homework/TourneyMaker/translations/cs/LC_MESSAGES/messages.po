@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Чешский\n"
 
-msgid "You have successfully registered!"
-msgstr "Úspěšně jste se zaregistrovali!"
+msgid "A new password has been sent to your email."
+msgstr "Na váš e-mail bylo zasláno nové heslo."
 
 msgid "A user with this email already exists."
 msgstr "Uživatel s tímto e-mailem již existuje."
 
-msgid "Welcome, %(username)s!"
-msgstr "Vítej, %(username)s!"
+msgid "Actions"
+msgstr "Akce"
 
-msgid "Invalid email or password."
-msgstr "Neplatný e-mail nebo heslo."
+msgid "Close"
+msgstr "Zavřít"
 
-msgid "You have been logged out."
-msgstr "Byli jste odhlášeni."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Předmět: Zpracování informací o projektu, který se uskutečnil v roce 2012, a o jeho výsledcích: Obnova hesla\n"
-"\n"
-"Vaše nové heslo je: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "Na váš e-mail bylo zasláno nové heslo."
-
-msgid "Error sending email: %(error)s"
-msgstr "Chyba při odesílání e-mailu: %(error)s"
-
-msgid "No user found with this email."
-msgstr "S tímto e-mailem nebyl nalezen žádný uživatel."
-
-msgid "Participant successfully registered!"
-msgstr "Účastník se úspěšně zaregistroval!"
-
-msgid "Participants in a match must be different."
-msgstr "Účastníci zápasu se musí lišit."
-
-msgid "Match successfully created!"
-msgstr "Zápas úspěšně vytvořen!"
-
-msgid "Home"
-msgstr ""
-
-msgid "Register Participant"
-msgstr "Registrace účastníka"
-
-msgid "Create Tournament"
-msgstr "Vytvořit turnaj"
+msgid "Contact"
+msgstr "Kontakt"
 
 msgid "Create Match"
 msgstr "Vytvořit shodu"
 
-msgid "Register User"
-msgstr "Registrace uživatele"
+msgid "Create Tournament Bracket"
+msgstr "Vytvoření turnajové závorky"
+
+msgid "Create Tournament"
+msgstr "Vytvořit turnaj"
+
+msgid "Delete all participants"
+msgstr "Odstranění všech účastníků"
+
+msgid "Delete tournament"
+msgstr "Smazat turnaj"
+
+msgid "Delete"
+msgstr "Odstranit"
+
+msgid "Description"
+msgstr "Popis"
+
+msgid "Double Elimination Bracket"
+msgstr "Dvojitá vyřazovací skupina"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Error sending email: %(error)s"
+msgstr "Chyba při odesílání e-mailu: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "Předpokládaný čas turnaje:"
+
+msgid "Home"
+msgstr ""
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Jak dlouho trvá jeden zápas (v minutách)?"
+
+msgid "Invalid email or password."
+msgstr "Neplatný e-mail nebo heslo."
+
+msgid "Language"
+msgstr "Jazyk"
+
+msgid "List of Participants"
+msgstr "Seznam účastníků"
+
+msgid "List of tournaments"
+msgstr "Seznam turnajů"
+
+msgid "Log in"
+msgstr "Přihlášení"
 
 msgid "Login"
 msgstr "Přihlášení"
@@ -75,8 +87,116 @@ msgstr "Přihlášení"
 msgid "Logout"
 msgstr "Odhlášení"
 
-msgid "Language"
-msgstr "Jazyk"
+msgid "Match successfully created!"
+msgstr "Zápas úspěšně vytvořen!"
+
+msgid "Name"
+msgstr "Název"
+
+msgid "No user found with this email."
+msgstr "S tímto e-mailem nebyl nalezen žádný uživatel."
+
+msgid "Number of participants:"
+msgstr "Počet účastníků:"
+
+msgid "Participant 1"
+msgstr "Účastník 1"
+
+msgid "Participant 2"
+msgstr "Účastník 2"
+
+msgid "Participant Registration"
+msgstr "Registrace účastníka"
+
+msgid "Participant successfully registered!"
+msgstr "Účastník se úspěšně zaregistroval!"
+
+msgid "Participants (each on a new line)"
+msgstr "Účastníci (každý na novém řádku)"
+
+msgid "Participants in a match must be different."
+msgstr "Účastníci zápasu se musí lišit."
+
+msgid "passed to the next stage automatically"
+msgstr "automaticky postoupí do další fáze"
+
+msgid "Password"
+msgstr "Heslo"
+
+msgid "Proceed to next stage"
+msgstr "Přejděte do další fáze"
 
 msgid "Recover Password"
 msgstr "Obnovení hesla"
+
+msgid "Register Participant"
+msgstr "Registrace účastníka"
+
+msgid "Register User"
+msgstr "Registrace uživatele"
+
+msgid "Register"
+msgstr "Registrace"
+
+msgid "Select tournament type:"
+msgstr "Vyberte typ turnaje:"
+
+msgid "Select winner"
+msgstr "Výběr vítěze"
+
+msgid "Single Elimination Bracket"
+msgstr "Jediná vyřazovací skupina"
+
+msgid "Stage 0 (Play-in)"
+msgstr "Fáze 0 (Play-in)"
+
+msgid "Stage"
+msgstr "Fáze"
+
+msgid "The tournament is over! Winner"
+msgstr "Turnaj skončil! Vítěz"
+
+msgid "Tournament Bracket"
+msgstr "Turnajový žebříček"
+
+msgid "Tournament Description"
+msgstr "Popis turnaje"
+
+msgid "Tournament Details"
+msgstr "Podrobnosti o turnaji"
+
+msgid "Tournament Name"
+msgstr "Název turnaje"
+
+msgid "Tournament"
+msgstr "Turnaj"
+
+msgid "Type"
+msgstr "Typ"
+
+msgid "User Registration"
+msgstr "Registrace uživatele"
+
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+msgid "View bracket"
+msgstr "Zobrazit držák"
+
+msgid "vs"
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr "Vítej, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Určení vítěze"
+
+msgid "Winner"
+msgstr "Vítěz"
+
+msgid "You have been logged out."
+msgstr "Byli jste odhlášeni."
+
+msgid "You have successfully registered!"
+msgstr "Úspěšně jste se zaregistrovali!"

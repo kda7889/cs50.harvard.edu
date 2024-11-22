@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Венгерский\n"
 
-msgid "You have successfully registered!"
-msgstr "Sikeresen regisztráltál!"
+msgid "A new password has been sent to your email."
+msgstr "Új jelszót küldtünk az Ön e-mail címére."
 
 msgid "A user with this email already exists."
 msgstr "Ezzel az e-mail címmel már létezik egy felhasználó."
 
-msgid "Welcome, %(username)s!"
-msgstr "Üdvözöljük, %(username)s!"
+msgid "Actions"
+msgstr "Tevékenységek"
 
-msgid "Invalid email or password."
-msgstr "Érvénytelen e-mail cím vagy jelszó."
+msgid "Close"
+msgstr "Zárja be a"
 
-msgid "You have been logged out."
-msgstr "Önt kijelentkeztették."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Téma: A téma a következő: Jelszó helyreállítása\n"
-"\n"
-"Az új jelszava: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "Új jelszót küldtünk az Ön e-mail címére."
-
-msgid "Error sending email: %(error)s"
-msgstr "Hiba az e-mail küldésében: %(error)s"
-
-msgid "No user found with this email."
-msgstr "Nem találtunk felhasználót ezzel az e-mail címmel."
-
-msgid "Participant successfully registered!"
-msgstr "A résztvevő sikeresen regisztrált!"
-
-msgid "Participants in a match must be different."
-msgstr "A mérkőzés résztvevőinek különbözőnek kell lenniük."
-
-msgid "Match successfully created!"
-msgstr "Sikeresen létrehozott mérkőzés!"
-
-msgid "Home"
-msgstr ""
-
-msgid "Register Participant"
-msgstr "Regisztráljon résztvevőt"
-
-msgid "Create Tournament"
-msgstr "Verseny létrehozása"
+msgid "Contact"
+msgstr "Kapcsolat"
 
 msgid "Create Match"
 msgstr "Párhuzam létrehozása"
 
-msgid "Register User"
-msgstr "Felhasználó regisztrálása"
+msgid "Create Tournament Bracket"
+msgstr "Versenytábla létrehozása"
+
+msgid "Create Tournament"
+msgstr "Verseny létrehozása"
+
+msgid "Delete all participants"
+msgstr "Minden résztvevő törlése"
+
+msgid "Delete tournament"
+msgstr "Verseny törlése"
+
+msgid "Delete"
+msgstr ""
+
+msgid "Description"
+msgstr "Leírás"
+
+msgid "Double Elimination Bracket"
+msgstr "Dupla kieséses zárójelenet"
+
+msgid "Email"
+msgstr "E-mail"
+
+msgid "Error sending email: %(error)s"
+msgstr "Hiba az e-mail küldésében: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "A verseny várható időpontja:"
+
+msgid "Home"
+msgstr ""
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Mennyi ideig tart egy mérkőzés (percben)?"
+
+msgid "Invalid email or password."
+msgstr "Érvénytelen e-mail cím vagy jelszó."
+
+msgid "Language"
+msgstr "Nyelv"
+
+msgid "List of Participants"
+msgstr "A résztvevők listája"
+
+msgid "List of tournaments"
+msgstr "Versenyek listája"
+
+msgid "Log in"
+msgstr "Bejelentkezés"
 
 msgid "Login"
 msgstr "Bejelentkezés"
@@ -75,8 +87,116 @@ msgstr "Bejelentkezés"
 msgid "Logout"
 msgstr "Kijelentkezés"
 
-msgid "Language"
-msgstr "Nyelv"
+msgid "Match successfully created!"
+msgstr "Sikeresen létrehozott mérkőzés!"
+
+msgid "Name"
+msgstr "Név"
+
+msgid "No user found with this email."
+msgstr "Nem találtunk felhasználót ezzel az e-mail címmel."
+
+msgid "Number of participants:"
+msgstr "A résztvevők száma:"
+
+msgid "Participant 1"
+msgstr "1. résztvevő"
+
+msgid "Participant 2"
+msgstr "2. résztvevő"
+
+msgid "Participant Registration"
+msgstr "Résztvevői regisztráció"
+
+msgid "Participant successfully registered!"
+msgstr "A résztvevő sikeresen regisztrált!"
+
+msgid "Participants (each on a new line)"
+msgstr "Résztvevők (mindegyik új sorban)"
+
+msgid "Participants in a match must be different."
+msgstr "A mérkőzés résztvevőinek különbözőnek kell lenniük."
+
+msgid "passed to the next stage automatically"
+msgstr "automatikusan a következő szakaszba kerül"
+
+msgid "Password"
+msgstr "Jelszó"
+
+msgid "Proceed to next stage"
+msgstr "Tovább a következő szakaszhoz"
 
 msgid "Recover Password"
 msgstr "Jelszó helyreállítása"
+
+msgid "Register Participant"
+msgstr "Regisztráljon résztvevőt"
+
+msgid "Register User"
+msgstr "Felhasználó regisztrálása"
+
+msgid "Register"
+msgstr "Regisztráció"
+
+msgid "Select tournament type:"
+msgstr "Válassza ki a verseny típusát:"
+
+msgid "Select winner"
+msgstr "Győztes kiválasztása"
+
+msgid "Single Elimination Bracket"
+msgstr "Egyetlen kieséses szakasz"
+
+msgid "Stage 0 (Play-in)"
+msgstr "0. szakasz (bejátszás)"
+
+msgid "Stage"
+msgstr "Színpad"
+
+msgid "The tournament is over! Winner"
+msgstr "A versenynek vége! Győztes"
+
+msgid "Tournament Bracket"
+msgstr "Versenytábla"
+
+msgid "Tournament Description"
+msgstr "Verseny leírása"
+
+msgid "Tournament Details"
+msgstr "Verseny részletei"
+
+msgid "Tournament Name"
+msgstr "Verseny neve"
+
+msgid "Tournament"
+msgstr "Verseny"
+
+msgid "Type"
+msgstr "Típus"
+
+msgid "User Registration"
+msgstr "Felhasználói regisztráció"
+
+msgid "Username"
+msgstr "Felhasználónév"
+
+msgid "View bracket"
+msgstr "Konzol megtekintése"
+
+msgid "vs"
+msgstr ""
+
+msgid "Welcome, %(username)s!"
+msgstr "Üdvözöljük, %(username)s!"
+
+msgid "Winner determined"
+msgstr "A győztes megállapítása"
+
+msgid "Winner"
+msgstr "Győztes"
+
+msgid "You have been logged out."
+msgstr "Önt kijelentkeztették."
+
+msgid "You have successfully registered!"
+msgstr "Sikeresen regisztráltál!"

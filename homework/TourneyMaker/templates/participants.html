@@ -1,17 +1,17 @@
 {% extends 'layout.html' %}
 {% block content %}
-<h1>Список Участников</h1>
+<h1>{{ gettext('List of Participants') }}</h1>
 <form action="{{ url_for('delete_all_participants') }}" method="post" style="margin-bottom: 15px;">
-    <button type="submit" class="btn btn-danger" onclick="return confirm('Вы уверены, что хотите удалить всех участников?')">Удалить всех участников</button>
+    <button type="submit" class="btn btn-danger" onclick="return confirm('Вы уверены, что хотите удалить всех участников?')">{{ gettext('Delete all participants') }}</button>
 </form>
 
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>Имя</th>
-            <th>Контакт</th>
-            <th>Турнир</th>
-            <th>Действия</th>
+            <th>{{ gettext('Name') }}</th>
+            <th>{{ gettext('Contact') }}</th>
+            <th>{{ gettext('Tournament') }}</th>
+            <th>{{ gettext('Actions') }}</th>
         </tr>
     </thead>
     <tbody>
@@ -22,7 +22,7 @@
             <td>{{ participant.tournament_id }}</td>
             <td>
                 <form action="{{ url_for('delete_participant', participant_id=participant.id) }}" method="post" style="display:inline;">
-                    <button type="submit" class="btn btn-danger" onclick="return confirm('Вы уверены, что хотите удалить этого участника?')">Удалить</button>
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Вы уверены, что хотите удалить этого участника?')">{{ gettext('Delete') }}</button>
                 </form>
             </td>
         </tr>

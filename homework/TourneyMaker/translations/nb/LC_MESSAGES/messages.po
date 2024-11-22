@@ -12,62 +12,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language-Name: Норвежский букмол\n"
 
-msgid "You have successfully registered!"
-msgstr "Du har registrert deg!"
+msgid "A new password has been sent to your email."
+msgstr "Et nytt passord har blitt sendt til din e-post."
 
 msgid "A user with this email already exists."
 msgstr "Det finnes allerede en bruker med denne e-postadressen."
 
-msgid "Welcome, %(username)s!"
-msgstr "Velkommen, %(username)s!"
+msgid "Actions"
+msgstr "Handlinger"
 
-msgid "Invalid email or password."
-msgstr "Ugyldig e-post eller passord."
+msgid "Close"
+msgstr "Lukk"
 
-msgid "You have been logged out."
-msgstr "Du har blitt logget ut."
-
-msgid ""
-"Subject: Password recovery\n"
-"\n"
-"Your new password is: %(new_password)s"
-msgstr ""
-"Emne: Gjenoppretting av passord\n"
-"\n"
-"Det nye passordet ditt er: %(new_password)s"
-
-msgid "A new password has been sent to your email."
-msgstr "Et nytt passord har blitt sendt til din e-post."
-
-msgid "Error sending email: %(error)s"
-msgstr "Feil ved sending av e-post: %(error)s"
-
-msgid "No user found with this email."
-msgstr "Ingen bruker funnet med denne e-posten."
-
-msgid "Participant successfully registered!"
-msgstr "Deltaker vellykket registrert!"
-
-msgid "Participants in a match must be different."
-msgstr "Deltakerne i en kamp må være forskjellige."
-
-msgid "Match successfully created!"
-msgstr "Match vellykket opprettet!"
-
-msgid "Home"
-msgstr "Hjem"
-
-msgid "Register Participant"
-msgstr "Registrer deltaker"
-
-msgid "Create Tournament"
-msgstr "Opprett turnering"
+msgid "Contact"
+msgstr "Kontakt"
 
 msgid "Create Match"
 msgstr "Opprett match"
 
-msgid "Register User"
-msgstr "Registrer bruker"
+msgid "Create Tournament Bracket"
+msgstr "Opprett turneringsbrakett"
+
+msgid "Create Tournament"
+msgstr "Opprett turnering"
+
+msgid "Delete all participants"
+msgstr "Slett alle deltakere"
+
+msgid "Delete tournament"
+msgstr "Slett turnering"
+
+msgid "Delete"
+msgstr "Slett"
+
+msgid "Description"
+msgstr "Beskrivelse"
+
+msgid "Double Elimination Bracket"
+msgstr "Dobbel eliminasjonsbrakett"
+
+msgid "Email"
+msgstr "E-post"
+
+msgid "Error sending email: %(error)s"
+msgstr "Feil ved sending av e-post: %(error)s"
+
+msgid "Expected time of the tournament:"
+msgstr "Forventet tidspunkt for turneringen:"
+
+msgid "Home"
+msgstr "Hjem"
+
+msgid "How long does one match take (in minutes)?"
+msgstr "Hvor lang tid tar en kamp (i minutter)?"
+
+msgid "Invalid email or password."
+msgstr "Ugyldig e-post eller passord."
+
+msgid "Language"
+msgstr "Språk"
+
+msgid "List of Participants"
+msgstr "Liste over deltakere"
+
+msgid "List of tournaments"
+msgstr "Liste over turneringer"
+
+msgid "Log in"
+msgstr "Logg inn"
 
 msgid "Login"
 msgstr "Logg inn"
@@ -75,8 +87,116 @@ msgstr "Logg inn"
 msgid "Logout"
 msgstr "Logg ut"
 
-msgid "Language"
-msgstr "Språk"
+msgid "Match successfully created!"
+msgstr "Match vellykket opprettet!"
+
+msgid "Name"
+msgstr "Navn"
+
+msgid "No user found with this email."
+msgstr "Ingen bruker funnet med denne e-posten."
+
+msgid "Number of participants:"
+msgstr "Antall deltakere:"
+
+msgid "Participant 1"
+msgstr "Deltaker 1"
+
+msgid "Participant 2"
+msgstr "Deltaker 2"
+
+msgid "Participant Registration"
+msgstr "Registrering av deltakere"
+
+msgid "Participant successfully registered!"
+msgstr "Deltaker vellykket registrert!"
+
+msgid "Participants (each on a new line)"
+msgstr "Deltakere (hver på en ny linje)"
+
+msgid "Participants in a match must be different."
+msgstr "Deltakerne i en kamp må være forskjellige."
+
+msgid "passed to the next stage automatically"
+msgstr "sendes automatisk videre til neste trinn"
+
+msgid "Password"
+msgstr "Passord"
+
+msgid "Proceed to next stage"
+msgstr "Gå videre til neste trinn"
 
 msgid "Recover Password"
 msgstr "Gjenopprett passord"
+
+msgid "Register Participant"
+msgstr "Registrer deltaker"
+
+msgid "Register User"
+msgstr "Registrer bruker"
+
+msgid "Register"
+msgstr "Registrer deg"
+
+msgid "Select tournament type:"
+msgstr "Velg turneringstype:"
+
+msgid "Select winner"
+msgstr "Velg vinner"
+
+msgid "Single Elimination Bracket"
+msgstr "Enkelt eliminasjonsbrakett"
+
+msgid "Stage 0 (Play-in)"
+msgstr "Fase 0 (innspilling)"
+
+msgid "Stage"
+msgstr "Scene"
+
+msgid "The tournament is over! Winner"
+msgstr "Turneringen er over! Vinner"
+
+msgid "Tournament Bracket"
+msgstr "Turneringsbrakett"
+
+msgid "Tournament Description"
+msgstr "Beskrivelse av turneringen"
+
+msgid "Tournament Details"
+msgstr "Detaljer om turneringen"
+
+msgid "Tournament Name"
+msgstr "Turneringens navn"
+
+msgid "Tournament"
+msgstr "Turnering"
+
+msgid "Type"
+msgstr ""
+
+msgid "User Registration"
+msgstr "Brukerregistrering"
+
+msgid "Username"
+msgstr "Brukernavn"
+
+msgid "View bracket"
+msgstr "Vis brakett"
+
+msgid "vs"
+msgstr "mot"
+
+msgid "Welcome, %(username)s!"
+msgstr "Velkommen, %(username)s!"
+
+msgid "Winner determined"
+msgstr "Vinner kåret"
+
+msgid "Winner"
+msgstr ""
+
+msgid "You have been logged out."
+msgstr "Du har blitt logget ut."
+
+msgid "You have successfully registered!"
+msgstr "Du har registrert deg!"
